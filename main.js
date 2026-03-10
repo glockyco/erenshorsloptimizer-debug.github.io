@@ -372,11 +372,24 @@ function computeMaxScore() {
   const fl = parseInt(document.getElementById('filter-level').value) || 999;
   const tieredGear = gear.map(blessedItem);
   let maxScore = 0;
+  let bestPrimary = null;
   SLOTS.forEach(slot => {
-    const pool = tieredGear.filter(g => g.lvl <= fl && (g.slot === slot || (g.bothSlots && (slot === 'Primary' || slot === 'Secondary'))))
+    // Secondary is handled below after we know what Primary picked.
+    if (slot === 'Secondary') return;
+    const pool = tieredGear.filter(g => g.lvl <= fl && (g.slot === slot || (g.bothSlots && slot === 'Primary')))
       .sort((a,b) => score(b)-score(a));
-    pool.slice(0, MULTI_SLOTS[slot]||1).forEach(item => { maxScore += score(item); });
+    const picks = pool.slice(0, MULTI_SLOTS[slot]||1);
+    picks.forEach(item => { maxScore += score(item); });
+    if (slot === 'Primary') bestPrimary = picks[0] || null;
   });
+  // Secondary: skip entirely if the best Primary is two-handed; otherwise
+  // exclude the Primary pick to avoid counting the same bothSlots item twice.
+  if (!bestPrimary?.twoHanded) {
+    const primaryName = bestPrimary?.name;
+    const pool = tieredGear.filter(g => g.lvl <= fl && (g.slot === 'Secondary' || g.bothSlots) && g.name !== primaryName)
+      .sort((a,b) => score(b)-score(a));
+    pool.slice(0, 1).forEach(item => { maxScore += score(item); });
+  }
   return maxScore;
 }
 
