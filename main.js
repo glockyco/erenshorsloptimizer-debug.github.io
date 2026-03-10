@@ -107,11 +107,59 @@ function sumLoadoutEffects() {
     mr:0, mr_proc:0, er:0, er_proc:0,
     pr:0, pr_proc:0, vr:0, vr_proc:0,
     wand_proc:null, bow_proc:null,
+    lineConflicts: [], // [{itemName, line, blockedBy}] for warning display
   };
+
+  // First pass: determine the highest req_lvl winner per spell line across
+  // all equipped items. This mirrors the game's one-per-line rule.
+  const lineWinner = {}; // line → { item, req_lvl }
   Object.values(manualLoadout).forEach(entry => {
     if (!entry?.item) return;
-    const perm = getItemPermEffects(entry.item);
-    // Permanent totals via getItemPermEffects — single source of truth
+    const e = entry.item.effects || {};
+    for (const bucket of [e.worn, e.aura]) {
+      if (!bucket?.line) continue;
+      const lvl = bucket.req_lvl ?? -1;
+      const prev = lineWinner[bucket.line];
+      if (!prev || lvl > prev.req_lvl) {
+        lineWinner[bucket.line] = { item: entry.item, req_lvl: lvl };
+      }
+    }
+  });
+
+  // Second pass: sum only the winning item's contribution per line, and collect
+  // info about blocked items for the conflict warning UI.
+  Object.values(manualLoadout).forEach(entry => {
+    if (!entry?.item) return;
+    const item = entry.item;
+    const e = item.effects || {};
+
+    const wornBlocked = e.worn?.line && lineWinner[e.worn.line]?.item !== item;
+    const auraBlocked = e.aura?.line && lineWinner[e.aura.line]?.item !== item;
+
+    if (wornBlocked) {
+      out.lineConflicts.push({
+        itemName: item.name,
+        line: e.worn.line,
+        blockedBy: lineWinner[e.worn.line].item.name,
+      });
+    }
+    if (auraBlocked) {
+      out.lineConflicts.push({
+        itemName: item.name,
+        line: e.aura.line,
+        blockedBy: lineWinner[e.aura.line].item.name,
+      });
+    }
+
+    // Build a context that blocks the losing buckets so getItemPermEffects
+    // returns zero for them.
+    const blockedContext = {
+      worn: wornBlocked ? {} : (e.worn || {}),
+      aura: auraBlocked ? {} : (e.aura || {}),
+      proc: e.proc || {},
+    };
+    const perm = getItemPermEffects({ effects: blockedContext });
+
     out.haste     += perm.haste;
     out.lifesteal += perm.lifesteal;
     out.atkroll   += perm.atkroll;
@@ -126,9 +174,8 @@ function sumLoadoutEffects() {
     out.mr_proc += perm.mr_proc; out.er_proc += perm.er_proc;
     out.pr_proc += perm.pr_proc; out.vr_proc += perm.vr_proc;
     // Haste breakdown sub-labels need raw bucket access
-    const e = entry.item.effects || {};
-    out.haste_worn += (e.worn?.haste  || 0);
-    out.haste_aura += (e.aura?.haste  || 0);
+    if (!wornBlocked) out.haste_worn += (e.worn?.haste || 0);
+    if (!auraBlocked) out.haste_aura += (e.aura?.haste || 0);
     // Only one wand/bow can be equipped — last item wins (shouldn't conflict)
     if (e.wand_proc) out.wand_proc = e.wand_proc;
     if (e.bow_proc)  out.bow_proc  = e.bow_proc;
@@ -737,6 +784,11 @@ function renderManualLoadout() {
             ${hasWandProc ? procPill('WAND PROC', fx.wand_proc, '#c0a0ff') : ''}
             ${hasBowProc  ? procPill('BOW PROC',  fx.bow_proc,  '#a0d0a0') : ''}
           </div>
+          ${fx.lineConflicts.length ? `<div style="margin-top:.5rem;font-size:.68rem;color:var(--text-dim);border-top:1px solid var(--border);padding-top:.4rem">${
+            fx.lineConflicts.map(c =>
+              `<div>&#9888; <span style="color:var(--red-light)">${c.itemName}</span>: ${c.line} blocked by <span style="color:var(--text-bright)">${c.blockedBy}</span></div>`
+            ).join('')
+          }</div>` : ''}
         </div>`;
       })()}
       <div style="margin-top:1rem"><div class="result-grid">${slotHtml}</div></div>
