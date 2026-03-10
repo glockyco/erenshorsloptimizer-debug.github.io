@@ -2,8 +2,13 @@
 // getItemEffects, getItemPermEffects, effectBlocked, claimLines,
 // score, scoreInContext are defined in js/scoring.js
 // sumLoadoutEffects is defined in js/effects.js
-
-let weights = {}, gear = [], activeClass = 'Windblade';
+// bankersRound, applyTier, blessedItem, optimize, computeMaxScore
+// are defined in js/optimizer.js
+// state is defined in js/state.js
+// slotKeys, slotFromKey, getSlotTier, buildSliders, updateSliderHighlights,
+// renderGearList, effBar, renderSlotGrid, renderCurrentGear,
+// renderManualLoadout, renderBothLoadouts, renderComparisonBar
+// are defined in js/render.js
 
 // ── Init ─────────────────────────────────────────────────────────────────────
 function init() {
@@ -11,7 +16,7 @@ function init() {
   const bar = document.getElementById('class-bar');
   Object.keys(CLASSES).forEach(cls => {
     const btn = document.createElement('button');
-    btn.className = 'class-btn' + (cls === activeClass ? ' active' : '');
+    btn.className = 'class-btn' + (cls === state.activeClass ? ' active' : '');
     btn.innerHTML = `${CLASSES[cls].icon} ${cls}`;
     btn.onclick = () => switchClass(cls);
     bar.appendChild(btn);
@@ -31,77 +36,14 @@ function init() {
   renderBothLoadouts();
 }
 
-function buildSliders() {
-  const container = document.getElementById('stat-weights');
-  container.innerHTML = '';
-
-  STATS.forEach(s => {
-    if (s.key === 'mr') {
-      container.innerHTML += `<div style="border-top:1px solid var(--border);margin-top:.4rem;padding-top:.4rem"></div>`;
-    }
-    const w = weights[s.key] ?? 0;
-    container.innerHTML += `<div class="stat-row" id="sr-${s.key}">
-      <div class="stat-label" id="sl-${s.key}"><span id="sa-${s.key}">${s.abbr}</span>${s.label}<span id="sp-${s.key}"></span></div>
-      <input class="stat-slider" id="ss-${s.key}" type="range" min="0" max="10" value="${w}"
-        oninput="onSliderInput('${s.key}',+this.value)">
-      <div class="stat-value" id="wv-${s.key}">${w}</div>
-    </div>`;
-  });
-
-  // Haste slider
-  const hw = weights['haste'] ?? 0;
-  container.innerHTML += `<div class="stat-row" id="sr-haste" style="border-top:1px solid var(--border);margin-top:.4rem;padding-top:.4rem">
-    <div class="stat-label" id="sl-haste"><span id="sa-haste" style="color:#a0c8ff">HST</span>Haste<span id="sp-haste"></span></div>
-    <input class="stat-slider" id="ss-haste" type="range" min="0" max="10" value="${hw}"
-      style="accent-color:#a0c8ff"
-      oninput="onSliderInput('haste',+this.value)">
-    <div class="stat-value" id="wv-haste" style="color:#a0c8ff">${hw}</div>
-  </div>`;
-
-  updateSliderHighlights();
-}
-
 function onSliderInput(key, val) {
-  weights[key] = val;
+  state.weights[key] = val;
   document.getElementById('wv-' + key).textContent = val;
   updateSliderHighlights();
 }
 
-function updateSliderHighlights() {
-  const allWeights = [...STATS.map(s => weights[s.key] ?? 0), weights['haste'] ?? 0];
-  const maxW = Math.max(...allWeights);
-  const primaryThreshold = Math.max(7, maxW);
-  const PILL_HTML = `<span style="font-family:'Cinzel',serif;font-size:.5rem;letter-spacing:.06em;padding:.05rem .3rem;border-radius:2px;background:rgba(139,105,20,.25);border:1px solid var(--gold);color:var(--gold);text-transform:uppercase;margin-left:.25rem;vertical-align:middle">primary</span>`;
-
-  const allKeys = [...STATS.map(s => s.key), 'haste'];
-  allKeys.forEach(key => {
-    const w = weights[key] ?? 0;
-    const isPrimary = w >= primaryThreshold && w > 0;
-    const isHaste = key === 'haste';
-
-    const labelEl = document.getElementById('sl-' + key);
-    const abbrEl  = document.getElementById('sa-' + key);
-    const pillEl  = document.getElementById('sp-' + key);
-    const valEl   = document.getElementById('wv-' + key);
-    const sliderEl = document.getElementById('ss-' + key);
-    if (!labelEl) return;
-
-    if (isHaste) {
-      // Haste label color is always #a0c8ff — don't change it
-      pillEl.innerHTML = isPrimary ? PILL_HTML : '';
-    } else {
-      const color = isPrimary ? 'var(--gold-light)' : '';
-      labelEl.style.color = color;
-      abbrEl.style.color  = isPrimary ? 'var(--gold-light)' : '';
-      valEl.style.color   = isPrimary ? 'var(--gold-light)' : '';
-      pillEl.innerHTML    = isPrimary ? PILL_HTML : '';
-      if (sliderEl) sliderEl.style.accentColor = isPrimary ? 'var(--gold)' : 'var(--border-glow)';
-    }
-  });
-}
-
 function switchClass(cls, initial=false) {
-  activeClass = cls;
+  state.activeClass = cls;
   // Update buttons
   document.querySelectorAll('.class-btn').forEach((b,i) => {
     b.classList.toggle('active', Object.keys(CLASSES)[i] === cls);
@@ -109,23 +51,23 @@ function switchClass(cls, initial=false) {
   // Update description
   document.getElementById('class-desc').textContent = `${CLASSES[cls].icon}  ${cls} — ${CLASSES[cls].desc}`;
   // Reset weights to class defaults
-  weights = {...CLASSES[cls].weights};
+  state.weights = {...CLASSES[cls].weights};
   buildSliders();
   // Reload gear for new class (keep manual items, replace wiki items)
   if (!initial) {
-    gear = gear.filter(g => g.source === 'manual');
-    WIKI_GEAR.forEach(item => {
-      if (item.classes.includes(cls)) gear.push({...item, source:'wiki', id: Date.now()+Math.random()});
+    state.gear = state.gear.filter(g => g.source === 'manual');
+    state.wikiGear.forEach(item => {
+      if (item.classes.includes(cls)) state.gear.push({...item, source:'wiki', id: Date.now()+Math.random()});
     });
   }
   renderGearList();
   // Clear manual loadout and re-render builder for new class
-  Object.keys(manualLoadout).forEach(k => delete manualLoadout[k]);
+  Object.keys(state.manualLoadout).forEach(k => delete state.manualLoadout[k]);
   renderBothLoadouts();
 }
 
 function resetWeights() {
-  weights = {...CLASSES[activeClass].weights};
+  state.weights = {...CLASSES[state.activeClass].weights};
   buildSliders();
 }
 
@@ -143,7 +85,7 @@ function addItemManual() {
   }
   const slot = document.getElementById('item-slot').value, lvl = parseInt(document.getElementById('item-level').value)||1;
   const stats = {}; STATS.forEach(s => { stats[s.key] = parseInt(document.getElementById('si-'+s.key).value)||0; });
-  gear.push({name, slot, lvl, stats, source:'manual', classes:[activeClass], id:Date.now()+Math.random()});
+  state.gear.push({name, slot, lvl, stats, source:'manual', classes:[state.activeClass], id:Date.now()+Math.random()});
   clearForm(); renderGearList();
 }
 
@@ -152,22 +94,22 @@ function clearForm() {
   STATS.forEach(s => { const e=document.getElementById('si-'+s.key); if(e) e.value=''; });
 }
 
-function removeItem(id) { gear=gear.filter(g=>g.id!==id); renderGearList(); }
+function removeItem(id) { state.gear=state.gear.filter(g=>g.id!==id); renderGearList(); }
 
 function loadWikiGear() {
-  const ex = new Set(gear.map(g=>g.name.toLowerCase())); let added=0;
-  WIKI_GEAR.forEach(item => {
-    if (item.classes.includes(activeClass) && !ex.has(item.name.toLowerCase())) {
-      gear.push({...item, source:'wiki', id:Date.now()+Math.random()}); added++;
+  const ex = new Set(state.gear.map(g=>g.name.toLowerCase())); let added=0;
+  state.wikiGear.forEach(item => {
+    if (item.classes.includes(state.activeClass) && !ex.has(item.name.toLowerCase())) {
+      state.gear.push({...item, source:'wiki', id:Date.now()+Math.random()}); added++;
     }
   });
   renderGearList();
-  if (!added) alert(`All wiki items for ${activeClass} are already loaded.`);
+  if (!added) alert(`All wiki items for ${state.activeClass} are already loaded.`);
 }
 
 function clearAllGear() {
-  if (gear.length && confirm('Remove all items from the database?')) {
-    gear = [];
+  if (state.gear.length && confirm('Remove all items from the database?')) {
+    state.gear = [];
     renderGearList();
     renderBothLoadouts();
   }
@@ -177,43 +119,13 @@ function getFiltered() {
   const fn=document.getElementById('filter-name').value.toLowerCase(),
     fs=document.getElementById('filter-slot').value,
     fl=parseInt(document.getElementById('filter-level').value)||999;
-  return gear.filter(g=>(!fn||g.name.toLowerCase().includes(fn))&&(!fs||g.slot===fs)&&(g.lvl<=fl));
+  return state.gear.filter(g=>(!fn||g.name.toLowerCase().includes(fn))&&(!fs||g.slot===fs)&&(g.lvl<=fl));
 }
-
-function renderGearList() {
-  const c=document.getElementById('gear-list');
-  document.getElementById('gear-count').textContent=`(${gear.length} items)`;
-  const f=getFiltered();
-  if (!gear.length) { c.innerHTML='<div class="empty-state">No items yet. Click "Load Wiki Gear" to start.</div>'; return; }
-  if (!f.length) { c.innerHTML='<div class="empty-state">No items match the filter.</div>'; return; }
-  c.innerHTML=f.map(g=>{
-    const ss=STATS.filter(s=>g.stats?.[s.key]>0).map(s=>`${s.abbr}+${g.stats[s.key]}`).join(' ');
-    const tag=g.source==='wiki'?'<span class="tag tag-wiki">wiki</span>':'<span class="tag tag-manual">custom</span>';
-    return `<div class="gear-item" draggable="true" data-id="${g.id}" ondragstart="onItemDragStart(event,${g.id})">
-      <span class="gear-item-name">${g.name}${tag}</span>
-      <span class="gear-item-slot">Lv${g.lvl}·${g.slot}</span>
-      <span class="gear-item-stats">${ss||'—'}</span>
-      <button class="btn btn-red" onclick="removeItem(${g.id})">✕</button>
-    </div>`;
-  }).join('');
-}
-
 
 // ── Manual Loadout ────────────────────────────────────────────────────────────
-const manualLoadout = {};
-let dragItemId = null;
-
-function slotKeys(slot) {
-  const cnt = MULTI_SLOTS[slot] || 1;
-  return cnt > 1 ? [slot+'_0', slot+'_1'] : [slot];
-}
-
-function slotFromKey(key) {
-  return key.replace(/_\d+$/, '');
-}
 
 function onItemDragStart(e, id) {
-  dragItemId = id;
+  state.dragItemId = id;
   e.dataTransfer.effectAllowed = 'copy';
   setTimeout(() => {
     const el = document.querySelector(`.gear-item[data-id="${id}"]`);
@@ -240,11 +152,11 @@ function onSlotDrop(e, slotKey) {
   e.preventDefault();
   const el = document.getElementById('slot-'+slotKey);
   if (el) el.classList.remove('drag-over');
-  if (dragItemId === null) return;
-  const item = gear.find(g => g.id === dragItemId);
+  if (state.dragItemId === null) return;
+  const item = state.gear.find(g => g.id === state.dragItemId);
   if (!item) return;
   const targetSlot = slotFromKey(slotKey);
-  const primaryItem = manualLoadout['Primary']?.item;
+  const primaryItem = state.manualLoadout['Primary']?.item;
   const secondaryBlocked = primaryItem?.twoHanded && targetSlot === 'Secondary';
   const slotOk = !secondaryBlocked && (item.slot === targetSlot || (item.bothSlots && (targetSlot === 'Primary' || targetSlot === 'Secondary')));
   if (!slotOk) {
@@ -256,378 +168,60 @@ function onSlotDrop(e, slotKey) {
   }
   // If dropping a 2H into Primary, clear Secondary
   if (slotKey === 'Primary' && item.twoHanded) {
-    delete manualLoadout['Secondary'];
-    delete slotTiers['Secondary'];
+    delete state.manualLoadout['Secondary'];
+    delete state.slotTiers['Secondary'];
   }
-  manualLoadout[slotKey] = { item: blessedItem(item, activeTier), locked: true };
-  dragItemId = null;
+  state.manualLoadout[slotKey] = { item: blessedItem(item, state.activeTier), locked: true };
+  state.dragItemId = null;
   renderBothLoadouts();
 }
 
 function toggleLock(slotKey) {
-  if (manualLoadout[slotKey]) {
-    manualLoadout[slotKey].locked = !manualLoadout[slotKey].locked;
+  if (state.manualLoadout[slotKey]) {
+    state.manualLoadout[slotKey].locked = !state.manualLoadout[slotKey].locked;
     renderBothLoadouts();
   }
 }
 
 function clearSlot(slotKey) {
-  delete manualLoadout[slotKey];
-  delete slotTiers[slotKey];
+  delete state.manualLoadout[slotKey];
+  delete state.slotTiers[slotKey];
   renderBothLoadouts();
 }
 
 function clearManualLoadout() {
-  Object.keys(manualLoadout).forEach(k => delete manualLoadout[k]);
-  Object.keys(slotTiers).forEach(k => delete slotTiers[k]);
+  Object.keys(state.manualLoadout).forEach(k => delete state.manualLoadout[k]);
+  Object.keys(state.slotTiers).forEach(k => delete state.slotTiers[k]);
   renderBothLoadouts();
 }
 
 
-
-function effBar(totalScore, maxScore) {
-  if (!maxScore || !totalScore) return '';
-  const pct = Math.min(100, (totalScore / maxScore) * 100);
-  const color = pct>=90?'#c9b44a':pct>=70?'#7fba5a':pct>=50?'#5a9ecc':'#888';
-  const label = pct>=95?'Near Perfect':pct>=85?'Excellent':pct>=70?'Strong':pct>=50?'Decent':'Room to Improve';
-  return `<div style="margin-top:.9rem;padding-top:.9rem;border-top:1px solid var(--border)">
-    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.35rem">
-      <span style="font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.12em;color:var(--text-dim);text-transform:uppercase">Priority Efficiency</span>
-      <span style="font-size:.78rem;color:${color};font-weight:600">${label} &nbsp;·&nbsp; ${pct.toFixed(1)}%
-        <span style="color:var(--text-dim);font-weight:400;font-size:.72rem">(${totalScore.toFixed(0)} / ${maxScore.toFixed(0)})</span>
-      </span>
-    </div>
-    <div style="height:6px;background:var(--surface3,#1a1a1a);border-radius:3px;overflow:hidden;border:1px solid var(--border)">
-      <div style="height:100%;width:${pct.toFixed(1)}%;background:linear-gradient(90deg,${color}88,${color});border-radius:3px;transition:width .4s ease"></div>
-    </div>
-    <div style="font-size:.7rem;color:var(--text-dim);margin-top:.3rem">% of the highest-scoring gear available to your class at this level &amp; quality tier</div>
-  </div>`;
-}
 
 // ── Current Gear loadout ──────────────────────────────────────────────────────
-const currentLoadout = {};
-// Shared score cache for comparison bar — must be declared before render functions
-const _loadoutScores = { current: 0, builder: 0 };
 
 function clearCurrentLoadout() {
-  Object.keys(currentLoadout).forEach(k => delete currentLoadout[k]);
-  Object.keys(currentSlotTiers).forEach(k => delete currentSlotTiers[k]);
+  Object.keys(state.currentLoadout).forEach(k => delete state.currentLoadout[k]);
+  Object.keys(state.currentSlotTiers).forEach(k => delete state.currentSlotTiers[k]);
   renderBothLoadouts();
-}
-
-// ── Shared slot grid renderer ─────────────────────────────────────────────────
-
-
-function renderSlotGrid(loadout, opts = {}) {
-  // opts: { showLock, showTier, showSource, prefix }
-  const { showLock = true, showTier = true, showSource = true, prefix = '' } = opts;
-  const totals = {}; STATS.forEach(s => totals[s.key] = 0);
-  let totalScore = 0;
-
-  const slotHtml = SLOTS.map(slot => {
-    const keys = slotKeys(slot);
-    return keys.map((key, ki) => {
-      const entry = loadout[key];
-      const item = entry ? entry.item : null;
-      const locked = entry ? entry.locked : false;
-      if (item) { STATS.forEach(s => totals[s.key] += (item.stats?.[s.key]||0)); totalScore += score(item, weights); }
-      const slotClass = ['result-slot', item?'equipped':'', locked?'locked':''].filter(Boolean).join(' ');
-      const slotLabel = keys.length > 1 ? slot+' '+(ki+1) : slot;
-      const domId = `slot-${prefix}${key}`;
-
-      const tierBadge = (showTier && item) ? (() => {
-        const t = getSlotTier(key, prefix);
-        const label = t==='base'?'Base':t==='blessed'?'✦ Blessed':'✦✦ Godly';
-        const col = t==='base'?'var(--text-dim)':t==='blessed'?'var(--gold)':'#e080ff';
-        const bg = t==='base'?'transparent':t==='blessed'?'rgba(139,105,20,.15)':'rgba(180,80,255,.12)';
-        return `<button onclick="cycleSlotTier('${key}','${prefix}')" title="Click to cycle quality: Base → Blessed → Godly" onmouseover="this.style.filter='brightness(1.4)'" onmouseout="this.style.filter=''" style="font-family:'Cinzel',serif;font-size:.55rem;letter-spacing:.06em;padding:.1rem .35rem;border-radius:2px;border:1px solid ${col};background:${bg};color:${col};cursor:pointer;white-space:nowrap;line-height:1.4;transition:filter .15s">${label} ↻</button>`;
-      })() : '';
-
-      const lockBtn = (showLock && item)
-        ? `<button class="lock-btn ${locked?'locked':''}" onclick="toggleLockIn('${prefix}','${key}')" title="${locked?'Unlock':'Lock'}">${locked?'🔒':'🔓'}</button>`
-        : '';
-      const clearBtn = item
-        ? `<button class="clear-slot-btn" onclick="clearSlotIn('${prefix}','${key}')" title="Remove">✕</button>`
-        : '';
-      const headerBtns = item
-        ? `<div style="display:flex;gap:.25rem;align-items:center">${tierBadge}${lockBtn}${clearBtn}</div>`
-        : '';
-
-      const sourceHtml = (() => {
-        if (!showSource || !item) return '';
-        const si = item.source_info;
-        if (!si) return '';
-        let icon, label;
-        if (si.type === 'craftable') {
-          icon = '🔨'; label = 'crafted';
-        } else if (si.type === 'vendor') {
-          icon = '🛒'; label = si.name;
-        } else if (si.type === 'quest') {
-          icon = '📜'; label = si.name;
-        } else {
-          icon = '⚔'; label = si.monster;
-        }
-        return `<div style="font-size:.68rem;color:var(--text-dim);margin-top:.25rem;font-style:italic;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${label}">${icon} ${label}</div>`;
-      })();
-
-      const content = item
-        ? `<div class="result-item-name">${item.name}</div>
-           <div class="result-item-stats">${STATS.filter(s=>item.stats?.[s.key]>0).map(s=>`${s.abbr}+${item.stats[s.key]}`).join('·')||'—'}</div>
-           ${sourceHtml}`
-        : (() => {
-            const pri = loadout['Primary']?.item;
-            if (slot === 'Secondary' && pri?.twoHanded) {
-              return `<div class="result-empty" style="font-size:.72rem;text-align:center;padding:.4rem 0;opacity:.4;font-style:italic">2H equipped</div>`;
-            }
-            return `<div class="result-empty" style="font-size:.75rem;text-align:center;padding:.4rem 0;opacity:.5">click to equip</div>`;
-          })();
-
-      return `<div class="${slotClass}" id="${domId}"
-        onclick="onSlotClickIn(event,'${prefix}','${key}')"
-        ondragover="onSlotDragOver(event,'${key}')"
-        ondragleave="onSlotDragLeave('${key}')"
-        ondrop="onSlotDropIn(event,'${prefix}','${key}')">
-        <div class="result-slot-header"><div class="result-slot-name">${slotLabel}</div>${headerBtns}</div>
-        ${content}
-      </div>`;
-    }).join('');
-  }).join('');
-
-  return { slotHtml, totals, totalScore };
-}
-
-function renderCurrentGear() {
-  const { slotHtml, totals, totalScore } = renderSlotGrid(currentLoadout, { showLock: false, showTier: true, showSource: false, prefix: 'cur-' });
-  _loadoutScores.current = totalScore;
-  const filledCount = Object.keys(currentLoadout).length;
-
-  document.getElementById('current-gear-panel').innerHTML = `<div class="panel">
-    <div class="panel-header"><h2>Current Gear</h2></div>
-    <div class="panel-body">
-      <div class="loadout-controls">
-        <button class="btn btn-ghost" onclick="clearCurrentLoadout()" style="font-size:.75rem;padding:.4rem .9rem;color:var(--red-light);border-color:var(--red)">✕ Clear All</button>
-        <span style="font-size:.78rem;color:var(--text-dim);font-style:italic">${filledCount > 0 ? `${filledCount} slots filled` : 'Click a slot to set your current gear'}</span>
-      </div>
-      <div class="score-bar">
-        <div style="display:flex;flex-direction:column;gap:.15rem;min-width:80px">
-          <div class="score-label">Priority Score</div>
-          <div class="score-value">${totalScore.toFixed(1)}</div>
-        </div>
-        <div style="width:1px;background:var(--border);align-self:stretch;margin:0 .5rem"></div>
-        <div style="display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;flex:1">
-          ${STATS.map(s => {
-            const val = totals[s.key] || 0;
-            const isNeg = val < 0;
-            const color = isNeg ? 'var(--red-light)' : val > 0 ? 'var(--text-bright)' : 'var(--text-dim)';
-            return `<div class="stat-total">
-              <span class="stat-total-name" style="font-size:.65rem">${s.abbr}</span>
-              <span class="stat-total-val" style="color:${color};font-size:${Math.min(1.1, 0.7 + val/80)}rem">${isNeg?'':val>0?'+':''}${val}</span>
-            </div>`;
-          }).join('')}
-        </div>
-      </div>
-      <div style="margin-top:1rem"><div class="result-grid">${slotHtml}</div></div>
-    </div>
-  </div>`;
-}
-
-function renderManualLoadout() {
-  const { slotHtml, totals, totalScore } = renderSlotGrid(manualLoadout, { showLock: true, showTier: true, showSource: true, prefix: '' });
-  _loadoutScores.builder = totalScore;
-
-  // Compute current gear totals for deltas
-  const curTotals = {}; STATS.forEach(s => curTotals[s.key] = 0);
-  const hasCurrent = Object.keys(currentLoadout).length > 0;
-  if (hasCurrent) {
-    SLOTS.forEach(slot => slotKeys(slot).forEach(key => {
-      const item = currentLoadout[key]?.item;
-      if (item) STATS.forEach(s => curTotals[s.key] += (item.stats?.[s.key]||0));
-    }));
-  }
-
-  const fl = parseInt(document.getElementById('filter-level').value) || 999;
-  const maxScore = computeMaxScore(gear, activeTier, weights, fl);
-  const fx = sumLoadoutEffects(manualLoadout);
-  const tierLabel = activeTier==='base'?'':activeTier==='blessed'
-    ? ' <span style="color:var(--gold);font-size:.75rem">✦ Blessed</span>'
-    : ' <span style="color:#e080ff;font-size:.75rem;text-shadow:0 0 8px rgba(200,100,255,.4)">✦✦ Godly</span>';
-  const filledCount = Object.keys(manualLoadout).length;
-  const lockedCount = Object.values(manualLoadout).filter(e=>e.locked).length;
-
-  document.getElementById('loadout-builder-panel').innerHTML = `<div class="panel">
-    <div class="panel-header"><h2>${activeClass} — Loadout Builder${tierLabel}</h2></div>
-    <div class="panel-body">
-      <div class="loadout-controls">
-        <button class="btn btn-gold" onclick="optimize()" style="font-size:.78rem;padding:.4rem 1rem">⚔ Auto-Fill Empty Slots</button>
-        <button class="btn btn-ghost" onclick="clearManualLoadout()" style="font-size:.75rem;padding:.4rem .9rem;color:var(--red-light);border-color:var(--red)">✕ Clear All</button>
-        <span style="font-size:.78rem;color:var(--text-dim);font-style:italic">${filledCount>0?`${filledCount} filled · ${lockedCount} locked`:'Click a slot or drag items from the database'}</span>
-      </div>
-      <div class="score-bar">
-        <div style="display:flex;flex-direction:column;gap:.15rem;min-width:80px">
-          <div class="score-label">Priority Score</div>
-          <div class="score-value">${totalScore.toFixed(1)}</div>
-        </div>
-        <div style="width:1px;background:var(--border);align-self:stretch;margin:0 .5rem"></div>
-        <div style="display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;flex:1">
-          ${STATS.map(s => {
-            const val = totals[s.key] || 0;
-            const delta = hasCurrent ? val - (curTotals[s.key] || 0) : 0;
-            const isNeg = val < 0;
-            const color = isNeg ? 'var(--red-light)' : val > 0 ? 'var(--text-bright)' : 'var(--text-dim)';
-            const deltaHtml = hasCurrent && delta !== 0
-              ? `<span style="font-size:.6rem;font-family:'Cinzel',serif;color:${delta>0?'var(--green-light)':'var(--red-light)'};display:block;line-height:1">${delta>0?'▲':'▼'}${Math.abs(delta)}</span>`
-              : '';
-            return `<div class="stat-total">
-              <span class="stat-total-name" style="font-size:.65rem">${s.abbr}</span>
-              <span class="stat-total-val" style="color:${color};font-size:${Math.min(1.1, 0.7 + val/80)}rem">${isNeg?'':val>0?'+':''}${val}</span>
-              ${deltaHtml}
-            </div>`;
-          }).join('')}
-        </div>
-      </div>
-      ${effBar(totalScore, maxScore)}
-      ${(() => {
-        const hasHaste     = fx.haste > 0     || fx.haste_proc > 0;
-        const hasLifesteal = fx.lifesteal > 0 || fx.lifesteal_proc > 0;
-        const hasAtkroll   = fx.atkroll > 0   || fx.atkroll_proc > 0;
-        const hasMovespeed = fx.movespeed > 0 || fx.movespeed_proc > 0;
-        const hasWandProc  = !!fx.wand_proc;
-        const hasBowProc   = !!fx.bow_proc;
-        if (!hasHaste && !hasLifesteal && !hasAtkroll && !hasMovespeed
-            && !hasWandProc && !hasBowProc) return '';
-
-        // Renders a pill with a permanent total and an optional proc sub-label.
-        // procVal is the raw (undiscounted) proc value; unit is appended to both.
-        const pill = (label, val, procVal, unit='', color='var(--blue-light)') => {
-          const procLine = procVal > 0
-            ? `<span style="font-size:.65rem;color:var(--text-dim)">▪ ${fmt(procVal)}${unit} proc</span>`
-            : '';
-          const totalLine = val > 0
-            ? `<span style="font-family:'Cinzel',serif;font-size:.95rem;color:${color};font-weight:600">+${fmt(val)}${unit}</span>`
-            : `<span style="font-family:'Cinzel',serif;font-size:.95rem;color:var(--text-dim);font-weight:600">—</span>`;
-          return `<div style="display:flex;flex-direction:column;gap:.1rem">
-            <span style="font-family:'Cinzel',serif;font-size:.6rem;color:var(--text-dim);letter-spacing:.06em">${label}</span>
-            ${totalLine}
-            ${procLine}
-          </div>`;
-        };
-        const fmt = v => typeof v === 'number' ? v.toFixed(1).replace(/\.0$/, '') : v;
-
-        const procPill = (label, proc, color) => {
-          const dmg = proc.target_damage || 0;
-          const heal = proc.target_healing || 0;
-          const val = dmg || heal;
-          const kind = dmg ? 'dmg' : 'heal';
-          const chance = proc.chance || 0;
-          return `<div style="display:flex;flex-direction:column;gap:.1rem">
-            <span style="font-family:'Cinzel',serif;font-size:.6rem;color:var(--text-dim);letter-spacing:.06em">${label}</span>
-            <span style="font-family:'Cinzel',serif;font-size:.95rem;color:${color};font-weight:600">${val} ${kind}</span>
-            <span style="font-size:.65rem;color:var(--text-dim)">@ ${chance}% chance</span>
-          </div>`;
-        };
-
-        const hasteColor = fx.haste >= 55 ? '#ff9944' : fx.haste >= 30 ? '#a0c8ff' : 'var(--blue-light)';
-        const hastePill = hasHaste ? `
-          <div style="display:flex;flex-direction:column;gap:.1rem">
-            <span style="font-family:'Cinzel',serif;font-size:.6rem;color:var(--text-dim);letter-spacing:.06em">HASTE</span>
-            ${fx.haste > 0 ? `<span style="font-family:'Cinzel',serif;font-size:.95rem;color:${hasteColor};font-weight:600">+${fmt(fx.haste)}%</span>` : `<span style="font-family:'Cinzel',serif;font-size:.95rem;color:var(--text-dim);font-weight:600">—</span>`}
-            <span style="font-size:.65rem;color:var(--text-dim)">
-              ${fx.haste_worn > 0 ? `<span style="color:#a0c8ff">▪ ${fmt(fx.haste_worn)}% worn</span>` : ''}
-              ${fx.haste_aura > 0 ? `<span style="color:#c0a0ff;margin-left:.3rem">▪ ${fmt(fx.haste_aura)}% aura</span>` : ''}
-              ${fx.haste_proc > 0 ? `<span style="color:var(--text-dim);margin-left:.3rem">▪ ${fmt(fx.haste_proc)}% proc</span>` : ''}
-            </span>
-          </div>` : '';
-
-        return `<div style="margin-top:.75rem;padding:.65rem .9rem;background:var(--surface2);border:1px solid var(--border);border-radius:3px;border-left:2px solid var(--blue-light)">
-          <div style="font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.12em;color:var(--text-dim);text-transform:uppercase;margin-bottom:.5rem">Spell &amp; Passive Effects</div>
-          <div style="display:flex;flex-wrap:wrap;gap:.5rem 1.5rem">
-            ${hastePill}
-            ${hasLifesteal ? pill('LIFESTEAL', fx.lifesteal, fx.lifesteal_proc, '%', '#e08080') : ''}
-            ${hasAtkroll   ? pill('ATK ROLL',  fx.atkroll,   fx.atkroll_proc,   '',  '#c9a227') : ''}
-            ${hasMovespeed ? pill('MOVE SPD',  fx.movespeed, fx.movespeed_proc, '%', '#80e0a0') : ''}
-            ${hasWandProc ? procPill('WAND PROC', fx.wand_proc, '#c0a0ff') : ''}
-            ${hasBowProc  ? procPill('BOW PROC',  fx.bow_proc,  '#a0d0a0') : ''}
-          </div>
-          ${fx.lineConflicts.length ? `<div style="margin-top:.5rem;font-size:.68rem;color:var(--text-dim);border-top:1px solid var(--border);padding-top:.4rem">${
-            fx.lineConflicts.map(c =>
-              `<div>&#9888; <span style="color:var(--red-light)">${c.itemName}</span>: ${c.line} blocked by <span style="color:var(--text-bright)">${c.blockedBy}</span></div>`
-            ).join('')
-          }</div>` : ''}
-        </div>`;
-      })()}
-      <div style="margin-top:1rem"><div class="result-grid">${slotHtml}</div></div>
-    </div>
-  </div>`;
-}
-
-function renderBothLoadouts() {
-  renderCurrentGear();
-  renderManualLoadout();
-  renderComparisonBar();
-}
-
-function renderComparisonBar() {
-  const el = document.getElementById('comparison-bar');
-  const curScore = _loadoutScores.current;
-  const bldScore = _loadoutScores.builder;
-  const hasCurrent = Object.keys(currentLoadout).length > 0;
-  const hasBuilder = Object.keys(manualLoadout).length > 0;
-
-  if (!hasCurrent || !hasBuilder) {
-    el.innerHTML = '';
-    return;
-  }
-
-  const delta = bldScore - curScore;
-  const pct = curScore > 0 ? (delta / curScore) * 100 : 0;
-  const isFlat = Math.abs(delta) < 0.05;
-  const isUpgrade = !isFlat && delta > 0;
-
-  const color = isFlat ? 'var(--text-dim)' : isUpgrade ? 'var(--green-light)' : 'var(--red-light)';
-  const barColor = isFlat ? 'var(--border-glow)' : isUpgrade ? '#4aaa4a' : '#c94444';
-  const label = isFlat ? 'No change vs current gear'
-    : isUpgrade ? `Upgrade over current gear`
-    : `Downgrade vs current gear`;
-  const sign = delta >= 0 ? '+' : '';
-  const barW = isFlat ? 50 : isUpgrade
-    ? Math.min(100, 50 + (pct / 2))
-    : Math.max(0, 50 - (Math.abs(pct) / 2));
-
-  el.innerHTML = `<div style="background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:.9rem 1.2rem">
-    <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:.5rem;margin-bottom:.6rem">
-      <span style="font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.12em;color:var(--text-dim);text-transform:uppercase">Loadout Comparison</span>
-      <div style="display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap">
-        <span style="font-size:.82rem;color:var(--text-dim)">Current: <strong style="color:var(--text-bright);font-family:'Cinzel',serif">${curScore.toFixed(1)}</strong></span>
-        <span style="font-size:.82rem;color:var(--text-dim)">Builder: <strong style="color:var(--text-bright);font-family:'Cinzel',serif">${bldScore.toFixed(1)}</strong></span>
-        <span style="font-family:'Cinzel',serif;font-size:.95rem;font-weight:700;color:${color}">${sign}${delta.toFixed(1)} &nbsp;·&nbsp; ${sign}${pct.toFixed(1)}%</span>
-      </div>
-    </div>
-    <div style="position:relative;height:8px;background:var(--surface2);border-radius:4px;overflow:hidden;border:1px solid var(--border)">
-      <div style="position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--border-glow);z-index:1"></div>
-      <div style="position:absolute;top:0;bottom:0;transition:left .4s ease,width .4s ease;border-radius:4px;background:linear-gradient(90deg,${barColor}88,${barColor});
-        ${isUpgrade ? `left:50%;width:${(barW-50).toFixed(1)}%` : isFlat ? 'left:49%;width:2%' : `left:${barW.toFixed(1)}%;width:${(50-barW).toFixed(1)}%`}"></div>
-    </div>
-    <div style="font-size:.72rem;color:${color};margin-top:.35rem;font-style:italic">${label}</div>
-  </div>`;
 }
 
 // ── Slot interaction helpers (prefix-aware) ───────────────────────────────────
 function getLoadoutByPrefix(prefix) {
-  return prefix === 'cur-' ? currentLoadout : manualLoadout;
+  return prefix === 'cur-' ? state.currentLoadout : state.manualLoadout;
 }
 
 function onSlotClickIn(e, prefix, key) {
   if (e.target.closest('button')) return;
-  modalTargetSlot = key;
-  modalTargetPrefix = prefix;
+  state.modalTargetSlot = key;
+  state.modalTargetPrefix = prefix;
   openSlotModal(key);
 }
 
 function clearSlotIn(prefix, key) {
   const loadout = getLoadoutByPrefix(prefix);
   delete loadout[key];
-  if (prefix === 'cur-') delete currentSlotTiers[key];
-  else delete slotTiers[key];
+  if (prefix === 'cur-') delete state.currentSlotTiers[key];
+  else delete state.slotTiers[key];
   renderBothLoadouts();
 }
 
@@ -639,29 +233,20 @@ function toggleLockIn(prefix, key) {
 function onSlotDropIn(e, prefix, key) {
   onSlotDrop(e, key); // drag-drop only applies to builder
 }
-// ── Optimize ──────────────────────────────────────────────────────────────────
 // ── Item Quality / Blessing ──────────────────────────────────────────────────
-let activeTier = 'base'; // 'base' | 'blessed' | 'double' (Godly)
-const slotTiers = {};        // per-slot tier overrides for builder
-const currentSlotTiers = {}; // per-slot tier overrides for current gear
-
-function getSlotTier(slotKey, prefix) {
-  const tiers = prefix === 'cur-' ? currentSlotTiers : slotTiers;
-  return tiers[slotKey] || activeTier;
-}
 
 function cycleSlotTier(slotKey, prefix) {
   prefix = prefix || '';
-  const tiers = prefix === 'cur-' ? currentSlotTiers : slotTiers;
+  const tiers = prefix === 'cur-' ? state.currentSlotTiers : state.slotTiers;
   const loadout = getLoadoutByPrefix(prefix);
   const current = getSlotTier(slotKey, prefix);
   const next = current === 'base' ? 'blessed' : current === 'blessed' ? 'double' : 'base';
   tiers[slotKey] = next;
   const entry = loadout[slotKey];
   if (entry) {
-    // Always re-derive from WIKI_GEAR base stats to avoid compounding multiplications
-    const base = WIKI_GEAR.find(g => g.name === entry.item.name)
-               || gear.find(g => g.name === entry.item.name && !g._tier);
+    // Always re-derive from wikiGear base stats to avoid compounding multiplications
+    const base = state.wikiGear.find(g => g.name === entry.item.name)
+               || state.gear.find(g => g.name === entry.item.name && !g._tier);
     if (base) entry.item = { ...entry.item, stats: applyTier(base.stats, next), _tier: next };
   }
   renderBothLoadouts();
@@ -674,38 +259,32 @@ const TIER_NOTES = {
 };
 
 function setTier(t) {
-  activeTier = t;
+  state.activeTier = t;
   ['base','blessed','double'].forEach(id => {
     document.getElementById('tier-'+id).classList.toggle('active', id===t);
   });
   document.getElementById('tier-note').textContent = TIER_NOTES[t];
   // Re-apply tier to all locked items in loadout
-  Object.keys(manualLoadout).forEach(key => {
-    const entry = manualLoadout[key];
+  Object.keys(state.manualLoadout).forEach(key => {
+    const entry = state.manualLoadout[key];
     if (entry) {
-      const baseItem = gear.find(g => g.name === entry.item.name);
-      if (baseItem) entry.item = blessedItem(baseItem, activeTier);
+      const baseItem = state.gear.find(g => g.name === entry.item.name);
+      if (baseItem) entry.item = blessedItem(baseItem, state.activeTier);
     }
   });
   renderBothLoadouts();
 }
 
-// bankersRound, applyTier, blessedItem, optimize, computeMaxScore
-// are defined in js/optimizer.js
-
 // ── Slot Search Modal ─────────────────────────────────────────────────────────
-let modalTargetSlot = null;
-let modalTargetPrefix = '';
-let modalActiveIdx = -1;
 
 function openSlotModal(slotKey) {
   // Block secondary if 2H equipped (builder only)
-  if (modalTargetPrefix !== 'cur-' && slotKey === 'Secondary' && manualLoadout['Primary']?.item?.twoHanded) return;
-  modalTargetSlot = slotKey;
-  modalActiveIdx = -1;
+  if (state.modalTargetPrefix !== 'cur-' && slotKey === 'Secondary' && state.manualLoadout['Primary']?.item?.twoHanded) return;
+  state.modalTargetSlot = slotKey;
+  state.modalActiveIdx = -1;
   const slot = slotFromKey(slotKey);
   const label = slotKey.includes('_') ? slotKey.replace('_0',' 1').replace('_1',' 2') : slot;
-  const activeLoadout = getLoadoutByPrefix(modalTargetPrefix);
+  const activeLoadout = getLoadoutByPrefix(state.modalTargetPrefix);
   const current = activeLoadout[slotKey]?.item?.name || '';
 
   const backdrop = document.createElement('div');
@@ -739,19 +318,19 @@ function openSlotModal(slotKey) {
 function closeSlotModal() {
   const el = document.getElementById('slot-modal-backdrop');
   if (el) el.remove();
-  modalTargetSlot = null;
-  modalTargetPrefix = '';
-  modalActiveIdx = -1;
+  state.modalTargetSlot = null;
+  state.modalTargetPrefix = '';
+  state.modalActiveIdx = -1;
 }
 
 function onModalSearch() {
   const q = document.getElementById('slot-modal-input').value.trim().toLowerCase();
   const box = document.getElementById('slot-modal-results');
-  modalActiveIdx = -1;
-  const slot = slotFromKey(modalTargetSlot);
+  state.modalActiveIdx = -1;
+  const slot = slotFromKey(state.modalTargetSlot);
 
   // Filter to items valid for this slot
-  let pool = gear.filter(g => {
+  let pool = state.gear.filter(g => {
     if (g.slot === slot) return true;
     if (g.bothSlots && (slot === 'Primary' || slot === 'Secondary')) return true;
     return false;
@@ -781,16 +360,16 @@ function onModalKey(e) {
   const items = box.querySelectorAll('.smi');
   if (e.key === 'ArrowDown') {
     e.preventDefault();
-    modalActiveIdx = Math.min(modalActiveIdx + 1, items.length - 1);
-    items.forEach((el, i) => el.classList.toggle('active', i === modalActiveIdx));
-    if (items[modalActiveIdx]) items[modalActiveIdx].scrollIntoView({block:'nearest'});
+    state.modalActiveIdx = Math.min(state.modalActiveIdx + 1, items.length - 1);
+    items.forEach((el, i) => el.classList.toggle('active', i === state.modalActiveIdx));
+    if (items[state.modalActiveIdx]) items[state.modalActiveIdx].scrollIntoView({block:'nearest'});
   } else if (e.key === 'ArrowUp') {
     e.preventDefault();
-    modalActiveIdx = Math.max(modalActiveIdx - 1, 0);
-    items.forEach((el, i) => el.classList.toggle('active', i === modalActiveIdx));
-    if (items[modalActiveIdx]) items[modalActiveIdx].scrollIntoView({block:'nearest'});
+    state.modalActiveIdx = Math.max(state.modalActiveIdx - 1, 0);
+    items.forEach((el, i) => el.classList.toggle('active', i === state.modalActiveIdx));
+    if (items[state.modalActiveIdx]) items[state.modalActiveIdx].scrollIntoView({block:'nearest'});
   } else if (e.key === 'Enter') {
-    const idx = modalActiveIdx >= 0 ? modalActiveIdx : 0;
+    const idx = state.modalActiveIdx >= 0 ? state.modalActiveIdx : 0;
     modalSelectItem(idx);
   } else if (e.key === 'Escape') {
     closeSlotModal();
@@ -802,21 +381,21 @@ function modalSelectItem(idx) {
   const matches = box._matches;
   if (!matches || !matches[idx]) return;
   const item = matches[idx];
-  const slotKey = modalTargetSlot;
-  const loadout = getLoadoutByPrefix(modalTargetPrefix);
+  const slotKey = state.modalTargetSlot;
+  const loadout = getLoadoutByPrefix(state.modalTargetPrefix);
 
   // Block secondary if 2H in primary (builder only)
-  if (modalTargetPrefix !== 'cur-' && slotKey === 'Secondary' && manualLoadout['Primary']?.item?.twoHanded) {
+  if (state.modalTargetPrefix !== 'cur-' && slotKey === 'Secondary' && state.manualLoadout['Primary']?.item?.twoHanded) {
     closeSlotModal();
     return;
   }
   // If placing a 2H in Primary in builder, clear Secondary
-  if (modalTargetPrefix !== 'cur-' && slotKey === 'Primary' && item.twoHanded) {
-    delete manualLoadout['Secondary'];
-    delete slotTiers['Secondary'];
+  if (state.modalTargetPrefix !== 'cur-' && slotKey === 'Primary' && item.twoHanded) {
+    delete state.manualLoadout['Secondary'];
+    delete state.slotTiers['Secondary'];
   }
 
-  loadout[slotKey] = { item: blessedItem(item, activeTier), locked: false };
+  loadout[slotKey] = { item: blessedItem(item, state.activeTier), locked: false };
   closeSlotModal();
   renderBothLoadouts();
 }
@@ -837,27 +416,25 @@ function optimizeAndScroll() {
   }, 80);
 }
 
-let addItemOpen = false;
 function toggleAddItem() {
-  addItemOpen = !addItemOpen;
-  document.getElementById('add-item-body').style.display = addItemOpen ? 'block' : 'none';
-  document.getElementById('add-item-chevron').style.transform = addItemOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+  state.addItemOpen = !state.addItemOpen;
+  document.getElementById('add-item-body').style.display = state.addItemOpen ? 'block' : 'none';
+  document.getElementById('add-item-chevron').style.transform = state.addItemOpen ? 'rotate(180deg)' : 'rotate(0deg)';
 }
 
-let gearDbOpen = false;
 function toggleGearDb() {
-  gearDbOpen = !gearDbOpen;
-  document.getElementById('gear-db-body').style.display = gearDbOpen ? 'block' : 'none';
-  document.getElementById('gear-db-chevron').style.transform = gearDbOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+  state.gearDbOpen = !state.gearDbOpen;
+  document.getElementById('gear-db-body').style.display = state.gearDbOpen ? 'block' : 'none';
+  document.getElementById('gear-db-chevron').style.transform = state.gearDbOpen ? 'rotate(180deg)' : 'rotate(0deg)';
 }
 
 function runOptimize() {
   const fl = parseInt(document.getElementById('filter-level').value) || 999;
-  if (!gear.length) {
+  if (!state.gear.length) {
     document.getElementById('loadout-builder-panel').innerHTML = '<div class="empty-state" style="border:1px solid var(--border);border-radius:4px;padding:2rem">Add gear or load wiki gear first!</div>';
     return;
   }
-  optimize(gear, manualLoadout, slotTiers, activeTier, weights, fl);
+  optimize(state.gear, state.manualLoadout, state.slotTiers, state.activeTier, state.weights, fl);
   renderBothLoadouts();
 }
 
@@ -878,7 +455,7 @@ function makeToggle(headerId) {
 if (typeof GEAR_DATA === 'undefined') {
   document.body.innerHTML = '<p style="color:red;padding:2rem">Failed to load gear data. Make sure gear.js exists (run: uv run generate.py)</p>';
 } else {
-  window.WIKI_GEAR = GEAR_DATA;
+  state.wikiGear = GEAR_DATA;
   init();
   makeToggle('tutorial-header');
   makeToggle('notes-header');
@@ -900,15 +477,12 @@ window.__erenshorTest = {
   // optimizer
   bankersRound,
   applyTier,
-  blessedItem: (item) => blessedItem(item, activeTier),
+  blessedItem: (item) => blessedItem(item, state.activeTier),
   optimize: runOptimize,
   computeMaxScore: () => {
     const fl = parseInt(document.getElementById('filter-level').value) || 999;
-    return computeMaxScore(gear, activeTier, weights, fl);
+    return computeMaxScore(state.gear, state.activeTier, state.weights, fl);
   },
-  // mutable state (for test setup)
-  get gear() { return gear; },
-  get weights() { return weights; },
-  set weights(v) { weights = v; },
-  get manualLoadout() { return manualLoadout; },
+  // state
+  state,
 };
