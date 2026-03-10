@@ -138,6 +138,51 @@ function effBar(totalScore, maxScore) {
   </div>`;
 }
 
+// ── Slot grid sub-renderers ───────────────────────────────────────────────────
+
+function renderTierBadge(key, prefix, item) {
+  if (!item) return '';
+  const t = getSlotTier(key, prefix);
+  const label = t === 'base' ? 'Base' : t === 'blessed' ? '✦ Blessed' : '✦✦ Godly';
+  const col = t === 'base' ? 'var(--text-dim)' : t === 'blessed' ? 'var(--gold)' : '#e080ff';
+  const bg  = t === 'base' ? 'transparent' : t === 'blessed' ? 'rgba(139,105,20,.15)' : 'rgba(180,80,255,.12)';
+  return `<button onclick="cycleSlotTier('${key}','${prefix}')" title="Click to cycle quality: Base → Blessed → Godly" onmouseover="this.style.filter='brightness(1.4)'" onmouseout="this.style.filter=''" style="font-family:'Cinzel',serif;font-size:.55rem;letter-spacing:.06em;padding:.1rem .35rem;border-radius:2px;border:1px solid ${col};background:${bg};color:${col};cursor:pointer;white-space:nowrap;line-height:1.4;transition:filter .15s">${label} ↻</button>`;
+}
+
+function renderLockBtn(prefix, key, locked) {
+  return `<button class="lock-btn ${locked ? 'locked' : ''}" onclick="toggleLockIn('${prefix}','${key}')" title="${locked ? 'Unlock' : 'Lock'}">${locked ? '🔒' : '🔓'}</button>`;
+}
+
+function renderSourceHtml(item) {
+  if (!item) return '';
+  const si = item.source_info;
+  if (!si) return '';
+  let icon, label;
+  if (si.type === 'craftable') {
+    icon = '🔨'; label = 'crafted';
+  } else if (si.type === 'vendor') {
+    icon = '🛒'; label = si.name;
+  } else if (si.type === 'quest') {
+    icon = '📜'; label = si.name;
+  } else {
+    icon = '⚔'; label = si.monster;
+  }
+  return `<div style="font-size:.68rem;color:var(--text-dim);margin-top:.25rem;font-style:italic;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${label}">${icon} ${label}</div>`;
+}
+
+function renderSlotContent(slot, slotKey, item, loadout, showSource) {
+  if (!item) {
+    const pri = loadout['Primary']?.item;
+    if (slot === 'Secondary' && pri?.twoHanded) {
+      return `<div class="result-empty" style="font-size:.72rem;text-align:center;padding:.4rem 0;opacity:.4;font-style:italic">2H equipped</div>`;
+    }
+    return `<div class="result-empty" style="font-size:.75rem;text-align:center;padding:.4rem 0;opacity:.5">click to equip</div>`;
+  }
+  return `<div class="result-item-name">${item.name}</div>
+    <div class="result-item-stats">${STATS.filter(s => item.stats?.[s.key] > 0).map(s => `${s.abbr}+${item.stats[s.key]}`).join('·') || '—'}</div>
+    ${showSource ? renderSourceHtml(item) : ''}`;
+}
+
 // ── Slot grid ─────────────────────────────────────────────────────────────────
 
 function renderSlotGrid(loadout, opts = {}) {
@@ -160,52 +205,11 @@ function renderSlotGrid(loadout, opts = {}) {
       const slotLabel = keys.length > 1 ? slot + ' ' + (ki + 1) : slot;
       const domId = `slot-${prefix}${key}`;
 
-      const tierBadge = (showTier && item) ? (() => {
-        const t = getSlotTier(key, prefix);
-        const label = t === 'base' ? 'Base' : t === 'blessed' ? '✦ Blessed' : '✦✦ Godly';
-        const col = t === 'base' ? 'var(--text-dim)' : t === 'blessed' ? 'var(--gold)' : '#e080ff';
-        const bg  = t === 'base' ? 'transparent' : t === 'blessed' ? 'rgba(139,105,20,.15)' : 'rgba(180,80,255,.12)';
-        return `<button onclick="cycleSlotTier('${key}','${prefix}')" title="Click to cycle quality: Base → Blessed → Godly" onmouseover="this.style.filter='brightness(1.4)'" onmouseout="this.style.filter=''" style="font-family:'Cinzel',serif;font-size:.55rem;letter-spacing:.06em;padding:.1rem .35rem;border-radius:2px;border:1px solid ${col};background:${bg};color:${col};cursor:pointer;white-space:nowrap;line-height:1.4;transition:filter .15s">${label} ↻</button>`;
-      })() : '';
-
-      const lockBtn = (showLock && item)
-        ? `<button class="lock-btn ${locked ? 'locked' : ''}" onclick="toggleLockIn('${prefix}','${key}')" title="${locked ? 'Unlock' : 'Lock'}">${locked ? '🔒' : '🔓'}</button>`
-        : '';
-      const clearBtn = item
-        ? `<button class="clear-slot-btn" onclick="clearSlotIn('${prefix}','${key}')" title="Remove">✕</button>`
-        : '';
-      const headerBtns = item
-        ? `<div style="display:flex;gap:.25rem;align-items:center">${tierBadge}${lockBtn}${clearBtn}</div>`
-        : '';
-
-      const sourceHtml = (() => {
-        if (!showSource || !item) return '';
-        const si = item.source_info;
-        if (!si) return '';
-        let icon, label;
-        if (si.type === 'craftable') {
-          icon = '🔨'; label = 'crafted';
-        } else if (si.type === 'vendor') {
-          icon = '🛒'; label = si.name;
-        } else if (si.type === 'quest') {
-          icon = '📜'; label = si.name;
-        } else {
-          icon = '⚔'; label = si.monster;
-        }
-        return `<div style="font-size:.68rem;color:var(--text-dim);margin-top:.25rem;font-style:italic;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${label}">${icon} ${label}</div>`;
-      })();
-
-      const content = item
-        ? `<div class="result-item-name">${item.name}</div>
-           <div class="result-item-stats">${STATS.filter(s => item.stats?.[s.key] > 0).map(s => `${s.abbr}+${item.stats[s.key]}`).join('·') || '—'}</div>
-           ${sourceHtml}`
-        : (() => {
-            const pri = loadout['Primary']?.item;
-            if (slot === 'Secondary' && pri?.twoHanded) {
-              return `<div class="result-empty" style="font-size:.72rem;text-align:center;padding:.4rem 0;opacity:.4;font-style:italic">2H equipped</div>`;
-            }
-            return `<div class="result-empty" style="font-size:.75rem;text-align:center;padding:.4rem 0;opacity:.5">click to equip</div>`;
-          })();
+      const headerBtns = item ? `<div style="display:flex;gap:.25rem;align-items:center">
+        ${showTier ? renderTierBadge(key, prefix, item) : ''}
+        ${showLock ? renderLockBtn(prefix, key, locked) : ''}
+        <button class="clear-slot-btn" onclick="clearSlotIn('${prefix}','${key}')" title="Remove">✕</button>
+      </div>` : '';
 
       return `<div class="${slotClass}" id="${domId}"
         onclick="onSlotClickIn(event,'${prefix}','${key}')"
@@ -213,7 +217,7 @@ function renderSlotGrid(loadout, opts = {}) {
         ondragleave="onSlotDragLeave('${key}')"
         ondrop="onSlotDropIn(event,'${prefix}','${key}')">
         <div class="result-slot-header"><div class="result-slot-name">${slotLabel}</div>${headerBtns}</div>
-        ${content}
+        ${renderSlotContent(slot, key, item, loadout, showSource)}
       </div>`;
     }).join('');
   }).join('');
