@@ -86,6 +86,39 @@ Gear data is held in the module-level `gear` array. Wiki gear (from
 `gear.json`) is loaded once on startup via `loadWikiGear()`. Custom items
 added by the user are appended to the same array for the session.
 
+## Testing
+
+The project uses [Playwright](https://playwright.dev/) for smoke tests.
+Tests run against a local Python HTTP server — no Node server needed.
+
+**One-time setup** (requires [pnpm](https://pnpm.io/)):
+
+```
+pnpm install
+pnpm exec playwright install chromium
+```
+
+**Run tests:**
+
+```
+pnpm test
+```
+
+All tests must pass before committing any change to `main.js` or
+`index.html`. If a test fails after your change, fix the code (or the
+test if the expected behaviour genuinely changed) before committing.
+
+The tests cover: page title, gear loading, class buttons, default active
+class, optimizer output, wiki source tags, and class switching.
+
+**Manual local server** (if you need to inspect the page in a browser):
+
+```
+python3 -m http.server 8765
+```
+
+Then open `http://localhost:8765`.
+
 ## Commit Guidelines
 
 Follow [Conventional Commits](https://www.conventionalcommits.org/) with
