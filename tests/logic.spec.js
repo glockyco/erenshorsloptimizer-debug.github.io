@@ -145,6 +145,94 @@ test.describe('getItemPermEffects', () => {
   });
 });
 
+// ── effectBlocked ─────────────────────────────────────────────────────────────
+
+test.describe('effectBlocked', () => {
+  test('returns false when effect has no line', async ({ page }) => {
+    const result = await page.evaluate(() =>
+      effectBlocked({}, { 'Buff_Haste_Worn': 25 })
+    );
+    expect(result).toBe(false);
+  });
+
+  test('returns false when line is not in claimedLines', async ({ page }) => {
+    const result = await page.evaluate(() =>
+      effectBlocked({ line: 'Buff_Haste_Worn', req_lvl: 25 }, {})
+    );
+    expect(result).toBe(false);
+  });
+
+  test('returns true when claimed at equal req_lvl', async ({ page }) => {
+    const result = await page.evaluate(() =>
+      effectBlocked({ line: 'Buff_Haste_Worn', req_lvl: 25 }, { 'Buff_Haste_Worn': 25 })
+    );
+    expect(result).toBe(true);
+  });
+
+  test('returns true when claimed at higher req_lvl', async ({ page }) => {
+    const result = await page.evaluate(() =>
+      effectBlocked({ line: 'Buff_Haste_Worn', req_lvl: 10 }, { 'Buff_Haste_Worn': 25 })
+    );
+    expect(result).toBe(true);
+  });
+
+  test('returns false when claimed at lower req_lvl', async ({ page }) => {
+    const result = await page.evaluate(() =>
+      effectBlocked({ line: 'Buff_Haste_Worn', req_lvl: 25 }, { 'Buff_Haste_Worn': 10 })
+    );
+    expect(result).toBe(false);
+  });
+});
+
+// ── claimLines ────────────────────────────────────────────────────────────────
+
+test.describe('claimLines', () => {
+  test('registers a worn line', async ({ page }) => {
+    const result = await page.evaluate(() => {
+      const claimed = {};
+      claimLines({ effects: { worn: { line: 'Buff_Haste_Worn', req_lvl: 25 } } }, claimed);
+      return claimed;
+    });
+    expect(result['Buff_Haste_Worn']).toBe(25);
+  });
+
+  test('registers an aura line', async ({ page }) => {
+    const result = await page.evaluate(() => {
+      const claimed = {};
+      claimLines({ effects: { aura: { line: 'Regen', req_lvl: 10 } } }, claimed);
+      return claimed;
+    });
+    expect(result['Regen']).toBe(10);
+  });
+
+  test('higher req_lvl overwrites lower', async ({ page }) => {
+    const result = await page.evaluate(() => {
+      const claimed = { 'Buff_Haste_Worn': 10 };
+      claimLines({ effects: { worn: { line: 'Buff_Haste_Worn', req_lvl: 25 } } }, claimed);
+      return claimed;
+    });
+    expect(result['Buff_Haste_Worn']).toBe(25);
+  });
+
+  test('lower req_lvl does not overwrite higher', async ({ page }) => {
+    const result = await page.evaluate(() => {
+      const claimed = { 'Buff_Haste_Worn': 25 };
+      claimLines({ effects: { worn: { line: 'Buff_Haste_Worn', req_lvl: 10 } } }, claimed);
+      return claimed;
+    });
+    expect(result['Buff_Haste_Worn']).toBe(25);
+  });
+
+  test('item with no effects leaves map unchanged', async ({ page }) => {
+    const result = await page.evaluate(() => {
+      const claimed = { 'Regen': 5 };
+      claimLines({ effects: {} }, claimed);
+      return claimed;
+    });
+    expect(result).toEqual({ 'Regen': 5 });
+  });
+});
+
 // ── bankersRound ──────────────────────────────────────────────────────────────
 
 test.describe('bankersRound', () => {
