@@ -11,7 +11,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Bridgekeeper",
+      "rarity": "common"
+    }
   },
   {
     "name": "Tattered Leather Sleeves",
@@ -24,7 +29,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Islander Bandit",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Islander Bandit Armwrap",
@@ -41,7 +51,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Vevillo Polter",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Daggersilk Sleeves",
@@ -76,7 +91,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Militia Druid",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Aged Plate Sleeves",
@@ -90,7 +110,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Rotting Royal Hound",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Azure Plate Vambraces",
@@ -101,7 +126,11 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Violet Smithfield"
+    }
   },
   {
     "name": "Archer's Vambrace",
@@ -116,7 +145,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Sylvan Giant Runt",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Etched Armlet",
@@ -132,7 +166,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Obba of the Warkind",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Faerie Sleeves",
@@ -147,7 +186,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Tinkles",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Vinewrapped Vambracers",
@@ -162,7 +206,11 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Tiver Banes"
+    }
   },
   {
     "name": "Solunarian Armguard",
@@ -175,7 +223,11 @@ const GEAR_DATA = [
     },
     "classes": [
       "Paladin"
-    ]
+    ],
+    "source_info": {
+      "type": "quest",
+      "name": "Graveweed Leaf for Benson Gamble"
+    }
   },
   {
     "name": "Polished Steel Armguards",
@@ -191,7 +243,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Overseer Orlok",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Fungus Covered Armband",
@@ -210,7 +267,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Deepling Lunarite",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Boatman's Armband",
@@ -228,7 +290,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Drowned Corpse",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Desert Silk Sleeves",
@@ -248,7 +315,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Archaeologist",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Exoskeletal Spaulders",
@@ -267,7 +339,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Spark Royal",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Ancient Guardian Sleeve",
@@ -280,7 +357,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Worn Ancient Guardian",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Flaming Vambraces",
@@ -296,7 +378,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Peon",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Chewed Armwraps",
@@ -312,7 +399,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Dream",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Dueling Armguards",
@@ -329,7 +421,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Chazza Priel",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Battlemage Sleeves",
@@ -344,7 +441,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Protected Memory",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Intricate Sleeves",
@@ -363,7 +465,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Balaste the Fallen",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Vaporous Armguard",
@@ -380,7 +487,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Dream Invader",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Charred Sleeves",
@@ -398,7 +510,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Stoneman Colossus",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Gifted Sleeves",
@@ -416,7 +533,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Julianna Priel",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Priel Steel Armguards",
@@ -432,7 +554,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Julianna Priel",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Azynthian Armguards",
@@ -451,7 +578,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Oracle Tretha",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Braxonian Leather Sleeves",
@@ -468,7 +600,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Braxon Prospect",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Braxonian Royal Armband",
@@ -486,7 +623,12 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Braxon Prospect",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Braxonian Spaulders",
@@ -500,7 +642,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Braxonian Honor Guard",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Feathery Vambraces",
@@ -517,7 +664,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Aviak",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Dreamy Sleeves",
@@ -539,7 +691,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Hypnic",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Armbands of Order",
@@ -562,7 +719,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Lost Treasure",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Crested Spaulders",
@@ -579,7 +741,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Celeso the Historian",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Age-Old Armlet",
@@ -599,7 +766,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Ripper DeMerth",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Armband of Generals",
@@ -617,7 +789,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Assassin of Sivakaya",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Armguards of Presence",
@@ -636,7 +813,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Azynthian Keeper",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Bonebanded Armguard",
@@ -653,7 +835,12 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Balthom, Soldier of Sivakaya",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Petitioner's Vambraces",
@@ -673,7 +860,11 @@ const GEAR_DATA = [
     "stats": {},
     "classes": [
       "Paladin"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Alexandria Fadden"
+    }
   },
   {
     "name": "End of Life",
@@ -682,7 +873,12 @@ const GEAR_DATA = [
     "stats": {},
     "classes": [
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Gruhglor",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Evacuate Soul",
@@ -691,7 +887,12 @@ const GEAR_DATA = [
     "stats": {},
     "classes": [
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Eldoth Molorai",
+      "rarity": "common"
+    }
   },
   {
     "name": "Falling Shadow",
@@ -700,7 +901,11 @@ const GEAR_DATA = [
     "stats": {},
     "classes": [
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Alexandria Fadden"
+    }
   },
   {
     "name": "Looming Void",
@@ -709,7 +914,11 @@ const GEAR_DATA = [
     "stats": {},
     "classes": [
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Shantee Swingblade"
+    }
   },
   {
     "name": "Rolling Clouds",
@@ -718,7 +927,11 @@ const GEAR_DATA = [
     "stats": {},
     "classes": [
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Alexandria Fadden"
+    }
   },
   {
     "name": "Scent of the Sea",
@@ -727,7 +940,11 @@ const GEAR_DATA = [
     "stats": {},
     "classes": [
       "Windblade"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Alexandria Fadden"
+    }
   },
   {
     "name": "Spark of Light",
@@ -736,7 +953,11 @@ const GEAR_DATA = [
     "stats": {},
     "classes": [
       "Arcanist"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Alexandria Fadden"
+    }
   },
   {
     "name": "Sprout",
@@ -745,7 +966,11 @@ const GEAR_DATA = [
     "stats": {},
     "classes": [
       "Druid"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Alexandria Fadden"
+    }
   },
   {
     "name": "Bloom",
@@ -754,7 +979,11 @@ const GEAR_DATA = [
     "stats": {},
     "classes": [
       "Druid"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Tiver Banes"
+    }
   },
   {
     "name": "Essence of Flame",
@@ -763,7 +992,11 @@ const GEAR_DATA = [
     "stats": {},
     "classes": [
       "Arcanist"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Edwin Ansegg"
+    }
   },
   {
     "name": "Falling Rain",
@@ -772,7 +1005,11 @@ const GEAR_DATA = [
     "stats": {},
     "classes": [
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Elizabeth DeWitt"
+    }
   },
   {
     "name": "Force of the Sea",
@@ -781,7 +1018,11 @@ const GEAR_DATA = [
     "stats": {},
     "classes": [
       "Windblade"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Pierson Windwash"
+    }
   },
   {
     "name": "Morning Glow",
@@ -790,7 +1031,11 @@ const GEAR_DATA = [
     "stats": {},
     "classes": [
       "Paladin"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Akaran Black"
+    }
   },
   {
     "name": "Amber's Gift",
@@ -804,7 +1049,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Beady",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Glow of Eternity",
@@ -813,7 +1063,12 @@ const GEAR_DATA = [
     "stats": {},
     "classes": [
       "Arcanist"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Gruhglor",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Distant Thunder",
@@ -822,7 +1077,12 @@ const GEAR_DATA = [
     "stats": {},
     "classes": [
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Gruhglor",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Freedom of the Sky",
@@ -831,7 +1091,12 @@ const GEAR_DATA = [
     "stats": {},
     "classes": [
       "Windblade"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Gruhglor",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Rising Moon",
@@ -840,7 +1105,12 @@ const GEAR_DATA = [
     "stats": {},
     "classes": [
       "Paladin"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Gruhglor",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Wilt",
@@ -849,7 +1119,12 @@ const GEAR_DATA = [
     "stats": {},
     "classes": [
       "Druid"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Gruhglor",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Corruption of Sivakaya",
@@ -863,7 +1138,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "quest",
+      "name": "Sivakayan Ore for Tipp"
+    }
   },
   {
     "name": "Spirit of the Steed",
@@ -877,7 +1156,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Blazefiend",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Flame of the Redemption",
@@ -886,7 +1170,12 @@ const GEAR_DATA = [
     "stats": {},
     "classes": [
       "Arcanist"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Blazefiend",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Aged Prism",
@@ -900,7 +1189,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Plunkey",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Chunk of Living Stone",
@@ -914,7 +1208,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Cinder",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Gem of Echoes",
@@ -928,7 +1227,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Granitus",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Lightning Strike",
@@ -937,7 +1241,12 @@ const GEAR_DATA = [
     "stats": {},
     "classes": [
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Apparition of Vitheo",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Sage's Trinket",
@@ -951,7 +1260,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Volcanic Giant",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Whispers of Wind",
@@ -960,7 +1274,12 @@ const GEAR_DATA = [
     "stats": {},
     "classes": [
       "Windblade"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Ripples",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Wisp's Presence",
@@ -974,7 +1293,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "quest",
+      "name": "Ritual Components"
+    }
   },
   {
     "name": "Decay",
@@ -983,7 +1306,12 @@ const GEAR_DATA = [
     "stats": {},
     "classes": [
       "Druid"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "The Gardener of Loomingwood",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Eclipse",
@@ -992,7 +1320,12 @@ const GEAR_DATA = [
     "stats": {},
     "classes": [
       "Paladin"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Raval, The First Paladin",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Ancient Presence",
@@ -1006,7 +1339,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Lost Treasure",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Pyre of the Cleansed",
@@ -1027,7 +1365,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Oracle Tretha",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Hallows Eve",
@@ -1041,7 +1384,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Mephallo",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Old Torn Cape",
@@ -1055,7 +1403,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Plaxitheris",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Lightkeeper's Cape",
@@ -1090,7 +1443,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Priel Lieutenant Bovo",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Satin Cloak",
@@ -1108,7 +1466,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Zashlyn Bloodbane",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Backplate",
@@ -1126,7 +1489,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Bassalt Vallano",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Call To Arms",
@@ -1145,7 +1513,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Overseer Orlok",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Gambler's Cape",
@@ -1165,7 +1538,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Highwayman Raider",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Fungal Scab Cape",
@@ -1184,7 +1562,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Druo the Reborn",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Cape of the Sands",
@@ -1198,7 +1581,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Archaeologist",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Seawashed Cloak",
@@ -1216,7 +1604,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Spike",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Distinguished Cape",
@@ -1235,7 +1628,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Spectral Torturer",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Honor Strip",
@@ -1251,7 +1649,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Deepling Orator",
+      "rarity": "common"
+    }
   },
   {
     "name": "Layer Cape",
@@ -1270,7 +1673,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Goliath",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Lost Cape",
@@ -1292,7 +1700,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Lost Treasure",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Dreamthread Wings",
@@ -1312,7 +1725,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Ghost of Plaxitheris",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Ritual Cape",
@@ -1330,7 +1748,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Cinder",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Tamer's Pack",
@@ -1346,7 +1769,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Priel Tamer",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Feathered Cape",
@@ -1364,7 +1792,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Pteriaped Matron",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Flowing Cloak",
@@ -1384,7 +1817,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Restless Thoughts",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Blue Leaf Cape",
@@ -1402,7 +1840,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Thorn",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Red Leaf Cape",
@@ -1421,7 +1864,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Diva",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Abyssal Shell",
@@ -1437,7 +1885,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Undertoes",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Arboreal Cape",
@@ -1456,7 +1909,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Sylvan Giant",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Lifewind",
@@ -1474,7 +1932,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Protected Memory",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Night Wave",
@@ -1493,7 +1956,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Noctua",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Braxonian Cape",
@@ -1514,7 +1982,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Braxonian Weapon Master",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Assassin's Bane",
@@ -1531,7 +2004,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Acquirer",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Nightbane",
@@ -1553,7 +2031,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Hypnic",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Wingwoven Cape",
@@ -1573,7 +2056,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Faerie Enchantress",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Azynthian Cape",
@@ -1593,7 +2081,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Oracle Miress",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Sivakayan Wings",
@@ -1614,7 +2107,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Assassin of Sivakaya",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Wardwarped Cape",
@@ -1637,7 +2135,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Wardwarped Alpha",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Plaguewind",
@@ -1658,7 +2161,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Blight Wyrm",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Shadowclasp",
@@ -1678,7 +2186,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Shrouded Sivakayan",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Verdant Embrace",
@@ -1699,7 +2212,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Fallen Fernalla",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Correcting Cape",
@@ -1728,7 +2246,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Woe",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Embalmed Bracer",
@@ -1743,7 +2266,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Zashlyn Bloodbane",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Infused Bracelet",
@@ -1761,7 +2289,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Blunga",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Seaslimed Bracelet",
@@ -1779,7 +2312,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "quest",
+      "name": "Seaslimed Bracelet"
+    }
   },
   {
     "name": "Wolfguard",
@@ -1797,7 +2334,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Battlefist",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Aged Plate Bracer",
@@ -1811,7 +2353,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Rotting Royal Hound",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Azure Plate Bracer",
@@ -1822,7 +2369,11 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Violet Smithfield"
+    }
   },
   {
     "name": "Cracked Wristguard",
@@ -1836,7 +2387,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Gort",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Earthen Bracer",
@@ -1850,7 +2406,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Druo the Reborn",
+      "rarity": "common"
+    }
   },
   {
     "name": "Bronzed Solunarian Bracer",
@@ -1862,7 +2423,11 @@ const GEAR_DATA = [
     },
     "classes": [
       "Paladin"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Akaran Black"
+    }
   },
   {
     "name": "Runewoven Bracer",
@@ -1876,7 +2441,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Rottenfoot Warrior",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Hollowed Crustacean Leg",
@@ -1893,7 +2463,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Old Brackey",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Pull of Insomnia",
@@ -1906,7 +2481,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Wiggleribs",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Pull of Sleep",
@@ -1920,7 +2500,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Wiggleribs",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Salt Soaked Cuff",
@@ -1931,7 +2516,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Seafiend",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Obsidian Bracer",
@@ -1948,7 +2538,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Captain Sigrid",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "A Twisted Spider Leg",
@@ -1969,7 +2564,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Fungal Drone",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Crafted Bracer",
@@ -1986,7 +2586,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Gruhglor",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Stinging Bracer",
@@ -2001,7 +2606,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Spark Queen",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Searing Wristwrap",
@@ -2021,7 +2631,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Overseer Refleigh",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Spelunker's Brace",
@@ -2035,7 +2650,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Fungus Ravaged Brute",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Leaf Bracelet",
@@ -2053,7 +2673,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Protected Memory",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Igniting Brace",
@@ -2072,7 +2697,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Kio The Darkbringer",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Shadowmaker",
@@ -2088,7 +2718,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Shadow of Sleep",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Workworn Bracer",
@@ -2111,7 +2746,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Spectral Torturer",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Ancient Guardian Bracer",
@@ -2122,7 +2762,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Worn Ancient Guardian",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Sivakayan Bracer",
@@ -2136,7 +2781,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Sivakayan Cleric",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Chitin Bracer",
@@ -2152,7 +2802,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Shelled Monstrosity",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Hero Bracer",
@@ -2167,7 +2822,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Loomingwood Minotaur Hero",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Xasxi Bone Bracer",
@@ -2182,7 +2842,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Xasxi",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Protector's Bracer",
@@ -2201,7 +2866,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Warded Shadow",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Wrath Wrap",
@@ -2218,7 +2888,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Frenzy",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Moonstone Bangle",
@@ -2234,7 +2909,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Celestial Matter",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Officer's Bracer",
@@ -2250,7 +2930,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Celeso the Historian",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Shackle of Bidding",
@@ -2271,7 +2956,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Morian the Ascended",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Blighted Silk Wraps",
@@ -2289,7 +2979,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Fenton the Blighted",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Eroded Bangle",
@@ -2306,7 +3001,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Savannah Priel",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Exploding Brace",
@@ -2320,7 +3020,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Lost Treasure",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Fungal Wrapped Bracer",
@@ -2333,7 +3038,12 @@ const GEAR_DATA = [
     },
     "classes": [
       "Druid"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Nipper King",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Blessed Braxonian Bracelet",
@@ -2350,7 +3060,12 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Hand of the King",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Blessed Braxonian Bracer",
@@ -2366,7 +3081,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Hand of the King",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Blessed Braxonian Wristlet",
@@ -2385,7 +3105,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Hand of the King",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Braxonian Bracelet",
@@ -2402,7 +3127,12 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Braxon Prospect",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Braxonian Bracer",
@@ -2418,7 +3148,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Braxonian Honor Guard",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Braxonian Wristlet",
@@ -2437,7 +3172,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Braxon Prospect",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Perfect Links",
@@ -2458,7 +3198,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Statue of Brax",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Mirrored Bracer",
@@ -2481,7 +3226,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "quest",
+      "name": "Braxonian Scripture"
+    }
   },
   {
     "name": "Warded Brace",
@@ -2497,7 +3246,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Wardwarped Alpha",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Gardener's Wrist Wrap",
@@ -2518,7 +3272,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Botanist",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Bracelet of the Vessel",
@@ -2541,7 +3300,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Vessel Siraethe",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Resonating Brace",
@@ -2563,7 +3327,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Assassin of Sivakaya",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Guiding Presence",
@@ -2585,6 +3354,338 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Fallen Fernalla",
+      "rarity": "rare"
+    }
+  },
+  {
+    "name": "Pupil's Pin",
+    "slot": "Charm",
+    "lvl": 5,
+    "stats": {},
+    "classes": [
+      "Arcanist",
+      "Druid",
+      "Windblade",
+      "Paladin",
+      "Reaver",
+      "Stormcaller"
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Historian of Braxonia",
+      "rarity": "unknown"
+    }
+  },
+  {
+    "name": "Adventure Charm",
+    "slot": "Charm",
+    "lvl": 8,
+    "stats": {},
+    "classes": [
+      "Arcanist",
+      "Druid",
+      "Windblade",
+      "Paladin",
+      "Reaver",
+      "Stormcaller"
+    ],
+    "source_info": {
+      "type": "quest",
+      "name": "Clearing the Bonepits"
+    }
+  },
+  {
+    "name": "Charm of Age",
+    "slot": "Charm",
+    "lvl": 22,
+    "stats": {},
+    "classes": [
+      "Arcanist",
+      "Druid",
+      "Windblade",
+      "Paladin",
+      "Reaver",
+      "Stormcaller"
+    ],
+    "source_info": {
+      "type": "craftable"
+    }
+  },
+  {
+    "name": "Charm of Brilliance",
+    "slot": "Charm",
+    "lvl": 22,
+    "stats": {},
+    "classes": [
+      "Arcanist",
+      "Druid",
+      "Windblade",
+      "Paladin",
+      "Reaver",
+      "Stormcaller"
+    ],
+    "source_info": {
+      "type": "craftable"
+    }
+  },
+  {
+    "name": "Charm of Compassion",
+    "slot": "Charm",
+    "lvl": 22,
+    "stats": {},
+    "classes": [
+      "Arcanist",
+      "Druid",
+      "Windblade",
+      "Paladin",
+      "Reaver",
+      "Stormcaller"
+    ],
+    "source_info": {
+      "type": "craftable"
+    }
+  },
+  {
+    "name": "Charm of Rage",
+    "slot": "Charm",
+    "lvl": 22,
+    "stats": {},
+    "classes": [
+      "Arcanist",
+      "Druid",
+      "Windblade",
+      "Paladin",
+      "Reaver",
+      "Stormcaller"
+    ],
+    "source_info": {
+      "type": "craftable"
+    }
+  },
+  {
+    "name": "Charm of Vanity",
+    "slot": "Charm",
+    "lvl": 22,
+    "stats": {},
+    "classes": [
+      "Arcanist",
+      "Druid",
+      "Windblade",
+      "Paladin",
+      "Reaver",
+      "Stormcaller"
+    ],
+    "source_info": {
+      "type": "craftable"
+    }
+  },
+  {
+    "name": "Charm of the Jester",
+    "slot": "Charm",
+    "lvl": 22,
+    "stats": {},
+    "classes": [
+      "Arcanist",
+      "Druid",
+      "Windblade",
+      "Paladin",
+      "Reaver",
+      "Stormcaller"
+    ],
+    "source_info": {
+      "type": "craftable"
+    }
+  },
+  {
+    "name": "Charm of the Shield",
+    "slot": "Charm",
+    "lvl": 22,
+    "stats": {},
+    "classes": [
+      "Arcanist",
+      "Druid",
+      "Windblade",
+      "Paladin",
+      "Reaver",
+      "Stormcaller"
+    ]
+  },
+  {
+    "name": "Charm of the Stone",
+    "slot": "Charm",
+    "lvl": 22,
+    "stats": {},
+    "classes": [
+      "Arcanist",
+      "Druid",
+      "Windblade",
+      "Paladin",
+      "Reaver",
+      "Stormcaller"
+    ],
+    "source_info": {
+      "type": "craftable"
+    }
+  },
+  {
+    "name": "Arcanist's Charm",
+    "slot": "Charm",
+    "lvl": 30,
+    "stats": {},
+    "classes": [
+      "Arcanist",
+      "Druid",
+      "Windblade",
+      "Paladin",
+      "Reaver",
+      "Stormcaller"
+    ],
+    "source_info": {
+      "type": "craftable"
+    }
+  },
+  {
+    "name": "Druid's Charm",
+    "slot": "Charm",
+    "lvl": 30,
+    "stats": {},
+    "classes": [
+      "Arcanist",
+      "Druid",
+      "Windblade",
+      "Paladin",
+      "Reaver",
+      "Stormcaller"
+    ],
+    "source_info": {
+      "type": "craftable"
+    }
+  },
+  {
+    "name": "Duelist's Charm",
+    "slot": "Charm",
+    "lvl": 30,
+    "stats": {},
+    "classes": [
+      "Arcanist",
+      "Druid",
+      "Windblade",
+      "Paladin",
+      "Reaver",
+      "Stormcaller"
+    ],
+    "source_info": {
+      "type": "craftable"
+    }
+  },
+  {
+    "name": "Soldier's Charm",
+    "slot": "Charm",
+    "lvl": 30,
+    "stats": {},
+    "classes": [
+      "Arcanist",
+      "Druid",
+      "Windblade",
+      "Paladin",
+      "Reaver",
+      "Stormcaller"
+    ],
+    "source_info": {
+      "type": "craftable"
+    }
+  },
+  {
+    "name": "Charm of Talent",
+    "slot": "Charm",
+    "lvl": 35,
+    "stats": {},
+    "classes": [
+      "Arcanist",
+      "Druid",
+      "Windblade",
+      "Paladin",
+      "Reaver",
+      "Stormcaller"
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Lost Treasure",
+      "rarity": "rare"
+    }
+  },
+  {
+    "name": "Healer's Charm",
+    "slot": "Charm",
+    "lvl": 40,
+    "stats": {},
+    "classes": [
+      "Arcanist",
+      "Druid",
+      "Windblade",
+      "Paladin",
+      "Reaver",
+      "Stormcaller"
+    ]
+  },
+  {
+    "name": "Precisionist's Charm",
+    "slot": "Charm",
+    "lvl": 40,
+    "stats": {},
+    "classes": [
+      "Arcanist",
+      "Druid",
+      "Windblade",
+      "Paladin",
+      "Reaver",
+      "Stormcaller"
+    ]
+  },
+  {
+    "name": "Protector's Charm",
+    "slot": "Charm",
+    "lvl": 40,
+    "stats": {},
+    "classes": [
+      "Arcanist",
+      "Druid",
+      "Windblade",
+      "Paladin",
+      "Reaver",
+      "Stormcaller"
+    ]
+  },
+  {
+    "name": "Sorcerer's Charm",
+    "slot": "Charm",
+    "lvl": 40,
+    "stats": {},
+    "classes": [
+      "Arcanist",
+      "Druid",
+      "Windblade",
+      "Paladin",
+      "Reaver",
+      "Stormcaller"
+    ]
+  },
+  {
+    "name": "Warlord's Charm",
+    "slot": "Charm",
+    "lvl": 40,
+    "stats": {},
+    "classes": [
+      "Arcanist",
+      "Druid",
+      "Windblade",
+      "Paladin",
+      "Reaver",
+      "Stormcaller"
     ]
   },
   {
@@ -2599,7 +3700,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Gus Highrest"
+    }
   },
   {
     "name": "Tattered Leather Tunic",
@@ -2612,7 +3717,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Gus Highrest"
+    }
   },
   {
     "name": "Funeral Garb",
@@ -2627,7 +3736,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Mourning",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Light Plate Breastplate",
@@ -2638,7 +3752,11 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Alyssia Fearnon"
+    }
   },
   {
     "name": "Daggersilk Shirt",
@@ -2673,7 +3791,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Blunga",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Oread Tunic",
@@ -2693,7 +3816,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Autmis the Lost",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Shivering Leather Tunic",
@@ -2711,7 +3839,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Militia Druid",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Cold Steel Plate",
@@ -2736,7 +3869,11 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Violet Smithfield"
+    }
   },
   {
     "name": "Tunic of Undying Faith",
@@ -2750,7 +3887,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "An Apparition of Sivakaya",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Sivakayan Tunic",
@@ -2765,7 +3907,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Acceptor",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Bronzed Solunarian Plate",
@@ -2778,7 +3925,11 @@ const GEAR_DATA = [
     },
     "classes": [
       "Paladin"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Akaran Black"
+    }
   },
   {
     "name": "Linked Chain Shirt",
@@ -2794,7 +3945,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Militia Warrior",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Reaver Plate",
@@ -2806,7 +3962,11 @@ const GEAR_DATA = [
     },
     "classes": [
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Shantee Swingblade"
+    }
   },
   {
     "name": "Living Chainmail Jacket",
@@ -2822,7 +3982,11 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Tiver Banes"
+    }
   },
   {
     "name": "Spidersilk Shirt",
@@ -2838,7 +4002,11 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Edwin Ansegg"
+    }
   },
   {
     "name": "Tarnished Plate Armor",
@@ -2852,7 +4020,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Grassland Ogre Plaguebringer",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Muddy Jerkin",
@@ -2870,7 +4043,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Grassland Ogre Plaguebringer",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Rottenfoot Tribal Strap",
@@ -2887,7 +4065,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Rottenfoot Mauler",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Rotten Chain Tunic",
@@ -2905,7 +4088,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Gruhglor",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Aged Plate",
@@ -2922,7 +4110,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Rotting Royal Hound",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Fungus Covered Tunic",
@@ -2941,7 +4134,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Devoratrix",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Molorai Battle Chain",
@@ -2957,7 +4155,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Outrider",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Braxonian Wrap",
@@ -2972,7 +4175,12 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Upha, Priest of Brax",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Ancient Guardian Plate",
@@ -2983,7 +4191,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Worn Ancient Guardian",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Battleworn Plate",
@@ -2999,7 +4212,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Goliath",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Hardened Scale Jacket",
@@ -3016,7 +4234,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Shivunax",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Chitin Protector",
@@ -3033,7 +4256,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Shelled Monstrosity",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Preserved Cloth Coat",
@@ -3052,7 +4280,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Diamond Colossus",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Sivakayan Ceremonial Garb",
@@ -3068,7 +4301,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Sivakayan Voidweaver",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Virophan Chestguard",
@@ -3084,7 +4322,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Oarik the Failure",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Blightsteel Plate",
@@ -3100,7 +4343,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Harbinger of Corruption",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Drakescale Cuirass",
@@ -3120,7 +4368,12 @@ const GEAR_DATA = [
       "Windblade",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Lost Treasure",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Malaroth Scale Chestguard",
@@ -3139,7 +4392,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Brood Mother",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Plumage",
@@ -3159,7 +4417,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Aviak",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Sivakayan Plate",
@@ -3173,7 +4436,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Sivakayan Cleric",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Stonelined Plate",
@@ -3185,7 +4453,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Loomingwood Minotaur Hero",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Worn Dueling Plate",
@@ -3201,7 +4474,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Lost Treasure",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Bloodstained Plate",
@@ -3219,7 +4497,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "The Abomination",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Lichencoat",
@@ -3241,7 +4524,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Abyssal Lord",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Ripparian Plate",
@@ -3254,7 +4542,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Ripper Soldier",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Sivakayan Dresscoat",
@@ -3272,7 +4565,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Darkwarden Awxa",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Braxonian Leather Tunic",
@@ -3290,7 +4588,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Braxon Prospect",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Braxonian Plate",
@@ -3307,7 +4610,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Braxonian Honor Guard",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Braxonian Royal Tunic",
@@ -3322,7 +4630,12 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Braxon Prospect",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Golden Plate",
@@ -3339,7 +4652,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Exalted Firebone",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Mirror Polished Plate",
@@ -3355,7 +4673,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Stoneman Diamondine",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Ascendant's Embrace",
@@ -3375,7 +4698,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Balthom, Soldier of Sivakaya",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Wyrm Skin Protector",
@@ -3393,7 +4721,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Swamp Wyrm",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Abyssal Plate",
@@ -3410,7 +4743,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Sivakayan Voidmaster",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Eldoth's Finery",
@@ -3430,7 +4768,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Eldoth Molorai",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Ilyth's Coat",
@@ -3449,7 +4792,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Darkwarden Ilyth",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Game Master's Plate",
@@ -3474,7 +4822,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Nylith Valorro"
+    }
   },
   {
     "name": "Daggersilk Shoes",
@@ -3504,7 +4856,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Rattlewrists",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Charred Boots",
@@ -3519,7 +4876,11 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Asaga Underloft"
+    }
   },
   {
     "name": "Shivering Leather Boots",
@@ -3535,7 +4896,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Golden Spirit",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Azure Plate Boots",
@@ -3550,7 +4916,11 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Violet Smithfield"
+    }
   },
   {
     "name": "Balanced Boots",
@@ -3564,7 +4934,11 @@ const GEAR_DATA = [
     },
     "classes": [
       "Windblade"
-    ]
+    ],
+    "source_info": {
+      "type": "quest",
+      "name": "A Sivakayan Horn for Ludo Luxo"
+    }
   },
   {
     "name": "Judicial Boots",
@@ -3594,7 +4968,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Bassalt Vallano",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Molorai Battle Boots",
@@ -3613,7 +4992,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Veteran",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Boots of Grounding",
@@ -3628,7 +5012,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Overseer Orlok",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Wolfhide Boots",
@@ -3645,7 +5034,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Obba of the Warkind",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Journeying Boots",
@@ -3661,7 +5055,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "quest",
+      "name": "Hadden's Supplies 2"
+    }
   },
   {
     "name": "Devout Moccasins",
@@ -3678,7 +5076,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Ecclesiarch",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Aged Plate Boots",
@@ -3694,7 +5097,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Rotting Royal Hound",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Molorai Warstomps",
@@ -3713,7 +5121,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Overseer Laseal",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Feathered Booties",
@@ -3727,7 +5140,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Pteriaped Matron",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Ancient Guardian Boots",
@@ -3738,7 +5156,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Worn Ancient Guardian",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Flamesoles",
@@ -3755,7 +5178,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Ember Acolyte",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Slimetreads",
@@ -3771,7 +5199,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Gloopa",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Virophan Leather Slippers",
@@ -3792,7 +5225,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Balaste the Fallen",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Obsidian Boots",
@@ -3804,7 +5242,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Nightmare",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Surestep",
@@ -3819,7 +5262,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Mosscovered Stoneman",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Windblown Boots",
@@ -3838,7 +5286,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Protected Memory",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Elder's Slippers",
@@ -3856,7 +5309,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Arcane Headmaster",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Shadowstep Shoes",
@@ -3872,7 +5330,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Noctua",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Cratermakers",
@@ -3891,7 +5354,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Granitus",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Salt Encrusted Boots",
@@ -3913,7 +5381,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Dockmaster",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Braxonian Leather Boots",
@@ -3932,7 +5405,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Braxon Prospect",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Braxonian Plate Boots",
@@ -3948,7 +5426,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Braxonian Honor Guard",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Braxonian Royal Shoes",
@@ -3964,7 +5447,12 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Braxon Prospect",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Wyrm Stompers",
@@ -3983,7 +5471,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Sivakayan High Shadow",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Thundermakers",
@@ -4000,7 +5493,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Lost Treasure",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Pious Sandals",
@@ -4020,7 +5518,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Astorim",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Cloth Gloves",
@@ -4034,7 +5537,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Bridgekeeper",
+      "rarity": "common"
+    }
   },
   {
     "name": "Tattered Leather Gloves",
@@ -4047,7 +5555,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Grassland Ogre Gatherer",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Ceremonial Gloves",
@@ -4063,7 +5576,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Failed Cremation",
+      "rarity": "common"
+    }
   },
   {
     "name": "Daggersilk Gloves",
@@ -4098,7 +5616,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Asaga Underloft"
+    }
   },
   {
     "name": "Channeling Gloves",
@@ -4113,7 +5635,12 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Ughl of the Skies",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Sailor's Work Gloves",
@@ -4131,7 +5658,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Saya Seawatcher"
+    }
   },
   {
     "name": "Wizarding Mitts",
@@ -4146,7 +5677,11 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Edwin Ansegg"
+    }
   },
   {
     "name": "Chopping Gloves",
@@ -4159,7 +5694,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Chef",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Sticky Gloves",
@@ -4179,7 +5719,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Highwayman Raider",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Nagalok Claw Gloves",
@@ -4197,7 +5742,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "quest",
+      "name": "Annaleigh's Nagalok Claws"
+    }
   },
   {
     "name": "Adorned Mitts",
@@ -4211,7 +5760,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Prioress",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Gator Gloves",
@@ -4228,7 +5782,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Lurk",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Runed Gloves",
@@ -4243,7 +5802,12 @@ const GEAR_DATA = [
       "Druid",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Deepling Lunarite",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Ancient Guardian Gloves",
@@ -4254,7 +5818,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Worn Ancient Guardian",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Dainty Mitts",
@@ -4274,7 +5843,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Diamond Colossus",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Digested Gloves",
@@ -4292,7 +5866,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Vizijivi",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Dreamborn Gloves",
@@ -4310,7 +5889,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Dream Invader",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Frenzied Fistwraps",
@@ -4326,7 +5910,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Frenzy",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Meteorite Gauntlets",
@@ -4344,7 +5933,12 @@ const GEAR_DATA = [
       "Druid",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Living Meteorite",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Widow's Wraps",
@@ -4365,7 +5959,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Fearantula",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Thorned Knuckle Gloves",
@@ -4383,7 +5982,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Thorn",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Giving Gloves",
@@ -4404,7 +6008,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Addison Priel",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Braxonian Gauntlets",
@@ -4421,7 +6030,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Braxonian Honor Guard",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Braxonian Gloves",
@@ -4437,7 +6051,12 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Braxon Prospect",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Braxonian Mitts",
@@ -4455,7 +6074,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Braxon Prospect",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Grips of Faith",
@@ -4471,7 +6095,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Astorim",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Rootwoven Wraps",
@@ -4486,7 +6115,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "The Gardener of Loomingwood",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Shadow Gloves",
@@ -4506,7 +6140,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Sivakayan Spymaster",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Woodland Gauntlets",
@@ -4526,7 +6165,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Sylvan Giant",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Grip of Darkness",
@@ -4544,7 +6188,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Eldermistress",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Gloves of Vitheo",
@@ -4567,7 +6216,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Apparition of Vitheo",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Rotten Hands",
@@ -4585,7 +6239,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Blight Wyrm",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Cloth Hood",
@@ -4599,7 +6258,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Bridgekeeper",
+      "rarity": "common"
+    }
   },
   {
     "name": "Daggersilk Hood",
@@ -4629,7 +6293,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Grassland Ogre Gatherer",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Funeral Shroud",
@@ -4647,7 +6316,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Mourning",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Shivering Leather Skullcap",
@@ -4664,7 +6338,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Asaga Underloft"
+    }
   },
   {
     "name": "Cold Steel Helm",
@@ -4677,7 +6355,11 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Asaga Underloft"
+    }
   },
   {
     "name": "Arcanist Cap",
@@ -4690,7 +6372,12 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Militia Arcanist",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Ring of the Sea Giant King",
@@ -4708,7 +6395,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "The Lost Sea Giant King",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Fernallan Knight's Helm",
@@ -4725,7 +6417,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Maple",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Rotting Sivakayan Helm",
@@ -4739,7 +6436,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "An Apparition of Sivakaya",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Rottenfoot Cap",
@@ -4756,7 +6458,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Rottenfoot Mauler",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Shroud of Barriers",
@@ -4773,7 +6480,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Braxon Fanatic",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Bandit's Mask",
@@ -4791,7 +6503,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Spiritist",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Jellycrown",
@@ -4805,7 +6522,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Ragewhip",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Explorer's Cap",
@@ -4820,7 +6542,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Goliath",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Aged Plate Mask",
@@ -4835,7 +6562,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Spectral Castle Guard",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Chewed Helmet",
@@ -4851,7 +6583,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Lurk",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Helm of the Deep",
@@ -4867,7 +6604,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Spike",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Knight's Helm",
@@ -4882,7 +6624,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Gruhglor",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Albino Bear Hood",
@@ -4897,7 +6644,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Albino Kodiak",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Pirate's Hair Tie",
@@ -4916,7 +6668,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Drowned Corpse",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Slime Coated Helm",
@@ -4933,7 +6690,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Subterranean Goop",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Aetherial Hood",
@@ -4951,7 +6713,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Shadow Man",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Ancient Guardian Helm",
@@ -4964,7 +6731,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Worn Ancient Guardian",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Jhalmathir, Helm of Generals",
@@ -4981,7 +6753,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Evadne the Corrupted",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Malaroth Hide Hood",
@@ -5000,7 +6777,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Vizijivi",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Shadow Helm",
@@ -5017,7 +6799,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Warded Shadow",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Sivakayan Cloth Band",
@@ -5031,7 +6818,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Sivakayan Voidweaver",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Lost Wizarding Hat",
@@ -5045,7 +6837,12 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Arcane Pupil",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Spiderskin Shroud",
@@ -5064,7 +6861,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Soul Linked Spider",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Jackal Hood",
@@ -5081,7 +6883,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Lupine Horror",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Seafarer's Hood",
@@ -5098,7 +6905,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Dockmaster",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Wisdom of the Forest",
@@ -5114,7 +6926,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Diva",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Echoes",
@@ -5143,7 +6960,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Ripper Soldier",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Spinesnap Hide Hood",
@@ -5160,7 +6982,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Spinesnap Gorilla",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Ardant's Crown",
@@ -5177,7 +7004,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Prince Ardant",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Blessed Helm",
@@ -5194,7 +7026,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Raval, The First Paladin",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Eternal Diadem",
@@ -5211,7 +7048,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Candlekeeper",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Plague Mask",
@@ -5231,7 +7073,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Lost Treasure",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Terra Crown",
@@ -5248,7 +7095,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Nipper King",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Diamond Helm",
@@ -5264,7 +7116,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Sivakayan Shadow",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Mask of Spies",
@@ -5286,7 +7143,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Sivakayan Spymaster",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Virophan Helm",
@@ -5306,7 +7168,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Elwio the Traitor",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Fury Helm",
@@ -5323,7 +7190,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Wardwarped Alpha",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Monarch's Mask",
@@ -5341,7 +7213,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Monarch of the Flame",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Siraethe's Prayercrest",
@@ -5357,7 +7234,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Vessel Siraethe",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Sivakayan Tricorner",
@@ -5376,7 +7258,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Sableheart, Steed of Sivakaya",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Azynthian Mask",
@@ -5391,7 +7278,12 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Azynthian Keeper",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Cloth Pants",
@@ -5405,7 +7297,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Nylith Valorro"
+    }
   },
   {
     "name": "Tattered Leather Leggings",
@@ -5418,7 +7314,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Islander Bandit",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Compression Wraps",
@@ -5436,7 +7337,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Sorrowful Spirit",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Light Plate Greaves",
@@ -5447,7 +7353,11 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Ludo Luxo"
+    }
   },
   {
     "name": "Daggersilk Trousers",
@@ -5479,7 +7389,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Golden Spirit",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Cold Steel Greaves",
@@ -5494,7 +7409,11 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Shantee Swingblade"
+    }
   },
   {
     "name": "Dusty Chain Leggings",
@@ -5508,7 +7427,11 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Pierson Windwash"
+    }
   },
   {
     "name": "Leggings of Undying Faith",
@@ -5523,7 +7446,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "An Apparition of Sivakaya",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Azure Plate Greaves",
@@ -5534,7 +7462,11 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Violet Smithfield"
+    }
   },
   {
     "name": "Tarnished Greaves",
@@ -5545,7 +7477,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Grassland Ogre Plaguebringer",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Bronzed Solunarian Greaves",
@@ -5557,7 +7494,11 @@ const GEAR_DATA = [
     },
     "classes": [
       "Paladin"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Akaran Black"
+    }
   },
   {
     "name": "Living Chainmail Leggings",
@@ -5572,7 +7513,11 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Tiver Banes"
+    }
   },
   {
     "name": "Spritely Leggings",
@@ -5589,7 +7534,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Massia the Fallen",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Highwayman Pants",
@@ -5609,7 +7559,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Highwayman Raider",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Liturgical Pantaloons",
@@ -5627,7 +7582,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Lazalith, Soldier of Sivakaya",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Cavesilk Trousers",
@@ -5649,7 +7609,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Slumbering Queen",
+      "rarity": "common"
+    }
   },
   {
     "name": "Aged Plate Greaves",
@@ -5666,7 +7631,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Rotting Royal Hound",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Reed Trousers",
@@ -5686,7 +7656,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Plunkey",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Silver Plated Leggings",
@@ -5700,7 +7675,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Ravager, The First Infected",
+      "rarity": "common"
+    }
   },
   {
     "name": "Ancient Guardian Legplates",
@@ -5711,7 +7691,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Worn Ancient Guardian",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Pyrelink Pantaloons",
@@ -5730,7 +7715,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Evadne the Corrupted",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Linen Bedpants",
@@ -5747,7 +7737,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Dream Invader",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Nightstalker Fur Leggings",
@@ -5766,7 +7761,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Tiallia Priel",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Sivakayan Breeches",
@@ -5784,7 +7784,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Sivakayan Devoted",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Pillars of Pyroclast",
@@ -5800,7 +7805,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Pyroclast",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Blightsteel Greaves",
@@ -5815,7 +7825,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Harbinger of Corruption",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Cobwebbed Breeches",
@@ -5831,7 +7846,12 @@ const GEAR_DATA = [
     },
     "classes": [
       "Druid"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Lost Treasure",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Sivakayan Legplate",
@@ -5849,7 +7869,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Sivakayan Cleric",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Starched Wool Leggings",
@@ -5865,7 +7890,12 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Addison Priel",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Ripparian Greaves",
@@ -5881,7 +7911,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Ripper Soldier",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Braxonian Breeches",
@@ -5899,7 +7934,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Braxon Prospect",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Braxonian Greaves",
@@ -5914,7 +7954,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Braxonian Honor Guard",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Braxonian Linens",
@@ -5930,7 +7975,12 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Braxon Prospect",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Treewoven Leggings",
@@ -5945,7 +7995,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Protected Memory",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Illusionist Trousers",
@@ -5963,7 +8018,12 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Acquirer",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Naturewalker's Breeches",
@@ -5979,7 +8039,12 @@ const GEAR_DATA = [
     "classes": [
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Corrupted Fungal Bear",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Creationist's Legwrap",
@@ -6000,7 +8065,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Aeiros, Soldier of Sivakaya",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Statuesque Greaves",
@@ -6019,7 +8089,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Blight Wyrm",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Resolving Greaves",
@@ -6044,7 +8119,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Brackish Croc Whelp",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Neophyte Necklace",
@@ -6059,7 +8139,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Woe",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Worn Wolf Collar",
@@ -6078,7 +8163,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Alpha Wolf",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Fluorite Amulet",
@@ -6095,7 +8185,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Parmalee Gemlyn"
+    }
   },
   {
     "name": "Decayed Amulet",
@@ -6117,7 +8211,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "An Apparition of Sivakaya",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Seafarer's Pendant",
@@ -6135,7 +8234,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "quest",
+      "name": "Aragath's Imprisonment"
+    }
   },
   {
     "name": "A Grassland Sap Necklace",
@@ -6152,7 +8255,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Grassland Ogre Chieftan",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Demon's Crest",
@@ -6173,7 +8281,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Faerie Drone",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Blackened Iron Amulet",
@@ -6191,7 +8304,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Gruhglor",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Swirlstone Amulet",
@@ -6205,7 +8323,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Elizah Vernor",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Pendant of Petrified Wood",
@@ -6221,7 +8344,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Grassland Ogre Plaguebringer",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Scarab Necklace",
@@ -6240,7 +8368,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Nipper Lashfist",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Brute's Chain Collar",
@@ -6259,7 +8392,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Goliath",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Flamelicked Gorget",
@@ -6279,7 +8417,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Ember Acolyte",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Forest Pendant",
@@ -6299,7 +8442,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "quest",
+      "name": "Ogre Spice for Valrae"
+    }
   },
   {
     "name": "Seastone Prism",
@@ -6316,7 +8463,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Algaeth Bilgeback",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Aether's Blessing",
@@ -6333,7 +8485,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Shadow Man",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "The Gift of Eloquence",
@@ -6351,7 +8508,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Deepling Orator",
+      "rarity": "common"
+    }
   },
   {
     "name": "Collar of the Huntress",
@@ -6365,7 +8527,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Dire Huntress",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Pteriaped Claw Necklace",
@@ -6381,7 +8548,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Pteriaped Matron",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Chain of Protection",
@@ -6397,7 +8569,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Soul Linked Spider",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Fiery Revival",
@@ -6413,7 +8590,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Pyroclast",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Trembling Chain",
@@ -6431,7 +8613,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Warded Shadow",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Lover's Locket",
@@ -6449,7 +8636,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Arcane Headmaster",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Moonglow Amulet",
@@ -6465,7 +8657,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Ancient Corpse",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Amulet of Birdsong",
@@ -6484,7 +8681,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Ripples",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Soul Echo",
@@ -6500,7 +8702,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Fenton the Blighted",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Crest of Braxonia",
@@ -6512,7 +8719,12 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Prince Oslind",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Twinkling Pendant",
@@ -6528,7 +8740,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Faerie Enchantress",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Frozen Mana Charm",
@@ -6548,7 +8765,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Nazura the Traitor",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Molorai Sigil",
@@ -6562,7 +8784,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Dockmaster",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Malaroth Tag",
@@ -6579,7 +8806,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Lacy",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Warped Choker",
@@ -6599,7 +8831,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Sivakayan Voidmaster",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Nature's Promise",
@@ -6617,7 +8854,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Grappler",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Amulet of Azure",
@@ -6640,7 +8882,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "quest",
+      "name": "A Bounty on Ripper DeMerth"
+    }
   },
   {
     "name": "Ripparian Pendant",
@@ -6663,7 +8909,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "quest",
+      "name": "A Bounty on Guard Captain Kilkay"
+    }
   },
   {
     "name": "Temporal Shard",
@@ -6686,7 +8936,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Eldoth Molorai",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Fishing Pole",
@@ -6700,7 +8955,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Amethi Plazzo"
+    }
   },
   {
     "name": "Traveler's Bow",
@@ -6721,7 +8980,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "vendor",
+      "name": "Benson Gamble"
+    }
   },
   {
     "name": "Carved Bow",
@@ -6731,7 +8994,11 @@ const GEAR_DATA = [
     "classes": [
       "Stormcaller"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "vendor",
+      "name": "Gus Highrest"
+    }
   },
   {
     "name": "Nightfall",
@@ -6742,7 +9009,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "A Skeleton Captain",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Old Halberd",
@@ -6753,7 +9025,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "vendor",
+      "name": "Aillee Desten"
+    }
   },
   {
     "name": "Rotwood Bow",
@@ -6763,7 +9039,11 @@ const GEAR_DATA = [
     "classes": [
       "Stormcaller"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "vendor",
+      "name": "Windlae Oldseer"
+    }
   },
   {
     "name": "Standard Halberd",
@@ -6774,7 +9054,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "vendor",
+      "name": "Brian Meshley"
+    }
   },
   {
     "name": "Whitewood",
@@ -6787,7 +9071,11 @@ const GEAR_DATA = [
     "classes": [
       "Stormcaller"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "quest",
+      "name": "Grizzlepaw's Chain"
+    }
   },
   {
     "name": "Executioner's Bow",
@@ -6804,7 +9092,11 @@ const GEAR_DATA = [
     "classes": [
       "Stormcaller"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "vendor",
+      "name": "Torado Zortia"
+    }
   },
   {
     "name": "Heavy Bladed Mace",
@@ -6817,7 +9109,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "vendor",
+      "name": "Akaran Black"
+    }
   },
   {
     "name": "Sea Giant's Cutlass",
@@ -6832,7 +9128,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "A Lost Sea Giant",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Ogre Tooth Club",
@@ -6848,7 +9149,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Grassland Ogre Elder",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Pathfinder's Staff",
@@ -6863,7 +9169,12 @@ const GEAR_DATA = [
     "classes": [
       "Druid"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Militia Druid",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Recurve Bow",
@@ -6877,7 +9188,12 @@ const GEAR_DATA = [
     "classes": [
       "Stormcaller"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "A Faerie Drone",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Spidersmasher",
@@ -6890,7 +9206,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Battlefist",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Anointed Sword",
@@ -6905,7 +9226,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Overseer Orlok",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Humanbone",
@@ -6920,7 +9246,12 @@ const GEAR_DATA = [
     "classes": [
       "Stormcaller"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "A Grassland Ogre Sentinel",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Molorai Bow",
@@ -6933,7 +9264,12 @@ const GEAR_DATA = [
     "classes": [
       "Stormcaller"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Militia Warrior",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Seastring",
@@ -6947,7 +9283,12 @@ const GEAR_DATA = [
     "classes": [
       "Stormcaller"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Greater Vithean Elemental",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Awaken",
@@ -6958,7 +9299,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Restless Thoughts",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Tarnished Halberd",
@@ -6972,7 +9318,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "vendor",
+      "name": "Shantee Swingblade"
+    }
   },
   {
     "name": "Woebringer - Halberd of Stone",
@@ -6987,7 +9337,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Gruhglor",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Diamondine Mace",
@@ -7002,7 +9357,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Stoneman Diamondine",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Fungal Edge",
@@ -7016,7 +9376,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Ravager, The First Infected",
+      "rarity": "common"
+    }
   },
   {
     "name": "Minoaxe",
@@ -7030,7 +9395,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Loomingwood Minotaur Hero",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Merosavillian Bow",
@@ -7045,7 +9415,12 @@ const GEAR_DATA = [
     "classes": [
       "Stormcaller"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Spectral King's Guard",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Dreamslayer",
@@ -7059,7 +9434,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Nightmarian Knight",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Dusken Staff",
@@ -7077,7 +9457,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Dusken Giant",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Mino Hatchet",
@@ -7088,7 +9473,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Loomingwood Minotaur Soldier",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Mooncutter",
@@ -7104,7 +9494,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Nightmare",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Sivakayan Axe",
@@ -7119,7 +9514,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Sivakayan Reaver",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Spectral Bow",
@@ -7134,7 +9534,12 @@ const GEAR_DATA = [
     "classes": [
       "Stormcaller"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "The Crypt Guardian",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Unholy Bonesaw",
@@ -7149,7 +9554,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Headless",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Diamond Claymore",
@@ -7164,7 +9574,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Stoneman Colossus",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Lamplighter's Pole",
@@ -7180,7 +9595,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Kio The Darkbringer",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Smoldering Blade",
@@ -7195,7 +9615,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Blazefiend",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Braxonian Bow",
@@ -7210,7 +9635,12 @@ const GEAR_DATA = [
     "classes": [
       "Stormcaller"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Braxonian High Guard",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Lamentation",
@@ -7226,7 +9656,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Parzgil",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Stirrer of Sleep",
@@ -7246,7 +9681,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Cloaked Shadow",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "World Builder",
@@ -7261,7 +9701,12 @@ const GEAR_DATA = [
       "Druid",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Bloom Preserver",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Fungal Staff",
@@ -7280,7 +9725,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Abyssal Fungus Protector",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Deathgiver",
@@ -7296,7 +9746,12 @@ const GEAR_DATA = [
     "classes": [
       "Stormcaller"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "A Protected Memory",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Fungal Greatsword",
@@ -7312,7 +9767,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Vinx",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Necromantic Bow",
@@ -7327,7 +9787,12 @@ const GEAR_DATA = [
     "classes": [
       "Stormcaller"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Faceless Necromancer",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Soulshiver",
@@ -7342,7 +9807,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Braxonian Weapon Master",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Azynthian Blade",
@@ -7359,7 +9829,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Curator",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Frostmaker",
@@ -7375,7 +9850,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Candlekeeper",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Oldenbow",
@@ -7391,7 +9871,12 @@ const GEAR_DATA = [
     "classes": [
       "Stormcaller"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Balthom, Soldier of Sivakaya",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Siva Bow",
@@ -7407,7 +9892,12 @@ const GEAR_DATA = [
     "classes": [
       "Stormcaller"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Bowmistress of Sivakaya",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Icy Bow",
@@ -7420,7 +9910,12 @@ const GEAR_DATA = [
     "classes": [
       "Stormcaller"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Sivakayan Doomshade",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Executioner of Azure",
@@ -7434,7 +9929,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Captain Kilkay",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Ripparian Axe",
@@ -7449,7 +9949,11 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Oscar VanEllis"
+    }
   },
   {
     "name": "Blackbone Axe",
@@ -7465,7 +9969,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Sableheart, Steed of Sivakaya",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Bramblecull",
@@ -7483,7 +9992,12 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Botanist",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Molten Axe",
@@ -7500,7 +10014,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Demented Malaroth",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Monarch's Blade",
@@ -7517,7 +10036,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Monarch of the Flame",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Reaver's Steel",
@@ -7533,7 +10057,12 @@ const GEAR_DATA = [
     "classes": [
       "Reaver"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Reaver of Sivakaya",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Thryne, Sledge of Creation",
@@ -7552,7 +10081,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Vessel Siraethe",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Arc, Crescent of the Void",
@@ -7568,7 +10102,12 @@ const GEAR_DATA = [
     "classes": [
       "Stormcaller"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Astra, Rogue of the Stars",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Eon, Blade of Time",
@@ -7584,7 +10123,12 @@ const GEAR_DATA = [
     },
     "classes": [
       "Paladin"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Astra, Rogue of the Stars",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Parallax, Key to the Void",
@@ -7602,7 +10146,12 @@ const GEAR_DATA = [
     "classes": [
       "Reaver"
     ],
-    "twoHanded": true
+    "twoHanded": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Astra, Rogue of the Stars",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Copper Sceptre",
@@ -7617,7 +10166,10 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "craftable"
+    }
   },
   {
     "name": "Journeyman's Pick",
@@ -7632,7 +10184,11 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "quest",
+      "name": "Serra Stile's Shovel"
+    }
   },
   {
     "name": "Mason's Pick",
@@ -7647,7 +10203,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Mason",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Unusual Copper Sceptre",
@@ -7662,7 +10223,10 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "craftable"
+    }
   },
   {
     "name": "Copper Sword",
@@ -7674,7 +10238,10 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "craftable"
+    }
   },
   {
     "name": "Hardened Copper Sword",
@@ -7686,7 +10253,10 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "craftable"
+    }
   },
   {
     "name": "Rusty Dagger",
@@ -7701,7 +10271,11 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "vendor",
+      "name": "Brian Meshley"
+    }
   },
   {
     "name": "Rusty Hatchet",
@@ -7713,7 +10287,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "vendor",
+      "name": "Innkeeper Ryvan"
+    }
   },
   {
     "name": "Rusty Shortsword",
@@ -7727,7 +10305,11 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "vendor",
+      "name": "Gus Highrest"
+    }
   },
   {
     "name": "Basic Pick",
@@ -7742,7 +10324,11 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "vendor",
+      "name": "Amethi Plazzo"
+    }
   },
   {
     "name": "Brackwood Mace",
@@ -7757,7 +10343,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Islander Bandit",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Weak Wand",
@@ -7772,7 +10363,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Islander Bandit",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Priel Knife",
@@ -7790,7 +10386,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Islander Bandit",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Steel Long Sword",
@@ -7802,7 +10403,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "vendor",
+      "name": "Akaran Black"
+    }
   },
   {
     "name": "Idol of Sivakaya",
@@ -7818,7 +10423,12 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Woe",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Bear Bone Club",
@@ -7836,7 +10446,11 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "vendor",
+      "name": "Brian Meshley"
+    }
   },
   {
     "name": "Gourd Carver",
@@ -7852,7 +10466,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "vendor",
+      "name": "Asaga Underloft"
+    }
   },
   {
     "name": "Lamplighter's Spark",
@@ -7881,7 +10499,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "vendor",
+      "name": "Benson Gamble"
+    }
   },
   {
     "name": "Rotting Cudgel",
@@ -7899,7 +10521,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "A Skeleton Soldier",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Molorai Axe",
@@ -7917,7 +10544,11 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "vendor",
+      "name": "Pierson Windwash"
+    }
   },
   {
     "name": "Runed Molorai Axe",
@@ -7935,7 +10566,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Archmage",
+      "rarity": "common"
+    }
   },
   {
     "name": "Adept Wand",
@@ -7950,7 +10586,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Neophyte Necromancer",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Petrified Club",
@@ -7969,7 +10610,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "A Rottenfoot Warrior",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Argo's Grimoire",
@@ -7986,7 +10632,12 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Elizah Vernor",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Thorn",
@@ -8000,7 +10651,12 @@ const GEAR_DATA = [
     "classes": [
       "Druid"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Massia the Fallen",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Blade of the Sea",
@@ -8015,7 +10671,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Greater Vithean Elemental",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Eyestalk Wand",
@@ -8029,7 +10690,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Old Brackey",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Short Sword of Viropha",
@@ -8044,7 +10710,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "quest",
+      "name": "A Magical Sword in Port Azure"
+    }
   },
   {
     "name": "The Interrogator",
@@ -8065,7 +10735,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Jailor",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Wand of Air",
@@ -8080,7 +10755,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Greater Vithean Elemental",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Bloodletter",
@@ -8098,7 +10778,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "A Highwayman Marauder",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Hardened Sceptre",
@@ -8114,7 +10799,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Archmage",
+      "rarity": "common"
+    }
   },
   {
     "name": "Razor Waveblade",
@@ -8129,7 +10819,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Bodyguard",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Jellystick",
@@ -8146,7 +10841,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Swamp Nettle",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Ogrespice Bundle",
@@ -8161,7 +10861,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "A Grassland Ogre Shaman",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Whipsword",
@@ -8174,7 +10879,12 @@ const GEAR_DATA = [
     "classes": [
       "Windblade"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Overseer Orlok",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Spectral Dagger",
@@ -8192,7 +10902,12 @@ const GEAR_DATA = [
       "Windblade",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Vithean Blademaster",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Spectral Sceptre",
@@ -8209,7 +10924,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Cursed Vithean Traitor",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Molorai Broadsword",
@@ -8221,7 +10941,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "vendor",
+      "name": "Summoned: Pocket Vendor"
+    }
   },
   {
     "name": "Pearlescent Kelp Totem",
@@ -8238,7 +10962,12 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Algaeth Bilgeback",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Acolyte's Cudgel",
@@ -8256,7 +10985,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Ecclesiarch",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Blackflame Torch",
@@ -8270,7 +11004,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Acceptor",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Fungal Bouquet",
@@ -8286,7 +11025,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Ravager, The First Infected",
+      "rarity": "common"
+    }
   },
   {
     "name": "Priest's Stein",
@@ -8301,7 +11045,11 @@ const GEAR_DATA = [
     "classes": [
       "Druid"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "quest",
+      "name": "Intel from the Lost Cellar"
+    }
   },
   {
     "name": "Scorched Walking Stick",
@@ -8317,7 +11065,12 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Peon",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Sivakayan Hookblade",
@@ -8331,7 +11084,12 @@ const GEAR_DATA = [
     "classes": [
       "Windblade"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Lazalith, Soldier of Sivakaya",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Songmaker",
@@ -8348,7 +11106,12 @@ const GEAR_DATA = [
       "Windblade",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Spectral Torturer",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Boneweaver's Leg",
@@ -8363,7 +11126,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Boneweaver",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Ebonshade",
@@ -8384,7 +11152,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Seed of Blight",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Queen's Fang",
@@ -8404,7 +11177,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Slumbering Queen",
+      "rarity": "common"
+    }
   },
   {
     "name": "Thorned Branch",
@@ -8422,7 +11200,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Elder Guardian",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Cinder of Birth",
@@ -8438,7 +11221,12 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Beady",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Sleeper's Pin",
@@ -8459,7 +11247,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Nightmarian Arcanist",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Dreamy Wand",
@@ -8474,7 +11267,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Dream",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Spectral Sword",
@@ -8493,7 +11291,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Reliquary Fiend",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Crystallized Tactics",
@@ -8510,7 +11313,12 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Pamia the Coward",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "End's Bane",
@@ -8528,7 +11336,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Tiallia Priel",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Fernallan Sceptre",
@@ -8543,7 +11356,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Maple",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Sivakayan Sceptre",
@@ -8558,7 +11376,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Sivakayan Cleric",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Sivakayan Straightsword",
@@ -8570,7 +11393,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Sivakayan Raider",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Celestial Spike",
@@ -8588,7 +11416,12 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Stardust",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Demon Claw",
@@ -8603,7 +11436,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Shadow of Sleep",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Diamond Claw",
@@ -8624,7 +11462,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Diamond Hound",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Memories of Snow",
@@ -8640,7 +11483,12 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Dream Invader",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Sivakayan Wand",
@@ -8656,7 +11504,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Sivakayan Shadow",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Stone Sword",
@@ -8676,7 +11529,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Stoneman",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Volcanic Sceptre",
@@ -8692,7 +11550,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Volcanic Giant",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Wyrm Bone",
@@ -8713,7 +11576,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Swamp Wyrm",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Ephermalia, Blade of Waning",
@@ -8735,7 +11603,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Morian the Ascended",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Resonating Crystal",
@@ -8752,7 +11625,12 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Granitus",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Asp's Fang",
@@ -8775,7 +11653,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Asp",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Brax's Candle",
@@ -8790,7 +11673,12 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Braxonian Ascended",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Ceto",
@@ -8806,7 +11694,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Ripper DeMerth",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Bombastic Wand",
@@ -8822,7 +11715,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Vinx",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Braxonian Mace",
@@ -8841,7 +11739,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Braxonian Honor Guard",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Diamond Edged Sword",
@@ -8859,7 +11762,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Sivakayan Shadow",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Fungal Longsword",
@@ -8877,7 +11785,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Vinx",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Looming Reaper",
@@ -8892,7 +11805,12 @@ const GEAR_DATA = [
     "classes": [
       "Druid"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "The Gardener of Loomingwood",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Mithril Short Sword",
@@ -8912,7 +11830,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Lost Treasure",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Braxonian Testament",
@@ -8929,7 +11852,12 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Historian of Braxonia",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Glowing Blue Stone",
@@ -8946,7 +11874,12 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Ancient Spectre",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Oslind's Eviscerator",
@@ -8964,7 +11897,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Prince Oslind",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Siva-Braxonian Teachings",
@@ -8983,7 +11921,11 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "quest",
+      "name": "The Ancient Teachings"
+    }
   },
   {
     "name": "Garg Wand",
@@ -8999,7 +11941,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Curator",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Petrified Wood Cane",
@@ -9018,7 +11965,12 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Statue of Brax",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Traitor's Steel",
@@ -9039,7 +11991,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Elwio the Traitor",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Twisted Branch",
@@ -9056,7 +12013,12 @@ const GEAR_DATA = [
     "classes": [
       "Druid"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Botanist",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Azynthian Dagger",
@@ -9074,7 +12036,12 @@ const GEAR_DATA = [
       "Windblade",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Oracle Miress",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Charged Sword",
@@ -9097,7 +12064,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Savannah Priel",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Cryptid Claws",
@@ -9116,7 +12088,12 @@ const GEAR_DATA = [
       "Windblade",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Lost Treasure",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Messenger",
@@ -9132,7 +12109,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Rotting Guardian",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Ulor's Encyclopedia",
@@ -9151,7 +12133,12 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Lost Treasure",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Ascended Remains",
@@ -9168,7 +12155,12 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Vessel Siraethe",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Esen",
@@ -9186,7 +12178,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Ripper DeMerth",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Apotheosis",
@@ -9210,7 +12207,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Apparition of Vitheo",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Horn of Aeiros",
@@ -9233,7 +12235,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Aeiros, Soldier of Sivakaya",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Tome of Necromancy",
@@ -9250,7 +12257,12 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Darkwarden Ilyth",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Corruptor",
@@ -9267,7 +12279,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Azynthian Keeper",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Eternox, Remnant of the Void",
@@ -9284,7 +12301,12 @@ const GEAR_DATA = [
     "classes": [
       "Druid"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Astra, Rogue of the Stars",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Lux, Carver of Stars",
@@ -9300,7 +12322,12 @@ const GEAR_DATA = [
     "classes": [
       "Windblade"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Astra, Rogue of the Stars",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Reaper of Regrowth",
@@ -9320,7 +12347,12 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Fallen Fernalla",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Singularity, Vessel of Creation",
@@ -9336,7 +12368,12 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "drop",
+      "monster": "Astra, Rogue of the Stars",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Deciding Blade",
@@ -9371,7 +12408,11 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
-    "bothSlots": true
+    "bothSlots": true,
+    "source_info": {
+      "type": "quest",
+      "name": "Lighting the Nighthollow Candle"
+    }
   },
   {
     "name": "Unsocketed Ring",
@@ -9387,7 +12428,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "quest",
+      "name": "Orion Mycon's Lost Ring"
+    }
   },
   {
     "name": "Waldorf Family Ring",
@@ -9405,7 +12450,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "quest",
+      "name": "Wally's Moongill"
+    }
   },
   {
     "name": "Golden Luminstone Ring",
@@ -9422,7 +12471,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Parmalee Gemlyn"
+    }
   },
   {
     "name": "Priel Insignia Ring",
@@ -9439,7 +12492,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Priel Bandit Recruit",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Ring of Magic Bolt",
@@ -9453,7 +12511,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Samuel Thatcher"
+    }
   },
   {
     "name": "Angler's Ring",
@@ -9471,7 +12533,10 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller",
       "Arcanist"
-    ]
+    ],
+    "source_info": {
+      "type": "craftable"
+    }
   },
   {
     "name": "Fiery Sapphire Ring",
@@ -9487,7 +12552,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Parmalee Gemlyn"
+    }
   },
   {
     "name": "Green Emerald Ring",
@@ -9503,7 +12572,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Parmalee Gemlyn"
+    }
   },
   {
     "name": "Hilltop Ring",
@@ -9522,7 +12595,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Autmis the Lost",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Shivering Ring",
@@ -9541,7 +12619,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Shadow of Sleep",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Clouded Diamond Ring",
@@ -9557,7 +12640,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Parmalee Gemlyn"
+    }
   },
   {
     "name": "Ring of the Sky",
@@ -9576,7 +12663,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Tinkles",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Decayed Ring",
@@ -9596,7 +12688,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "An Apparition of Sivakaya",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Ring of Clarity",
@@ -9612,7 +12709,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Archmage",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Swirlstone Ring",
@@ -9629,7 +12731,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Archmage",
+      "rarity": "common"
+    }
   },
   {
     "name": "Vithean Sea Salt Ring",
@@ -9649,7 +12756,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Captain Sigrid",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Rottenfoot Ring",
@@ -9663,7 +12775,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Asaga Underloft"
+    }
   },
   {
     "name": "Ceremonial Ring",
@@ -9679,7 +12795,10 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "craftable"
+    }
   },
   {
     "name": "Gapped Ring",
@@ -9697,7 +12816,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Ughl of the Skies",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Pristine Ceremonial Ring",
@@ -9719,7 +12843,10 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "craftable"
+    }
   },
   {
     "name": "Ring of The Mystics",
@@ -9736,7 +12863,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Agsha of the Soil",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Bog Hoop",
@@ -9753,7 +12885,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Nipper Lashfist",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Toxin Warped Band",
@@ -9772,7 +12909,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "King Cobra",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Fire Emerald Band",
@@ -9790,7 +12932,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Blazefiend",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Hardened Slime Ring",
@@ -9807,7 +12954,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Subterranean Goop",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Voidbloom Ring",
@@ -9827,7 +12979,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Lazalith, Soldier of Sivakaya",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Elderstone Ring",
@@ -9841,7 +12998,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Slumbering Queen",
+      "rarity": "common"
+    }
   },
   {
     "name": "Inspiration",
@@ -9858,7 +13020,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Lazalith, Soldier of Sivakaya",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Shielded Ring",
@@ -9875,7 +13042,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Acolyte",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Insect Shell Ring",
@@ -9894,7 +13066,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Spark Queen",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Priel Officer's Ring",
@@ -9913,7 +13090,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Priel Deceiver",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Lifeloop",
@@ -9930,7 +13112,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Protected Memory",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Tempestalia, Ring of Storms",
@@ -9947,7 +13134,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "quest",
+      "name": "Repairing Orion's Ring, Part 2"
+    }
   },
   {
     "name": "Flawless Diamond Ring",
@@ -9963,7 +13154,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Lost Treasure",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Flawless Emerald Ring",
@@ -9979,7 +13175,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Lost Treasure",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Flawless Sapphire Ring",
@@ -9995,7 +13196,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Lost Treasure",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Birdbone Band",
@@ -10011,7 +13217,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Pteriaped Matron",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Jackalbone Loop",
@@ -10031,7 +13242,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Lupine Horror",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Strategist's Ring",
@@ -10050,7 +13266,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Chazza Priel",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Wild Colossus Ring",
@@ -10067,7 +13288,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Xasxi",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Wisdom Band",
@@ -10084,7 +13310,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Lost Treasure",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Augmenting Ring",
@@ -10100,7 +13331,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Fearantula",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Freeing Stone",
@@ -10117,7 +13353,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Shadow of Sleep",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Living Ruby Ring",
@@ -10135,7 +13376,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Ruby Fiend",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Living Sapphire Ring",
@@ -10152,7 +13398,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Sapphire Fiend",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Ocean Aged Ring",
@@ -10175,7 +13426,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Pamia the Coward",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Phoenix Loop",
@@ -10193,7 +13449,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Pyroclast",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Simple Engagement Ring",
@@ -10209,7 +13470,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Risen Pilgrim",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Aged Ring of Barriers",
@@ -10223,7 +13489,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Worn Ancient Guardian",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Concentration Band",
@@ -10241,7 +13512,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Shadow of Sleep",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Slumberbloom Ring",
@@ -10261,7 +13537,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "quest",
+      "name": "Shivering Step"
+    }
   },
   {
     "name": "Ring of the Old",
@@ -10284,7 +13564,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Darkwarden Awxa",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Ring of Visions",
@@ -10303,7 +13588,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Spectre",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Frozen Lava Ring",
@@ -10323,7 +13613,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Historian of Braxonia",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Ring of Repeated Thoughts",
@@ -10340,7 +13635,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Lost Treasure",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Solar Forged Ring",
@@ -10357,7 +13657,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Raval, The First Paladin",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Molorai Allegiant Ring",
@@ -10380,7 +13685,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Molorai Eldermistress",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Skyfolk Band",
@@ -10403,7 +13713,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Faerie Enchantress",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Bladeturner",
@@ -10422,7 +13737,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Nazura the Traitor",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Dancer's Ring",
@@ -10442,7 +13762,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Sivakayan High Shadow",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Ring of Echoes",
@@ -10462,7 +13787,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Hypnic",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Monarch's Ring",
@@ -10484,7 +13814,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Monarch of the Flame",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Ring of the Ascended",
@@ -10507,7 +13842,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Apparition of Vitheo",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Ring of the Deceiver",
@@ -10530,7 +13870,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Assassin of Sivakaya",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Ring of the Pious",
@@ -10553,7 +13898,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Assassin of Sivakaya",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Sivakaya's Touch",
@@ -10576,7 +13926,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Eldoth Molorai",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Vessel's Band",
@@ -10599,7 +13954,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Vessel Siraethe",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Eldoth's Heirloom Ring",
@@ -10622,7 +13982,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Eldoth Molorai",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Old Buckler",
@@ -10636,7 +14001,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Benson Gamble"
+    }
   },
   {
     "name": "Rotting Metal Shield",
@@ -10655,7 +14024,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Skeleton Captain",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Twilight Shield",
@@ -10673,7 +14047,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Lost Sea Giant",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Magus Shield",
@@ -10689,7 +14068,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Sagan Ilth",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Crested Shield",
@@ -10708,7 +14092,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Goliath",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Mudmold Shield",
@@ -10725,7 +14114,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Rosle of the Spirits",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Braxonian Shield",
@@ -10742,7 +14136,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Peon",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Diamondine Shield",
@@ -10759,7 +14158,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Stoneman Diamondine",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Dusken Shield",
@@ -10777,7 +14181,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Dusken Giant",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Molorai Parrying Dagger",
@@ -10790,7 +14199,12 @@ const GEAR_DATA = [
     },
     "classes": [
       "Windblade"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Overseer Laseal",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Royal Carapace",
@@ -10808,7 +14222,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Spark Royal",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Bark Shield",
@@ -10824,7 +14243,12 @@ const GEAR_DATA = [
       "Druid",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Protected Memory",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Sivakayan Shield",
@@ -10841,7 +14265,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Sivakayan Cleric",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Provoker",
@@ -10860,7 +14289,12 @@ const GEAR_DATA = [
       "Druid",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Mephallo",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Slab of Meteorite",
@@ -10878,7 +14312,12 @@ const GEAR_DATA = [
       "Druid",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Living Meteorite",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Volcanic Shield",
@@ -10896,7 +14335,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Volcanic Giant",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Runed Shield",
@@ -10915,7 +14359,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Undertoes",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Erandian Avenger",
@@ -10934,7 +14383,12 @@ const GEAR_DATA = [
       "Druid",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Raval, The First Paladin",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Hopewarden",
@@ -10955,7 +14409,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Sivakayan Doomshade",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Bastion",
@@ -10976,7 +14435,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Astorim",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Cursed Hide Shield",
@@ -10997,7 +14461,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Demented Malaroth",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Griefwarden",
@@ -11019,7 +14488,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Lost Treasure",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Nature's Will",
@@ -11037,7 +14511,12 @@ const GEAR_DATA = [
     },
     "classes": [
       "Druid"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Fallen Fernalla",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Shivering Torch",
@@ -11075,7 +14554,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Sylvan Giant Runt",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Braided Belt",
@@ -11092,7 +14576,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "quest",
+      "name": "Alice Hewer's Necklace"
+    }
   },
   {
     "name": "Metal Girdle",
@@ -11109,7 +14597,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Gort",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Bonestudded Belt",
@@ -11121,7 +14614,11 @@ const GEAR_DATA = [
     },
     "classes": [
       "Druid"
-    ]
+    ],
+    "source_info": {
+      "type": "quest",
+      "name": "A Skeleton Eye for Alyssia Fearnon"
+    }
   },
   {
     "name": "Stalwart Belt",
@@ -11138,7 +14635,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Grizzlepaw",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Breezeworn Sash",
@@ -11151,7 +14653,11 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "quest",
+      "name": "Faerie Dust for Nylith Valorro"
+    }
   },
   {
     "name": "Sylvan Cord",
@@ -11164,7 +14670,12 @@ const GEAR_DATA = [
     "classes": [
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Sylvan Giant Runt",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Sailor's Belt",
@@ -11178,7 +14689,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "vendor",
+      "name": "Saya Seawatcher"
+    }
   },
   {
     "name": "Rottenfoot Sash",
@@ -11192,7 +14707,12 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Rottenfoot Warrior",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Ogreskin Cord",
@@ -11210,7 +14730,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Gruhglor",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Molorai Utility Belt",
@@ -11228,7 +14753,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "quest",
+      "name": "Keys for Valrae"
+    }
   },
   {
     "name": "Twilight Belt",
@@ -11244,7 +14773,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Restless Thoughts",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Braxonian Sash",
@@ -11259,7 +14793,12 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Upha, Priest of Brax",
+      "rarity": "common"
+    }
   },
   {
     "name": "Reinforced Scale Belt",
@@ -11270,7 +14809,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Nagalok",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Toxic Strap",
@@ -11286,7 +14830,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Gloopa",
+      "rarity": "uncommon"
+    }
   },
   {
     "name": "Sash of the Lost Guard",
@@ -11304,7 +14853,12 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Spectral King's Guard",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Spectral Silk Belt",
@@ -11322,7 +14876,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Boneweaver",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Lost Girdle",
@@ -11339,7 +14898,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Lost Treasure",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Prismatic Warcord",
@@ -11358,7 +14922,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Ember Acolyte",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Tarnished Steel Belt",
@@ -11372,7 +14941,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Spectral Guard",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Ghostly Sash",
@@ -11388,7 +14962,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Ghost of Plaxitheris",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Malaroth Sinew Cord",
@@ -11408,7 +14987,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Shivunax",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Stabilizing Belt",
@@ -11422,7 +15006,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Oarik the Failure",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Woven Stone Belt",
@@ -11440,7 +15029,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Cinder",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Belt of Ages",
@@ -11458,7 +15052,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Protected Memory",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Gut Cord",
@@ -11477,7 +15076,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Swamp Wyrm",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Coiling Belt",
@@ -11495,7 +15099,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Coiling Dusker",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Empath's Cord",
@@ -11512,7 +15121,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Failed Experiment",
+      "rarity": "common"
+    }
   },
   {
     "name": "Flowing Blight Silk Sash",
@@ -11533,7 +15147,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Parzgil",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Gem Adorned Belt",
@@ -11551,7 +15170,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Brood Mother",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Granite Belt",
@@ -11570,7 +15194,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Granitus",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Famish",
@@ -11588,7 +15217,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Darkwarden Ealdred",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Charmed Belt",
@@ -11609,7 +15243,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "A Faerie Enchantress",
+      "rarity": "legendary"
+    }
   },
   {
     "name": "Royal Waistband",
@@ -11627,7 +15266,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Prince Ardant",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Sableheart's Harness",
@@ -11647,7 +15291,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Sableheart, Steed of Sivakaya",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Steadfast Girdle",
@@ -11663,7 +15312,12 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "The Abomination",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Polished Steel Belt",
@@ -11680,7 +15334,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Braxonian Honor Guard",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Stilling Cord",
@@ -11699,7 +15358,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Shrouded Sivakayan",
+      "rarity": "rare"
+    }
   },
   {
     "name": "Centering Cord",
@@ -11720,7 +15384,12 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Corrupted Fungal Bear",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Exalted Belt",
@@ -11739,7 +15408,12 @@ const GEAR_DATA = [
     "classes": [
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Exalted Firebone",
+      "rarity": "unknown"
+    }
   },
   {
     "name": "Swampy Loincloth",
@@ -11758,6 +15432,11 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "source_info": {
+      "type": "drop",
+      "monster": "Rottenfoot Mauler",
+      "rarity": "rare"
+    }
   }
 ];
