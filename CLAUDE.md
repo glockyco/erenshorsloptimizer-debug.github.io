@@ -149,7 +149,9 @@ in-panel warnings.
 Key constants at the top of the file:
 
 - `CLASSES` — six classes with icons, descriptions, and default stat weights
-- `STATS` — eight stats (STR, DEX, AGI, END, INT, WIS, CHA, RES)
+- `STATS` — twelve stats: STR, DEX, AGI, END, INT, WIS, CHA, RES, MR, ER, PR,
+  VR (Magic/Elemental/Poison/Void Resist). Note: PR = **Poison** Resist, not
+  Physical.
 - `SLOTS` — fourteen equipment slots
 - `MULTI_SLOTS` — slots that accept two items (Ring×2, Wrist×2)
 
