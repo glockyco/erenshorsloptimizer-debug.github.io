@@ -53,7 +53,7 @@ test.describe('Erenshor Gear Sloptimizer', () => {
   });
 
   test('no items carry a "custom" tag — all gear is from the wiki', async ({ page }) => {
-    // All items loaded from gear.json get source='wiki', which renders as
+    // All items loaded from gear.js get source='wiki', which renders as
     // <span class="tag tag-wiki">wiki</span>. Custom items added manually
     // render as <span class="tag tag-manual">custom</span>.
     // This test asserts the database contains only wiki items on fresh load.

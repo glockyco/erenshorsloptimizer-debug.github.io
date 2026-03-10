@@ -47,7 +47,7 @@ git push
 
 `generate.py` requires [uv](https://docs.astral.sh/uv/) and nothing else.
 It downloads the public Erenshor SQLite database, queries all equippable
-gear, and writes `gear.json`.
+gear, and writes `gear.js`.
 
 ## Name Mappings
 
@@ -78,13 +78,13 @@ Key constants at the top of the file:
 
 Key functions:
 
-- `init()` — called after `gear.json` loads; sets up the UI
+- `init()` — called after `gear.js` defines `GEAR_DATA`; sets up the UI
 - `score(item, weights)` — returns a numeric score for an item given weights
 - `optimize()` — fills the loadout builder with highest-scoring items
 - `renderBothLoadouts()` — renders current gear and loadout builder panels
 
 Gear data is held in the module-level `gear` array. Wiki gear (from
-`gear.json`) is loaded once on startup via `loadWikiGear()`. Custom items
+`gear.js`) is loaded once on startup via `loadWikiGear()`. Custom items
 added by the user are appended to the same array for the session.
 
 ## Testing

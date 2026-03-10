@@ -13,7 +13,7 @@ module.exports = {
   ],
   webServer: {
     // No npm/node server needed — Python's built-in HTTP server serves the
-    // static files and makes fetch('gear.json') work correctly.
+    // static files. gear.js is loaded as a plain <script> tag.
     command: 'python3 -m http.server 8765',
     url: 'http://localhost:8765',
     reuseExistingServer: !process.env.CI,
