@@ -47,12 +47,12 @@ const SLOTS = ['Head','Neck','Chest','Back','Arms','Waist','Legs','Feet','Hands'
 const MULTI_SLOTS = {Ring:2, Wrist:2};
 
 
+// Returns spell-effect totals for scoring. Worn and aura are always-on;
+// proc effects are discounted at 50% to approximate uptime. Spell-sourced
+// resists (mr/er/pr/vr) are separate from item.stats resists — both feed
+// into score() but via different paths (item.stats via STAT_KEYS direct
+// reduce; spell effects via STATS.forEach on the return value here).
 function getItemEffects(item) {
-  // Returns aggregated effect totals for scoring and display. Worn and aura
-  // effects are always-on; proc effects are discounted at 50%. Spell-sourced
-  // resists (mr/er/pr/vr) are separate from item.stats resists — both feed
-  // into score() but through different paths (item.stats via STAT_KEYS,
-  // spell effects via STATS.forEach on the return value of this function).
   const e = item.effects || {};
   const w = e.worn || {}, a = e.aura || {}, p = e.proc || {};
   return {
@@ -64,7 +64,7 @@ function getItemEffects(item) {
     er: (w.er||0) + (a.er||0) + (p.er||0)*0.5,
     pr: (w.pr||0) + (a.pr||0) + (p.pr||0)*0.5,
     vr: (w.vr||0) + (a.vr||0) + (p.vr||0)*0.5,
-    // Worn + aura stats feed into main stat scoring via STATS.forEach in score()
+    // Worn + aura stats score via STATS.forEach in score()
     str: (w.str||0) + (a.str||0), dex: (w.dex||0) + (a.dex||0),
     agi: (w.agi||0) + (a.agi||0), end: (w.end||0) + (a.end||0),
     int: (w.int||0) + (a.int||0), wis: (w.wis||0) + (a.wis||0),
@@ -72,31 +72,67 @@ function getItemEffects(item) {
   };
 }
 
+// Returns permanent-only (worn + aura) spell-effect totals for display.
+// Proc effects are intentionally excluded from totals — they are temporary
+// and would misrepresent what the player permanently has. Raw proc values
+// are exposed separately for display as sub-labels.
+function getItemPermEffects(item) {
+  const e = item.effects || {};
+  const w = e.worn || {}, a = e.aura || {}, p = e.proc || {};
+  return {
+    haste:     (w.haste||0)     + (a.haste||0),
+    lifesteal: (w.lifesteal||0) + (a.lifesteal||0),
+    atkroll:   (w.atkroll||0)   + (a.atkroll||0),
+    movespeed: (w.movespeed||0) + (a.movespeed||0),
+    mr: (w.mr||0) + (a.mr||0),
+    er: (w.er||0) + (a.er||0),
+    pr: (w.pr||0) + (a.pr||0),
+    vr: (w.vr||0) + (a.vr||0),
+    // Raw proc values for display as sub-labels (not discounted)
+    haste_proc:     p.haste     || 0,
+    lifesteal_proc: p.lifesteal || 0,
+    atkroll_proc:   p.atkroll   || 0,
+    movespeed_proc: p.movespeed || 0,
+    mr_proc: p.mr || 0, er_proc: p.er || 0,
+    pr_proc: p.pr || 0, vr_proc: p.vr || 0,
+  };
+}
+
 function sumLoadoutEffects() {
-  const out = {haste:0, haste_worn:0, haste_aura:0, haste_proc:0,
-               lifesteal:0, atkroll:0, movespeed:0, mr:0, er:0, pr:0, vr:0,
-               wand_proc:null, bow_proc:null};
+  const out = {
+    haste:0, haste_worn:0, haste_aura:0, haste_proc:0,
+    lifesteal:0, lifesteal_proc:0,
+    atkroll:0,   atkroll_proc:0,
+    movespeed:0, movespeed_proc:0,
+    mr:0, mr_proc:0, er:0, er_proc:0,
+    pr:0, pr_proc:0, vr:0, vr_proc:0,
+    wand_proc:null, bow_proc:null,
+  };
   Object.values(manualLoadout).forEach(entry => {
     if (!entry?.item) return;
+    const perm = getItemPermEffects(entry.item);
+    // Permanent totals via getItemPermEffects — single source of truth
+    out.haste     += perm.haste;
+    out.lifesteal += perm.lifesteal;
+    out.atkroll   += perm.atkroll;
+    out.movespeed += perm.movespeed;
+    out.mr += perm.mr; out.er += perm.er;
+    out.pr += perm.pr; out.vr += perm.vr;
+    // Raw proc values for display sub-labels
+    out.haste_proc     += perm.haste_proc;
+    out.lifesteal_proc += perm.lifesteal_proc;
+    out.atkroll_proc   += perm.atkroll_proc;
+    out.movespeed_proc += perm.movespeed_proc;
+    out.mr_proc += perm.mr_proc; out.er_proc += perm.er_proc;
+    out.pr_proc += perm.pr_proc; out.vr_proc += perm.vr_proc;
+    // Haste breakdown sub-labels need raw bucket access
     const e = entry.item.effects || {};
-    const w = e.worn || {}, a = e.aura || {}, p = e.proc || {};
-    out.haste_worn  += w.haste || 0;
-    out.haste_aura  += a.haste || 0;
-    out.haste_proc  += (p.haste || 0) * 0.5;
-    out.haste       += (w.haste||0) + (a.haste||0) + (p.haste||0)*0.5;
-    out.lifesteal   += (w.lifesteal||0) + (a.lifesteal||0) + (p.lifesteal||0)*0.5;
-    out.atkroll     += (w.atkroll||0)   + (a.atkroll||0)   + (p.atkroll||0)*0.5;
-    out.movespeed   += (w.movespeed||0) + (a.movespeed||0);
-    out.mr += (w.mr||0) + (a.mr||0) + (p.mr||0)*0.5;
-    out.er += (w.er||0) + (a.er||0) + (p.er||0)*0.5;
-    out.pr += (w.pr||0) + (a.pr||0) + (p.pr||0)*0.5;
-    out.vr += (w.vr||0) + (a.vr||0) + (p.vr||0)*0.5;
+    out.haste_worn += (e.worn?.haste  || 0);
+    out.haste_aura += (e.aura?.haste  || 0);
     // Only one wand/bow can be equipped — last item wins (shouldn't conflict)
     if (e.wand_proc) out.wand_proc = e.wand_proc;
     if (e.bow_proc)  out.bow_proc  = e.bow_proc;
   });
-  // Cap total haste at 60
-  out.haste = Math.min(out.haste, 60);
   return out;
 }
 
