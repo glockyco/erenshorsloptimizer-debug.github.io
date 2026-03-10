@@ -416,13 +416,14 @@ function clearManualLoadout() {
 function computeMaxScore() {
   const fl = parseInt(document.getElementById('filter-level').value) || 999;
   const tieredGear = gear.map(blessedItem);
+  const claimedLines = {};
   let maxScore = 0;
   let bestPrimary = null;
   SLOTS.forEach(slot => {
     // Secondary is handled below after we know what Primary picked.
     if (slot === 'Secondary') return;
     const pool = tieredGear.filter(g => g.lvl <= fl && (g.slot === slot || (g.bothSlots && slot === 'Primary')))
-      .sort((a,b) => score(b)-score(a));
+      .sort((a, b) => scoreInContext(b, claimedLines) - scoreInContext(a, claimedLines));
     const n = MULTI_SLOTS[slot] || 1;
     if (n > 1) {
       // For multi-slots (Ring, Wrist): non-relic items can fill both slots
@@ -430,13 +431,27 @@ function computeMaxScore() {
       const best = pool[0];
       if (best) {
         if (!best.relic) {
-          maxScore += score(best) * 2;
+          // Same item in both slots — claim its line once, count score twice.
+          maxScore += scoreInContext(best, claimedLines) * 2;
+          claimLines(best, claimedLines);
         } else {
-          pool.slice(0, 2).forEach(item => { maxScore += score(item); });
+          // Relic: pick best, claim its line, then pick best remaining for
+          // the second slot with the updated context.
+          const s1 = scoreInContext(best, claimedLines);
+          maxScore += s1;
+          claimLines(best, claimedLines);
+          const second = pool.slice(1).sort((a, b) => scoreInContext(b, claimedLines) - scoreInContext(a, claimedLines))[0];
+          if (second) {
+            maxScore += scoreInContext(second, claimedLines);
+            claimLines(second, claimedLines);
+          }
         }
       }
     } else {
-      if (pool[0]) maxScore += score(pool[0]);
+      if (pool[0]) {
+        maxScore += scoreInContext(pool[0], claimedLines);
+        claimLines(pool[0], claimedLines);
+      }
     }
     if (slot === 'Primary') bestPrimary = pool[0] || null;
   });
@@ -445,8 +460,11 @@ function computeMaxScore() {
   if (!bestPrimary?.twoHanded) {
     const primaryName = bestPrimary?.name;
     const pool = tieredGear.filter(g => g.lvl <= fl && (g.slot === 'Secondary' || g.bothSlots) && g.name !== primaryName)
-      .sort((a,b) => score(b)-score(a));
-    if (pool[0]) maxScore += score(pool[0]);
+      .sort((a, b) => scoreInContext(b, claimedLines) - scoreInContext(a, claimedLines));
+    if (pool[0]) {
+      maxScore += scoreInContext(pool[0], claimedLines);
+      claimLines(pool[0], claimedLines);
+    }
   }
   return maxScore;
 }
@@ -1034,6 +1052,59 @@ function score(item) {
   return s;
 }
 
+// Returns true if the given effect bucket (worn or aura sub-object) is blocked
+// by an already-claimed spell line. An effect is blocked when its line is
+// claimed at an equal-or-higher required level (matching the game's
+// CheckForHigherLevelSE logic, which uses strict > for blocking but the
+// overwrite loop uses >= — the net effect on a fully-built loadout is that
+// only the highest-level effect per line ever applies).
+function effectBlocked(effect, claimedLines) {
+  const line = effect?.line;
+  if (!line) return false; // Generic or no line — never blocked
+  const claimed = claimedLines[line];
+  if (claimed === undefined) return false;
+  return claimed >= (effect.req_lvl ?? -1);
+}
+
+// Update claimedLines after placing an item. Worn and aura effects each claim
+// their spell line at their required level, but only if they are stronger than
+// whatever is already claimed (higher required level wins).
+function claimLines(item, claimedLines) {
+  const e = item.effects || {};
+  for (const bucket of [e.worn, e.aura]) {
+    if (!bucket?.line) continue;
+    const existing = claimedLines[bucket.line];
+    const lvl = bucket.req_lvl ?? -1;
+    if (existing === undefined || lvl > existing) {
+      claimedLines[bucket.line] = lvl;
+    }
+  }
+}
+
+// Score an item in the context of an already-partially-built loadout. Any worn
+// or aura effect whose spell line is already claimed at an equal-or-higher
+// level is excluded from the score because the game engine would block it.
+function scoreInContext(item, claimedLines) {
+  if (!item?.stats) return 0;
+  let s = STATS.reduce((a, st) => a + (item.stats[st.key] || 0) * weights[st.key], 0);
+  const e = item.effects || {};
+  const w = effectBlocked(e.worn, claimedLines) ? {} : (e.worn || {});
+  const a = effectBlocked(e.aura, claimedLines) ? {} : (e.aura || {});
+  const p = e.proc || {};
+  const effs = {
+    haste:     (w.haste||0)     + (a.haste||0)     + (p.haste||0)*0.5,
+    lifesteal: (w.lifesteal||0) + (a.lifesteal||0) + (p.lifesteal||0)*0.5,
+    atkroll:   (w.atkroll||0)   + (a.atkroll||0)   + (p.atkroll||0)*0.5,
+    str: (w.str||0) + (a.str||0), dex: (w.dex||0) + (a.dex||0),
+    agi: (w.agi||0) + (a.agi||0), end: (w.end||0) + (a.end||0),
+    int: (w.int||0) + (a.int||0), wis: (w.wis||0) + (a.wis||0),
+    cha: (w.cha||0) + (a.cha||0),
+  };
+  s += effs.haste * (weights['haste'] || 0);
+  STATS.forEach(st => { s += (effs[st.key] || 0) * (weights[st.key] || 0); });
+  return s;
+}
+
 function optimizeAndScroll() {
   optimize();
   setTimeout(() => {
@@ -1086,11 +1157,21 @@ function optimize() {
     });
   }
 
+  // Track claimed spell lines across the loadout as slots are filled. Locked
+  // slots are placed first so their lines are already claimed before the
+  // optimizer fills remaining slots.
+  const claimedLines = {};
+  SLOTS.forEach(slot => {
+    slotKeys(slot).forEach(key => {
+      if (manualLoadout[key]?.locked) claimLines(manualLoadout[key].item, claimedLines);
+    });
+  });
+
   // For each slot key, skip if already locked; fill if empty or unlocked
   SLOTS.forEach(slot => {
     const keys = slotKeys(slot);
     keys.forEach(key => {
-      // Skip locked slots
+      // Skip locked slots (already claimed above)
       if (manualLoadout[key] && manualLoadout[key].locked) return;
 
       // Build pool of items not already chosen for another key of this slot.
@@ -1109,10 +1190,11 @@ function optimize() {
         isFallback = true;
       }
 
-      const sorted = pool.slice().sort((a, b) => score(b) - score(a));
+      const sorted = pool.slice().sort((a, b) => scoreInContext(b, claimedLines) - scoreInContext(a, claimedLines));
       const best = sorted[0];
       if (best) {
         manualLoadout[key] = { item: best, locked: false, fallback: isFallback };
+        claimLines(best, claimedLines);
         // If a 2H weapon was just chosen for Primary, clear Secondary so the
         // optimizer does not also fill it — that would be an impossible loadout.
         if (key === 'Primary' && best.twoHanded) {
