@@ -152,19 +152,6 @@ function getLoadoutByPrefix(prefix) {
   return prefix === 'cur-' ? state.currentLoadout : state.manualLoadout;
 }
 
-function toggleLock(slotKey) {
-  if (state.manualLoadout[slotKey]) {
-    state.manualLoadout[slotKey].locked = !state.manualLoadout[slotKey].locked;
-    renderBothLoadouts();
-  }
-}
-
-function clearSlot(slotKey) {
-  delete state.manualLoadout[slotKey];
-  delete state.slotTiers[slotKey];
-  renderBothLoadouts();
-}
-
 function clearManualLoadout() {
   Object.keys(state.manualLoadout).forEach(k => delete state.manualLoadout[k]);
   Object.keys(state.slotTiers).forEach(k => delete state.slotTiers[k]);
