@@ -108,6 +108,7 @@ GEAR_QUERY = """
         i.RequiredSlot,
         i.ThisWeaponType,
         i.ItemLevel,
+        i.Relic,
         s.Str,
         s.End,
         s.Dex,
@@ -325,6 +326,8 @@ def build_gear(db_path: Path) -> list[dict]:
             item["twoHanded"] = True
         if row["RequiredSlot"] == "PrimaryOrSecondary":
             item["bothSlots"] = True
+        if row["Relic"]:
+            item["relic"] = True
         source = sources.get(row["StableKey"])
         if source:
             item["source_info"] = source

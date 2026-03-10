@@ -158,6 +158,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Sylvan Giant Runt",
@@ -180,6 +181,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Obba of the Warkind",
@@ -203,6 +205,7 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Tinkles",
@@ -225,6 +228,7 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "vendor",
       "name": "Tiver Banes"
@@ -296,6 +300,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "A Deepling Lunarite",
@@ -321,6 +326,7 @@ const GEAR_DATA = [
       "Windblade",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Drowned Corpse",
@@ -348,6 +354,7 @@ const GEAR_DATA = [
       "Windblade",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Molorai Archaeologist",
@@ -372,6 +379,7 @@ const GEAR_DATA = [
       "Windblade",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Spark Royal",
@@ -441,6 +449,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Dream",
@@ -467,6 +476,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Chazza Priel",
@@ -489,6 +499,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "A Protected Memory",
@@ -513,6 +524,7 @@ const GEAR_DATA = [
       "Windblade",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Balaste the Fallen",
@@ -562,6 +574,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Stoneman Colossus",
@@ -610,6 +623,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Julianna Priel",
@@ -1802,7 +1816,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "relic": true
   },
   {
     "name": "Priel Standard",
@@ -1827,6 +1842,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Priel Lieutenant Bovo",
@@ -1873,6 +1889,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Bassalt Vallano",
@@ -1901,6 +1918,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Overseer Orlok",
@@ -1928,6 +1946,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "A Highwayman Raider",
@@ -1955,6 +1974,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Druo the Reborn",
@@ -1979,6 +1999,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Molorai Archaeologist",
@@ -2029,6 +2050,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Spectral Torturer",
@@ -2051,6 +2073,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "A Deepling Orator",
@@ -2078,6 +2101,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Goliath",
@@ -2105,6 +2129,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Lost Treasure",
@@ -2136,6 +2161,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Ghost of Plaxitheris",
@@ -2162,6 +2188,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Cinder",
@@ -2185,6 +2212,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Priel Tamer",
@@ -2219,6 +2247,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Pteriaped Matron",
@@ -2252,6 +2281,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Restless Thoughts",
@@ -2285,6 +2315,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Thorn",
@@ -2312,6 +2343,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Diva",
@@ -2335,6 +2367,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Undertoes",
@@ -2359,6 +2392,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Sylvan Giant",
@@ -2382,6 +2416,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "A Protected Memory",
@@ -2414,6 +2449,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Noctua",
@@ -2441,6 +2477,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Braxonian Weapon Master",
@@ -2463,6 +2500,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Molorai Acquirer",
@@ -2490,6 +2528,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Hypnic",
@@ -2518,6 +2557,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "A Faerie Enchantress",
@@ -2544,6 +2584,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Oracle Miress",
@@ -2572,6 +2613,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Assassin of Sivakaya",
@@ -2602,6 +2644,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Wardwarped Alpha",
@@ -2628,6 +2671,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Blight Wyrm",
@@ -2660,6 +2704,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Shrouded Sivakayan",
@@ -2693,6 +2738,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Fallen Fernalla",
@@ -2716,7 +2762,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "relic": true
   },
   {
     "name": "Burial Cloth Wristwrap",
@@ -2780,6 +2827,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Blunga",
@@ -2805,6 +2853,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "quest",
       "name": "Seaslimed Bracelet"
@@ -2950,6 +2999,7 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "A Rottenfoot Warrior",
@@ -2975,6 +3025,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Old Brackey",
@@ -2993,6 +3044,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Wiggleribs",
@@ -3017,6 +3069,7 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Wiggleribs",
@@ -3161,6 +3214,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Overseer Refleigh",
@@ -3180,6 +3234,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "A Fungus Ravaged Brute",
@@ -3203,6 +3258,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "A Protected Memory",
@@ -3228,6 +3284,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Kio The Darkbringer",
@@ -3257,6 +3314,7 @@ const GEAR_DATA = [
       "Windblade",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Shadow of Sleep",
@@ -3424,6 +3482,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Warded Shadow",
@@ -3474,6 +3533,7 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Celestial Matter",
@@ -3526,6 +3586,7 @@ const GEAR_DATA = [
       "Windblade",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Morian the Ascended",
@@ -3553,6 +3614,7 @@ const GEAR_DATA = [
       "Windblade",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Fenton the Blighted",
@@ -3602,6 +3664,7 @@ const GEAR_DATA = [
       "Windblade",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Lost Treasure",
@@ -3651,6 +3714,7 @@ const GEAR_DATA = [
       "Arcanist",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Hand of the King",
@@ -3681,6 +3745,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Hand of the King",
@@ -3714,6 +3779,7 @@ const GEAR_DATA = [
       "Windblade",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Hand of the King",
@@ -3906,6 +3972,7 @@ const GEAR_DATA = [
       "Windblade",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Botanist",
@@ -3971,6 +4038,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Assassin of Sivakaya",
@@ -4006,6 +4074,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Fallen Fernalla",
@@ -4032,6 +4101,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Historian of Braxonia",
@@ -4051,6 +4121,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "quest",
       "name": "Clearing the Bonepits"
@@ -4069,6 +4140,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "craftable"
     }
@@ -4086,6 +4158,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "craftable"
     }
@@ -4103,6 +4176,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "craftable"
     }
@@ -4120,6 +4194,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "craftable"
     }
@@ -4137,6 +4212,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "craftable"
     }
@@ -4154,6 +4230,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "craftable"
     }
@@ -4170,7 +4247,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "relic": true
   },
   {
     "name": "Charm of the Stone",
@@ -4185,6 +4263,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "craftable"
     }
@@ -4202,6 +4281,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "craftable"
     }
@@ -4219,6 +4299,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "craftable"
     }
@@ -4236,6 +4317,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "craftable"
     }
@@ -4253,6 +4335,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "craftable"
     }
@@ -4270,6 +4353,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Lost Treasure",
@@ -4288,7 +4372,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "relic": true
   },
   {
     "name": "Precisionist's Charm",
@@ -4302,7 +4387,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "relic": true
   },
   {
     "name": "Protector's Charm",
@@ -4316,7 +4402,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "relic": true
   },
   {
     "name": "Sorcerer's Charm",
@@ -4330,7 +4417,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "relic": true
   },
   {
     "name": "Warlord's Charm",
@@ -4344,7 +4432,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "relic": true
   },
   {
     "name": "Cloth Shirt",
@@ -4557,6 +4646,7 @@ const GEAR_DATA = [
       "Windblade",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "An Apparition of Sivakaya",
@@ -4669,6 +4759,7 @@ const GEAR_DATA = [
       "Windblade",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "vendor",
       "name": "Tiver Banes"
@@ -4739,6 +4830,7 @@ const GEAR_DATA = [
       "Windblade",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "A Grassland Ogre Plaguebringer",
@@ -4765,6 +4857,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Rottenfoot Mauler",
@@ -4842,6 +4935,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Devoratrix",
@@ -5295,6 +5389,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Abyssal Lord",
@@ -5769,6 +5864,7 @@ const GEAR_DATA = [
     "classes": [
       "Windblade"
     ],
+    "relic": true,
     "source_info": {
       "type": "quest",
       "name": "A Sivakayan Horn for Ludo Luxo"
@@ -5854,6 +5950,7 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Overseer Orlok",
@@ -5899,6 +5996,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "quest",
       "name": "Hadden's Supplies 2"
@@ -6001,6 +6099,7 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Pteriaped Matron",
@@ -6047,6 +6146,7 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Ember Acolyte",
@@ -6072,6 +6172,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Gloopa",
@@ -6101,6 +6202,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Balaste the Fallen",
@@ -6147,6 +6249,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Mosscovered Stoneman",
@@ -6172,6 +6275,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "A Protected Memory",
@@ -6202,6 +6306,7 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Arcane Headmaster",
@@ -6227,6 +6332,7 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Noctua",
@@ -6255,6 +6361,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Granitus",
@@ -6504,6 +6611,7 @@ const GEAR_DATA = [
       "Windblade",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Failed Cremation",
@@ -6566,6 +6674,7 @@ const GEAR_DATA = [
       "Arcanist",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Ughl of the Skies",
@@ -6613,6 +6722,7 @@ const GEAR_DATA = [
       "Arcanist",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "vendor",
       "name": "Edwin Ansegg"
@@ -6688,6 +6798,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "quest",
       "name": "Annaleigh's Nagalok Claws"
@@ -6707,6 +6818,7 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Prioress",
@@ -6729,6 +6841,7 @@ const GEAR_DATA = [
       "Windblade",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Lurk",
@@ -6751,6 +6864,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "A Deepling Lunarite",
@@ -6793,6 +6907,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Diamond Colossus",
@@ -6817,6 +6932,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Vizijivi",
@@ -6841,6 +6957,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Dream Invader",
@@ -6862,6 +6979,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Frenzy",
@@ -6892,6 +7010,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Living Meteorite",
@@ -6920,6 +7039,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Fearantula",
@@ -6944,6 +7064,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Thorn",
@@ -6972,6 +7093,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Addison Priel",
@@ -7065,6 +7187,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Astorim",
@@ -7087,6 +7210,7 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "The Gardener of Loomingwood",
@@ -7113,6 +7237,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Sivakayan Spymaster",
@@ -7145,6 +7270,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Sylvan Giant",
@@ -7170,6 +7296,7 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Molorai Eldermistress",
@@ -7407,6 +7534,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "The Lost Sea Giant King",
@@ -7543,6 +7671,7 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Ragewhip",
@@ -7588,6 +7717,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Spectral Castle Guard",
@@ -7609,6 +7739,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Lurk",
@@ -7634,6 +7765,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Spike",
@@ -7732,6 +7864,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "A Subterranean Goop",
@@ -7759,6 +7892,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Shadow Man",
@@ -7805,6 +7939,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Evadne the Corrupted",
@@ -7833,6 +7968,7 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Vizijivi",
@@ -7858,6 +7994,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Warded Shadow",
@@ -7956,6 +8093,7 @@ const GEAR_DATA = [
       "Windblade",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Lupine Horror",
@@ -7981,6 +8119,7 @@ const GEAR_DATA = [
       "Windblade",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Molorai Dockmaster",
@@ -8023,7 +8162,8 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "relic": true
   },
   {
     "name": "Ripparian Soldier Helm",
@@ -8063,6 +8203,7 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Spinesnap Gorilla",
@@ -8088,6 +8229,7 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Prince Ardant",
@@ -8137,6 +8279,7 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Candlekeeper",
@@ -8164,6 +8307,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Lost Treasure",
@@ -8189,6 +8333,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Nipper King",
@@ -8211,6 +8356,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Sivakayan Shadow",
@@ -8268,6 +8414,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Elwio the Traitor",
@@ -8292,6 +8439,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Wardwarped Alpha",
@@ -8322,6 +8470,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Monarch of the Flame",
@@ -8344,6 +8493,7 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Vessel Siraethe",
@@ -8375,6 +8525,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Sableheart, Steed of Sivakaya",
@@ -8401,6 +8552,7 @@ const GEAR_DATA = [
       "Arcanist",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Azynthian Keeper",
@@ -8586,6 +8738,7 @@ const GEAR_DATA = [
       "Windblade",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "An Apparition of Sivakaya",
@@ -8668,6 +8821,7 @@ const GEAR_DATA = [
       "Windblade",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "vendor",
       "name": "Tiver Banes"
@@ -8690,6 +8844,7 @@ const GEAR_DATA = [
       "Windblade",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Massia the Fallen",
@@ -8772,6 +8927,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Slumbering Queen",
@@ -8846,6 +9002,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Ravager, The First Infected",
@@ -8892,6 +9049,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Evadne the Corrupted",
@@ -9577,6 +9735,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Elizah Vernor",
@@ -9598,6 +9757,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "A Grassland Ogre Plaguebringer",
@@ -9627,6 +9787,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Nipper Lashfist",
@@ -9731,6 +9892,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Algaeth Bilgeback",
@@ -9753,6 +9915,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Shadow Man",
@@ -9785,6 +9948,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "A Deepling Orator",
@@ -9809,6 +9973,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Dire Huntress",
@@ -9843,6 +10008,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Pteriaped Matron",
@@ -9877,6 +10043,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Soul Linked Spider",
@@ -9898,6 +10065,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Pyroclast",
@@ -9927,6 +10095,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Warded Shadow",
@@ -9950,6 +10119,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Arcane Headmaster",
@@ -9972,6 +10142,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Ancient Corpse",
@@ -10005,6 +10176,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Ripples",
@@ -10026,6 +10198,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Fenton the Blighted",
@@ -10048,6 +10221,7 @@ const GEAR_DATA = [
       "Arcanist",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Prince Oslind",
@@ -10070,6 +10244,7 @@ const GEAR_DATA = [
       "Windblade",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "A Faerie Enchantress",
@@ -10097,6 +10272,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Nazura the Traitor",
@@ -10121,6 +10297,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Molorai Dockmaster",
@@ -10143,6 +10320,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Lacy",
@@ -10168,6 +10346,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Sivakayan Voidmaster",
@@ -10200,6 +10379,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Grappler",
@@ -10232,6 +10412,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "quest",
       "name": "A Bounty on Ripper DeMerth"
@@ -10270,6 +10451,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "quest",
       "name": "A Bounty on Guard Captain Kilkay"
@@ -10304,6 +10486,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Eldoth Molorai",
@@ -10503,6 +10686,7 @@ const GEAR_DATA = [
       "Reaver"
     ],
     "twoHanded": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "A Lost Sea Giant",
@@ -10551,6 +10735,7 @@ const GEAR_DATA = [
       "Druid"
     ],
     "twoHanded": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Molorai Militia Druid",
@@ -10589,6 +10774,7 @@ const GEAR_DATA = [
       "Reaver"
     ],
     "twoHanded": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Battlefist",
@@ -10609,6 +10795,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Overseer Orlok",
@@ -10768,6 +10955,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Stoneman Diamondine",
@@ -10794,6 +10982,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Ravager, The First Infected",
@@ -10814,6 +11003,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Loomingwood Minotaur Hero",
@@ -10855,6 +11045,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Nightmarian Knight",
@@ -10886,6 +11077,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Dusken Giant",
@@ -10926,6 +11118,7 @@ const GEAR_DATA = [
       "Reaver"
     ],
     "twoHanded": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Nightmare",
@@ -11140,6 +11333,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Parzgil",
@@ -11191,6 +11385,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Bloom Preserver",
@@ -11280,6 +11475,7 @@ const GEAR_DATA = [
       "Reaver"
     ],
     "twoHanded": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Vinx",
@@ -11334,6 +11530,7 @@ const GEAR_DATA = [
       "Reaver"
     ],
     "twoHanded": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Braxonian Weapon Master",
@@ -11362,6 +11559,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Molorai Curator",
@@ -11389,6 +11587,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Candlekeeper",
@@ -11497,6 +11696,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Captain Kilkay",
@@ -11544,6 +11744,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Sableheart, Steed of Sivakaya",
@@ -11573,6 +11774,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Botanist",
@@ -11689,6 +11891,7 @@ const GEAR_DATA = [
       "Reaver"
     ],
     "twoHanded": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Vessel Siraethe",
@@ -11740,6 +11943,7 @@ const GEAR_DATA = [
     "classes": [
       "Paladin"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Astra, Rogue of the Stars",
@@ -11772,6 +11976,7 @@ const GEAR_DATA = [
       "Reaver"
     ],
     "twoHanded": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Astra, Rogue of the Stars",
@@ -11835,6 +12040,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Molorai Mason",
@@ -11995,6 +12201,7 @@ const GEAR_DATA = [
       "Druid"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Islander Bandit",
@@ -12061,6 +12268,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Woe",
@@ -12134,6 +12342,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "effects": {
       "proc": {
         "target_damage": 280,
@@ -12175,6 +12384,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "A Skeleton Soldier",
@@ -12246,6 +12456,7 @@ const GEAR_DATA = [
       "Druid"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Neophyte Necromancer",
@@ -12306,6 +12517,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Elizah Vernor",
@@ -12356,6 +12568,7 @@ const GEAR_DATA = [
       "Reaver"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Greater Vithean Elemental",
@@ -12383,6 +12596,7 @@ const GEAR_DATA = [
       "Druid"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Old Brackey",
@@ -12441,6 +12655,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Molorai Jailor",
@@ -12468,6 +12683,7 @@ const GEAR_DATA = [
       "Druid"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Greater Vithean Elemental",
@@ -12497,6 +12713,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "A Highwayman Marauder",
@@ -12521,6 +12738,7 @@ const GEAR_DATA = [
       "Druid"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Molorai Archmage",
@@ -12547,6 +12765,7 @@ const GEAR_DATA = [
       "Reaver"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Molorai Bodyguard",
@@ -12569,6 +12788,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Swamp Nettle",
@@ -12596,6 +12816,7 @@ const GEAR_DATA = [
       "Druid"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "A Grassland Ogre Shaman",
@@ -12614,6 +12835,7 @@ const GEAR_DATA = [
       "Windblade"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Overseer Orlok",
@@ -12705,6 +12927,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Algaeth Bilgeback",
@@ -12729,6 +12952,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Ecclesiarch",
@@ -12759,6 +12983,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Acceptor",
@@ -12781,6 +13006,7 @@ const GEAR_DATA = [
       "Druid"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Ravager, The First Infected",
@@ -12809,6 +13035,7 @@ const GEAR_DATA = [
       "Druid"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "quest",
       "name": "Intel from the Lost Cellar"
@@ -12837,6 +13064,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Peon",
@@ -12913,6 +13141,7 @@ const GEAR_DATA = [
       "Druid"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Boneweaver",
@@ -12948,6 +13177,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Seed of Blight",
@@ -12982,6 +13212,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Slumbering Queen",
@@ -13041,6 +13272,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Beady",
@@ -13073,6 +13305,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Nightmarian Arcanist",
@@ -13105,6 +13338,7 @@ const GEAR_DATA = [
       "Druid"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Dream",
@@ -13157,6 +13391,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Pamia the Coward",
@@ -13283,6 +13518,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Stardust",
@@ -13303,6 +13539,7 @@ const GEAR_DATA = [
       "Reaver"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Shadow of Sleep",
@@ -13337,6 +13574,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Diamond Hound",
@@ -13364,6 +13602,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Dream Invader",
@@ -13394,6 +13633,7 @@ const GEAR_DATA = [
       "Druid"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Sivakayan Shadow",
@@ -13426,6 +13666,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Stoneman",
@@ -13514,6 +13755,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Morian the Ascended",
@@ -13544,6 +13786,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Granitus",
@@ -13572,6 +13815,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Asp",
@@ -13598,6 +13842,7 @@ const GEAR_DATA = [
       "Arcanist"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Braxonian Ascended",
@@ -13652,6 +13897,7 @@ const GEAR_DATA = [
       "Druid"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Vinx",
@@ -13772,6 +14018,7 @@ const GEAR_DATA = [
       "Druid"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "The Gardener of Loomingwood",
@@ -13827,6 +14074,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Historian of Braxonia",
@@ -13850,6 +14098,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Ancient Spectre",
@@ -13875,6 +14124,7 @@ const GEAR_DATA = [
       "Reaver"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Prince Oslind",
@@ -13907,6 +14157,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "quest",
       "name": "The Ancient Teachings"
@@ -13927,6 +14178,7 @@ const GEAR_DATA = [
       "Druid"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Molorai Curator",
@@ -13957,6 +14209,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Statue of Brax",
@@ -14050,6 +14303,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Oracle Miress",
@@ -14114,6 +14368,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Lost Treasure",
@@ -14141,6 +14396,7 @@ const GEAR_DATA = [
       "Windblade"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Rotting Guardian",
@@ -14175,6 +14431,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Lost Treasure",
@@ -14198,6 +14455,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Vessel Siraethe",
@@ -14257,6 +14515,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Apparition of Vitheo",
@@ -14294,6 +14553,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Aeiros, Soldier of Sivakaya",
@@ -14323,6 +14583,7 @@ const GEAR_DATA = [
       "Arcanist"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Darkwarden Ilyth",
@@ -14345,6 +14606,7 @@ const GEAR_DATA = [
       "Druid"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Azynthian Keeper",
@@ -14375,6 +14637,7 @@ const GEAR_DATA = [
       "Druid"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Astra, Rogue of the Stars",
@@ -14398,6 +14661,7 @@ const GEAR_DATA = [
       "Windblade"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Astra, Rogue of the Stars",
@@ -14429,6 +14693,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Fallen Fernalla",
@@ -14458,6 +14723,7 @@ const GEAR_DATA = [
       "Arcanist"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Astra, Rogue of the Stars",
@@ -14506,6 +14772,7 @@ const GEAR_DATA = [
       "Stormcaller"
     ],
     "bothSlots": true,
+    "relic": true,
     "source_info": {
       "type": "quest",
       "name": "Lighting the Nighthollow Candle"
@@ -14526,6 +14793,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "quest",
       "name": "Orion Mycon's Lost Ring"
@@ -14548,6 +14816,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "quest",
       "name": "Wally's Moongill"
@@ -14612,6 +14881,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "vendor",
       "name": "Samuel Thatcher"
@@ -14770,6 +15040,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Tinkles",
@@ -14820,6 +15091,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Molorai Archmage",
@@ -14850,6 +15122,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Molorai Archmage",
@@ -14921,6 +15194,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "craftable"
     }
@@ -14976,6 +15250,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "craftable"
     }
@@ -14996,6 +15271,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Agsha of the Soil",
@@ -15046,6 +15322,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "King Cobra",
@@ -15070,6 +15347,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Blazefiend",
@@ -15175,6 +15453,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Lazalith, Soldier of Sivakaya",
@@ -15301,6 +15580,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "quest",
       "name": "Repairing Orion's Ring, Part 2"
@@ -15418,6 +15698,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Lupine Horror",
@@ -15455,6 +15736,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Chazza Priel",
@@ -15480,6 +15762,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Xasxi",
@@ -15505,6 +15788,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Lost Treasure",
@@ -15529,6 +15813,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Fearantula",
@@ -15556,6 +15841,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Shadow of Sleep",
@@ -15585,6 +15871,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Ruby Fiend",
@@ -15609,6 +15896,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Sapphire Fiend",
@@ -15639,6 +15927,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Pamia the Coward",
@@ -15669,6 +15958,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Pyroclast",
@@ -15690,6 +15980,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Risen Pilgrim",
@@ -15737,6 +16028,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Shadow of Sleep",
@@ -15768,6 +16060,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "quest",
       "name": "Shivering Step"
@@ -15795,6 +16088,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Darkwarden Awxa",
@@ -15821,6 +16115,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Spectre",
@@ -15847,6 +16142,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Historian of Braxonia",
@@ -15869,6 +16165,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Lost Treasure",
@@ -15892,6 +16189,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Raval, The First Paladin",
@@ -15920,6 +16218,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Molorai Eldermistress",
@@ -15948,6 +16247,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "A Faerie Enchantress",
@@ -15973,6 +16273,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Nazura the Traitor",
@@ -15998,6 +16299,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Sivakayan High Shadow",
@@ -16028,6 +16330,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Hypnic",
@@ -16062,6 +16365,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Monarch of the Flame",
@@ -16091,6 +16395,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Apparition of Vitheo",
@@ -16119,6 +16424,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Assassin of Sivakaya",
@@ -16147,6 +16453,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Assassin of Sivakaya",
@@ -16176,6 +16483,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Eldoth Molorai",
@@ -16210,6 +16518,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Vessel Siraethe",
@@ -16239,6 +16548,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Eldoth Molorai",
@@ -16287,6 +16597,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "A Skeleton Captain",
@@ -16310,6 +16621,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "A Lost Sea Giant",
@@ -16341,6 +16653,7 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Sagan Ilth",
@@ -16397,6 +16710,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Rosle of the Spirits",
@@ -16421,6 +16735,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Peon",
@@ -16453,6 +16768,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Stoneman Diamondine",
@@ -16485,6 +16801,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Dusken Giant",
@@ -16530,6 +16847,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Spark Royal",
@@ -16559,6 +16877,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "A Protected Memory",
@@ -16931,7 +17250,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "relic": true
   },
   {
     "name": "Beast Harness",
@@ -17016,6 +17336,7 @@ const GEAR_DATA = [
     "classes": [
       "Druid"
     ],
+    "relic": true,
     "source_info": {
       "type": "quest",
       "name": "A Skeleton Eye for Alyssia Fearnon"
@@ -17057,6 +17378,7 @@ const GEAR_DATA = [
       "Arcanist",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "quest",
       "name": "Faerie Dust for Nylith Valorro"
@@ -17075,6 +17397,7 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Sylvan Giant Runt",
@@ -17255,6 +17578,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Gloopa",
@@ -17497,6 +17821,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "A Protected Memory",
@@ -17522,6 +17847,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Swamp Wyrm",
@@ -17547,6 +17873,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Coiling Dusker",
@@ -17636,6 +17963,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Brood Mother",
@@ -17685,6 +18013,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Darkwarden Ealdred",
@@ -17721,6 +18050,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "A Faerie Enchantress",
@@ -17753,6 +18083,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Prince Ardant",
@@ -17778,6 +18109,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Sableheart, Steed of Sivakaya",
@@ -17801,6 +18133,7 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "The Abomination",
@@ -17855,6 +18188,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Shrouded Sivakayan",
@@ -17886,6 +18220,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Corrupted Fungal Bear",
@@ -17910,6 +18245,7 @@ const GEAR_DATA = [
       "Druid",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Exalted Firebone",
@@ -17942,6 +18278,7 @@ const GEAR_DATA = [
       "Reaver",
       "Stormcaller"
     ],
+    "relic": true,
     "source_info": {
       "type": "drop",
       "monster": "Rottenfoot Mauler",
