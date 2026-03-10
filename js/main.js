@@ -1,23 +1,3 @@
-// CLASSES, STATS, SLOTS, MULTI_SLOTS are defined in js/data.js
-// getItemEffects, getItemPermEffects, effectBlocked, claimLines,
-// score, scoreInContext are defined in js/scoring.js
-// sumLoadoutEffects is defined in js/effects.js
-// bankersRound, applyTier, blessedItem, optimize, computeMaxScore
-// are defined in js/optimizer.js
-// state is defined in js/state.js
-// slotKeys, slotFromKey, getSlotTier, buildSliders, updateSliderHighlights,
-// renderGearList, effBar, renderSlotGrid, renderCurrentGear,
-// renderManualLoadout, renderBothLoadouts, renderComparisonBar
-// are defined in js/render.js
-// onSliderInput, resetWeights, switchClass, addItemManual, clearForm,
-// removeItem, loadWikiGear, clearAllGear, getFiltered, onItemDragStart,
-// onSlotDragOver, onSlotDragLeave, onSlotDrop, getLoadoutByPrefix,
-// toggleLock, clearSlot, clearManualLoadout, clearCurrentLoadout,
-// onSlotClickIn, clearSlotIn, toggleLockIn, onSlotDropIn,
-// cycleSlotTier, setTier, openSlotModal, closeSlotModal, onModalSearch,
-// onModalKey, modalSelectItem, toggleAddItem, toggleGearDb,
-// optimizeAndScroll, runOptimize are defined in js/interact.js
-
 // ── Init ─────────────────────────────────────────────────────────────────────
 function init() {
   // Build class buttons

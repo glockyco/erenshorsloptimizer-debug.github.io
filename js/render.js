@@ -1,10 +1,3 @@
-// Render helpers — all functions that build HTML or update DOM.
-// Depends on globals: state (js/state.js), STATS, SLOTS, MULTI_SLOTS
-// (js/data.js), score (js/scoring.js), sumLoadoutEffects (js/effects.js),
-// computeMaxScore, applyTier, blessedItem (js/optimizer.js).
-// Interaction handlers (toggleLock, clearSlot, etc.) live in js/main.js and
-// are referenced here only as inline onclick strings — no import needed.
-
 // ── Slot key helpers ──────────────────────────────────────────────────────────
 
 function slotKeys(slot) {

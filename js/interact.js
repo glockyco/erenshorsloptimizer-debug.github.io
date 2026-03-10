@@ -1,9 +1,3 @@
-// Interaction handlers — event callbacks and state mutations triggered by user
-// actions. Depends on globals: state (js/state.js), CLASSES, STATS, SLOTS,
-// MULTI_SLOTS (js/data.js), blessedItem, applyTier, optimize,
-// computeMaxScore (js/optimizer.js), slotFromKey, getSlotTier, buildSliders,
-// updateSliderHighlights, renderGearList, renderBothLoadouts (js/render.js).
-
 // ── Stat weights ──────────────────────────────────────────────────────────────
 
 function onSliderInput(key, val) {
