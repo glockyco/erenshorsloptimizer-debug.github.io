@@ -3,44 +3,48 @@ const CLASSES = {
   Windblade: {
     icon: '🌊',
     desc: 'Dual-wield melee DPS. Primary stats: DEX (2:1 over STR), AGI. Aura: Presence of Vitheo grants DEX/AGI and Attack Speed.',
-    weights: {dex:10,str:7,res:5,agi:4,end:1,int:0,wis:0,cha:0,haste:8}
+    weights: {dex:10,str:7,res:5,agi:4,end:1,int:0,wis:0,cha:0,haste:8,mr:0,er:0,pr:0,vr:0}
   },
   Paladin: {
     icon: '🛡',
     desc: 'Tanky melee with heals. Primary stats: STR and END for survivability, with some INT/WIS for healing. Aura: Presence of Soluna grants STR/END.',
-    weights: {str:8,end:8,dex:4,agi:2,int:3,wis:3,cha:1,res:2,haste:0}
+    weights: {str:8,end:8,dex:4,agi:2,int:3,wis:3,cha:1,res:2,haste:0,mr:0,er:0,pr:0,vr:0}
   },
   Reaver: {
     icon: '💀',
     desc: 'Dark melee DPS. Primary stats: STR for damage, END for sustain. Aura: Rising Shadows grants party-wide proc effects.',
-    weights: {str:10,end:6,dex:4,agi:3,int:1,wis:0,cha:0,res:3,haste:0}
+    weights: {str:10,end:6,dex:4,agi:3,int:1,wis:0,cha:0,res:3,haste:0,mr:0,er:0,pr:0,vr:0}
   },
   Druid: {
     icon: '🌿',
     desc: 'Nature caster/healer. Primary stats: INT and WIS for spells, AGI for some builds. Aura: Presence of Fernalla grants Lifesteal.',
-    weights: {int:10,wis:8,agi:4,end:3,str:2,dex:1,cha:2,res:1,haste:0}
+    weights: {int:10,wis:8,agi:4,end:3,str:2,dex:1,cha:2,res:1,haste:0,mr:0,er:0,pr:0,vr:0}
   },
   Stormcaller: {
     icon: '⚡',
     desc: 'Elemental caster DPS. Primary stats: INT for spell power, AGI from aura. Aura: Presence of Storms grants AGI and Magic Resist.',
-    weights: {int:10,agi:6,wis:5,dex:2,end:2,str:1,cha:2,res:1,haste:5}
+    weights: {int:10,agi:6,wis:5,dex:2,end:2,str:1,cha:2,res:1,haste:5,mr:0,er:0,pr:0,vr:0}
   },
   Arcanist: {
     icon: '✨',
     desc: 'Pure magic DPS/utility. Primary stats: INT for damage, WIS and CHA for mana sustain. Aura: Presence of Brax grants INT/WIS/CHA.',
-    weights: {int:10,wis:7,cha:5,end:2,agi:1,str:0,dex:0,res:1,haste:0}
+    weights: {int:10,wis:7,cha:5,end:2,agi:1,str:0,dex:0,res:1,haste:0,mr:0,er:0,pr:0,vr:0}
   }
 };
 
 const STATS = [
-  {key:'str',label:'Strength',  abbr:'STR'},
-  {key:'dex',label:'Dexterity', abbr:'DEX'},
-  {key:'agi',label:'Agility',   abbr:'AGI'},
-  {key:'end',label:'Endurance', abbr:'END'},
-  {key:'int',label:'Intelligence',abbr:'INT'},
-  {key:'wis',label:'Wisdom',    abbr:'WIS'},
-  {key:'cha',label:'Charisma',  abbr:'CHA'},
-  {key:'res',label:'Resonance', abbr:'RES'},
+  {key:'str',label:'Strength',        abbr:'STR'},
+  {key:'dex',label:'Dexterity',       abbr:'DEX'},
+  {key:'agi',label:'Agility',         abbr:'AGI'},
+  {key:'end',label:'Endurance',       abbr:'END'},
+  {key:'int',label:'Intelligence',    abbr:'INT'},
+  {key:'wis',label:'Wisdom',          abbr:'WIS'},
+  {key:'cha',label:'Charisma',        abbr:'CHA'},
+  {key:'res',label:'Resonance',       abbr:'RES'},
+  {key:'mr', label:'Magic Resist',    abbr:'MR'},
+  {key:'er', label:'Elemental Resist',abbr:'ER'},
+  {key:'pr', label:'Poison Resist',   abbr:'PR'},
+  {key:'vr', label:'Void Resist',     abbr:'VR'},
 ];
 
 const SLOTS = ['Head','Neck','Chest','Back','Arms','Waist','Legs','Feet','Hands','Wrist','Ring','Primary','Secondary','Aura'];
@@ -104,8 +108,6 @@ function sumLoadoutEffects() {
     lifesteal:0, lifesteal_proc:0,
     atkroll:0,   atkroll_proc:0,
     movespeed:0, movespeed_proc:0,
-    mr:0, mr_proc:0, er:0, er_proc:0,
-    pr:0, pr_proc:0, vr:0, vr_proc:0,
     wand_proc:null, bow_proc:null,
     lineConflicts: [], // [{itemName, line, blockedBy}] for warning display
   };
@@ -164,15 +166,11 @@ function sumLoadoutEffects() {
     out.lifesteal += perm.lifesteal;
     out.atkroll   += perm.atkroll;
     out.movespeed += perm.movespeed;
-    out.mr += perm.mr; out.er += perm.er;
-    out.pr += perm.pr; out.vr += perm.vr;
     // Raw proc values for display sub-labels
     out.haste_proc     += perm.haste_proc;
     out.lifesteal_proc += perm.lifesteal_proc;
     out.atkroll_proc   += perm.atkroll_proc;
     out.movespeed_proc += perm.movespeed_proc;
-    out.mr_proc += perm.mr_proc; out.er_proc += perm.er_proc;
-    out.pr_proc += perm.pr_proc; out.vr_proc += perm.vr_proc;
     // Haste breakdown sub-labels need raw bucket access
     if (!wornBlocked) out.haste_worn += (e.worn?.haste || 0);
     if (!auraBlocked) out.haste_aura += (e.aura?.haste || 0);
@@ -216,6 +214,9 @@ function buildSliders() {
   container.innerHTML = '';
 
   STATS.forEach(s => {
+    if (s.key === 'mr') {
+      container.innerHTML += `<div style="border-top:1px solid var(--border);margin-top:.4rem;padding-top:.4rem"></div>`;
+    }
     const w = weights[s.key] ?? 0;
     container.innerHTML += `<div class="stat-row" id="sr-${s.key}">
       <div class="stat-label" id="sl-${s.key}"><span id="sa-${s.key}">${s.abbr}</span>${s.label}<span id="sp-${s.key}"></span></div>
@@ -721,11 +722,9 @@ function renderManualLoadout() {
         const hasLifesteal = fx.lifesteal > 0 || fx.lifesteal_proc > 0;
         const hasAtkroll   = fx.atkroll > 0   || fx.atkroll_proc > 0;
         const hasMovespeed = fx.movespeed > 0 || fx.movespeed_proc > 0;
-        const hasResist    = fx.mr > 0 || fx.er > 0 || fx.pr > 0 || fx.vr > 0
-                          || fx.mr_proc > 0 || fx.er_proc > 0 || fx.pr_proc > 0 || fx.vr_proc > 0;
         const hasWandProc  = !!fx.wand_proc;
         const hasBowProc   = !!fx.bow_proc;
-        if (!hasHaste && !hasLifesteal && !hasAtkroll && !hasMovespeed && !hasResist
+        if (!hasHaste && !hasLifesteal && !hasAtkroll && !hasMovespeed
             && !hasWandProc && !hasBowProc) return '';
 
         // Renders a pill with a permanent total and an optional proc sub-label.
@@ -777,10 +776,6 @@ function renderManualLoadout() {
             ${hasLifesteal ? pill('LIFESTEAL', fx.lifesteal, fx.lifesteal_proc, '%', '#e08080') : ''}
             ${hasAtkroll   ? pill('ATK ROLL',  fx.atkroll,   fx.atkroll_proc,   '',  '#c9a227') : ''}
             ${hasMovespeed ? pill('MOVE SPD',  fx.movespeed, fx.movespeed_proc, '%', '#80e0a0') : ''}
-            ${fx.mr > 0 || fx.mr_proc > 0 ? pill('MAG RESIST',  fx.mr, fx.mr_proc, '', 'var(--text-dim)') : ''}
-            ${fx.er > 0 || fx.er_proc > 0 ? pill('ELEM RESIST', fx.er, fx.er_proc, '', 'var(--text-dim)') : ''}
-            ${fx.pr > 0 || fx.pr_proc > 0 ? pill('PHY RESIST',  fx.pr, fx.pr_proc, '', 'var(--text-dim)') : ''}
-            ${fx.vr > 0 || fx.vr_proc > 0 ? pill('VOID RESIST', fx.vr, fx.vr_proc, '', 'var(--text-dim)') : ''}
             ${hasWandProc ? procPill('WAND PROC', fx.wand_proc, '#c0a0ff') : ''}
             ${hasBowProc  ? procPill('BOW PROC',  fx.bow_proc,  '#a0d0a0') : ''}
           </div>
@@ -1151,6 +1146,10 @@ function scoreInContext(item, claimedLines) {
     agi: (w.agi||0) + (a.agi||0), end: (w.end||0) + (a.end||0),
     int: (w.int||0) + (a.int||0), wis: (w.wis||0) + (a.wis||0),
     cha: (w.cha||0) + (a.cha||0),
+    mr: (w.mr||0) + (a.mr||0) + (p.mr||0)*0.5,
+    er: (w.er||0) + (a.er||0) + (p.er||0)*0.5,
+    pr: (w.pr||0) + (a.pr||0) + (p.pr||0)*0.5,
+    vr: (w.vr||0) + (a.vr||0) + (p.vr||0)*0.5,
   };
   s += effs.haste * (weights['haste'] || 0);
   STATS.forEach(st => { s += (effs[st.key] || 0) * (weights[st.key] || 0); });
