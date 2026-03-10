@@ -8,6 +8,87 @@ test.beforeEach(async ({ page }) => {
   await expect(page.locator('#gear-count')).toHaveText(/\(\d+ items\)/, { timeout: 10000 });
 });
 
+// ── getItemEffects ────────────────────────────────────────────────────────────
+
+test.describe('getItemEffects', () => {
+  test('returns all-zero object for item with no effects', async ({ page }) => {
+    const result = await page.evaluate(() =>
+      getItemEffects({ stats: { str: 10 } })
+    );
+    expect(result.haste).toBe(0);
+    expect(result.str).toBe(0);
+    expect(result.mr).toBe(0);
+  });
+
+  test('sums worn and aura directly', async ({ page }) => {
+    const result = await page.evaluate(() =>
+      getItemEffects({
+        stats: {},
+        effects: {
+          worn: { haste: 10, str: 5 },
+          aura: { haste: 20, str: 3 },
+        },
+      })
+    );
+    expect(result.haste).toBe(30);
+    expect(result.str).toBe(8);
+  });
+
+  test('discounts proc by 0.5', async ({ page }) => {
+    const result = await page.evaluate(() =>
+      getItemEffects({
+        stats: {},
+        effects: {
+          proc: { haste: 20, mr: 10 },
+        },
+      })
+    );
+    expect(result.haste).toBe(10);
+    expect(result.mr).toBe(5);
+  });
+
+  test('movespeed has no proc contribution', async ({ page }) => {
+    const result = await page.evaluate(() =>
+      getItemEffects({
+        stats: {},
+        effects: {
+          worn: { movespeed: 10 },
+          proc: { movespeed: 20 },
+        },
+      })
+    );
+    expect(result.movespeed).toBe(10);
+  });
+
+  test('missing buckets treated as zero', async ({ page }) => {
+    const result = await page.evaluate(() =>
+      getItemEffects({
+        stats: {},
+        effects: { worn: { haste: 5 } },
+      })
+    );
+    expect(result.haste).toBe(5);
+    expect(result.str).toBe(0);
+  });
+
+  test('all four resist stats accumulate correctly', async ({ page }) => {
+    const result = await page.evaluate(() =>
+      getItemEffects({
+        stats: {},
+        effects: {
+          worn: { mr: 4, er: 3 },
+          aura: { pr: 2 },
+          proc: { vr: 10 },
+        },
+      })
+    );
+    expect(result.mr).toBe(4);
+    expect(result.er).toBe(3);
+    expect(result.pr).toBe(2);
+    expect(result.vr).toBe(5); // proc × 0.5
+  });
+});
+
 // ── bankersRound ──────────────────────────────────────────────────────────────
 
 test.describe('bankersRound', () => {
