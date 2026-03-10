@@ -1281,3 +1281,29 @@ if (typeof GEAR_DATA === 'undefined') {
   makeToggle('tutorial-header');
   makeToggle('notes-header');
 }
+
+// ── Test surface ──────────────────────────────────────────────────────────────
+// Exposes internal functions to Playwright tests. Named to signal intent;
+// kept permanently so tests remain simple throughout the refactor.
+window.__erenshorTest = {
+  // scoring
+  getItemEffects,
+  getItemPermEffects,
+  effectBlocked,
+  claimLines,
+  score,
+  scoreInContext,
+  // effects
+  sumLoadoutEffects,
+  // optimizer
+  bankersRound,
+  applyTier,
+  blessedItem,
+  optimize,
+  computeMaxScore,
+  // mutable state (for test setup)
+  get gear() { return gear; },
+  get weights() { return weights; },
+  set weights(v) { weights = v; },
+  get manualLoadout() { return manualLoadout; },
+};
