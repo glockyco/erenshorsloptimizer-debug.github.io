@@ -912,7 +912,9 @@ const GEAR_DATA = [
     "effects": {
       "worn": {
         "haste": 17.0,
-        "atkroll": 1
+        "atkroll": 1,
+        "line": "Buff_Haste_Worn",
+        "req_lvl": 40
       }
     }
   },
@@ -977,7 +979,9 @@ const GEAR_DATA = [
         "er": 2,
         "pr": 2,
         "vr": 2,
-        "hp": 5
+        "hp": 5,
+        "line": "Aura_Paladin",
+        "req_lvl": 1
       }
     }
   },
@@ -996,7 +1000,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "aura": {
-        "add_proc_chance": 3
+        "add_proc_chance": 3,
+        "line": "Aura_Reaver",
+        "req_lvl": 1
       }
     }
   },
@@ -1015,7 +1021,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "aura": {
-        "add_proc_chance": 3
+        "add_proc_chance": 3,
+        "line": "Aura_Reaver",
+        "req_lvl": 1
       }
     }
   },
@@ -1033,7 +1041,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "aura": {
-        "add_proc_chance": 3
+        "add_proc_chance": 3,
+        "line": "Aura_Reaver",
+        "req_lvl": 1
       }
     }
   },
@@ -1051,7 +1061,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "aura": {
-        "add_proc_chance": 3
+        "add_proc_chance": 3,
+        "line": "Aura_Reaver",
+        "req_lvl": 1
       }
     }
   },
@@ -1072,7 +1084,9 @@ const GEAR_DATA = [
         "agi": 2,
         "mr": 2,
         "er": 2,
-        "pr": 2
+        "pr": 2,
+        "line": "Aura_Stormcaller",
+        "req_lvl": 1
       }
     }
   },
@@ -1092,7 +1106,9 @@ const GEAR_DATA = [
       "aura": {
         "haste": 3.0,
         "dex": 2,
-        "agi": 2
+        "agi": 2,
+        "line": "Aura_Duelist",
+        "req_lvl": 1
       }
     }
   },
@@ -1113,7 +1129,9 @@ const GEAR_DATA = [
         "int": 4,
         "wis": 4,
         "cha": 4,
-        "mana": 5
+        "mana": 5,
+        "line": "Aura_Arcanist",
+        "req_lvl": 1
       }
     }
   },
@@ -1136,7 +1154,9 @@ const GEAR_DATA = [
         "pr": 3,
         "vr": 3,
         "hp": 15,
-        "lifesteal": 3.0
+        "lifesteal": 3.0,
+        "line": "Aura_Druid",
+        "req_lvl": 1
       }
     }
   },
@@ -1159,7 +1179,9 @@ const GEAR_DATA = [
         "pr": 5,
         "vr": 5,
         "hp": 20,
-        "lifesteal": 5.0
+        "lifesteal": 5.0,
+        "line": "Aura_Druid",
+        "req_lvl": 8
       }
     }
   },
@@ -1180,7 +1202,9 @@ const GEAR_DATA = [
         "int": 8,
         "wis": 8,
         "cha": 8,
-        "mana": 8
+        "mana": 8,
+        "line": "Aura_Arcanist",
+        "req_lvl": 8
       }
     }
   },
@@ -1202,7 +1226,9 @@ const GEAR_DATA = [
         "mr": 4,
         "er": 4,
         "pr": 4,
-        "movespeed": 1.0
+        "movespeed": 1.0,
+        "line": "Aura_Stormcaller",
+        "req_lvl": 1
       }
     }
   },
@@ -1222,7 +1248,9 @@ const GEAR_DATA = [
       "aura": {
         "haste": 6.0,
         "dex": 6,
-        "agi": 6
+        "agi": 6,
+        "line": "Aura_Duelist",
+        "req_lvl": 8
       }
     }
   },
@@ -1247,7 +1275,9 @@ const GEAR_DATA = [
         "pr": 3,
         "vr": 3,
         "hp": 25,
-        "ac": 20
+        "ac": 20,
+        "line": "Aura_Paladin",
+        "req_lvl": 8
       }
     }
   },
@@ -1271,7 +1301,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "aura": {
-        "lifesteal": 5.0
+        "lifesteal": 5.0,
+        "line": "Aura_Lifesteal",
+        "req_lvl": 16
       }
     }
   },
@@ -1294,7 +1326,9 @@ const GEAR_DATA = [
         "wis": 12,
         "cha": 12,
         "er": 4,
-        "mana": 12
+        "mana": 12,
+        "line": "Aura_Arcanist",
+        "req_lvl": 16
       }
     }
   },
@@ -1317,7 +1351,9 @@ const GEAR_DATA = [
         "mr": 6,
         "er": 6,
         "pr": 6,
-        "movespeed": 1.0
+        "movespeed": 1.0,
+        "line": "Aura_Stormcaller",
+        "req_lvl": 1
       }
     }
   },
@@ -1339,7 +1375,9 @@ const GEAR_DATA = [
         "haste": 9.0,
         "dex": 12,
         "agi": 12,
-        "mr": 4
+        "mr": 4,
+        "line": "Aura_Duelist",
+        "req_lvl": 16
       }
     }
   },
@@ -1365,7 +1403,9 @@ const GEAR_DATA = [
         "pr": 5,
         "vr": 5,
         "hp": 50,
-        "ac": 30
+        "ac": 30,
+        "line": "Aura_Paladin",
+        "req_lvl": 16
       }
     }
   },
@@ -1389,7 +1429,9 @@ const GEAR_DATA = [
         "pr": 6,
         "vr": 6,
         "hp": 50,
-        "lifesteal": 7.0
+        "lifesteal": 7.0,
+        "line": "Aura_Druid",
+        "req_lvl": 16
       }
     }
   },
@@ -1433,7 +1475,9 @@ const GEAR_DATA = [
       "aura": {
         "str": 5,
         "hp": 50,
-        "movespeed": 3.0
+        "movespeed": 3.0,
+        "line": "Aura_Buff_Legs",
+        "req_lvl": 16
       }
     }
   },
@@ -1456,7 +1500,9 @@ const GEAR_DATA = [
         "wis": 16,
         "cha": 16,
         "er": 5,
-        "mana": 16
+        "mana": 16,
+        "line": "Aura_Arcanist",
+        "req_lvl": 16
       }
     }
   },
@@ -1483,7 +1529,9 @@ const GEAR_DATA = [
         "mr": 8,
         "er": 8,
         "pr": 8,
-        "vr": 8
+        "vr": 8,
+        "line": "Aura_Buff_Resists",
+        "req_lvl": 22
       }
     }
   },
@@ -1510,7 +1558,9 @@ const GEAR_DATA = [
         "end": 8,
         "er": 10,
         "hp": 100,
-        "ac": 100
+        "ac": 100,
+        "line": "Aura_Buff_Body",
+        "req_lvl": 22
       }
     }
   },
@@ -1554,7 +1604,9 @@ const GEAR_DATA = [
         "mr": 10,
         "er": 10,
         "pr": 10,
-        "movespeed": 2.0
+        "movespeed": 2.0,
+        "line": "Aura_Stormcaller",
+        "req_lvl": 1
       }
     }
   },
@@ -1578,7 +1630,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "aura": {
-        "mana": 100
+        "mana": 100,
+        "line": "Aura_Buff_Mind",
+        "req_lvl": 35
       }
     }
   },
@@ -1600,7 +1654,9 @@ const GEAR_DATA = [
         "haste": 12.0,
         "dex": 20,
         "agi": 20,
-        "mr": 8
+        "mr": 8,
+        "line": "Aura_Duelist",
+        "req_lvl": 28
       }
     }
   },
@@ -1625,7 +1681,9 @@ const GEAR_DATA = [
       "aura": {
         "haste": 5.0,
         "lifesteal": 5.0,
-        "atkroll": 1
+        "atkroll": 1,
+        "line": "Aura_Buff_Magic",
+        "req_lvl": 27
       }
     }
   },
@@ -1649,7 +1707,9 @@ const GEAR_DATA = [
         "pr": 10,
         "vr": 10,
         "hp": 155,
-        "lifesteal": 9.0
+        "lifesteal": 9.0,
+        "line": "Aura_Druid",
+        "req_lvl": 29
       }
     }
   },
@@ -1676,7 +1736,9 @@ const GEAR_DATA = [
         "pr": 7,
         "vr": 7,
         "hp": 150,
-        "ac": 75
+        "ac": 75,
+        "line": "Aura_Paladin",
+        "req_lvl": 33
       }
     }
   },
@@ -1708,7 +1770,9 @@ const GEAR_DATA = [
         "wis": 10,
         "cha": 10,
         "hp": 500,
-        "damage_shield": 40
+        "damage_shield": 40,
+        "line": "Aura_DamageShield",
+        "req_lvl": 16
       }
     }
   },
@@ -1726,7 +1790,9 @@ const GEAR_DATA = [
         "wis": 20,
         "cha": 20,
         "er": 5,
-        "mana": 20
+        "mana": 20,
+        "line": "Aura_Arcanist",
+        "req_lvl": 16
       }
     }
   },
@@ -1750,7 +1816,9 @@ const GEAR_DATA = [
       "aura": {
         "wis": 20,
         "cha": 20,
-        "lifesteal": 8.0
+        "lifesteal": 8.0,
+        "line": "Aura_Buff_Void",
+        "req_lvl": 35
       }
     }
   },
@@ -1775,7 +1843,9 @@ const GEAR_DATA = [
     "effects": {
       "aura": {
         "haste": 8.0,
-        "movespeed": 1.0
+        "movespeed": 1.0,
+        "line": "Aura_Buff_Magic",
+        "req_lvl": 28
       }
     }
   },
@@ -2137,7 +2207,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "ac": 35
+        "ac": 35,
+        "line": "Global_Buff",
+        "req_lvl": 1
       }
     }
   },
@@ -2713,7 +2785,9 @@ const GEAR_DATA = [
     "effects": {
       "worn": {
         "haste": 15.0,
-        "atkroll": 2
+        "atkroll": 2,
+        "line": "Global_Haste",
+        "req_lvl": 30
       }
     }
   },
@@ -2746,7 +2820,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "mana": 75
+        "mana": 75,
+        "line": "Mana_Recovery_Buff",
+        "req_lvl": 35
       }
     }
   },
@@ -3052,7 +3128,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "target_healing": 10
+        "target_healing": 10,
+        "line": "Regen",
+        "req_lvl": -1
       }
     }
   },
@@ -3077,7 +3155,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "ac": 35
+        "ac": 35,
+        "line": "Global_Buff",
+        "req_lvl": 1
       }
     }
   },
@@ -3322,7 +3402,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "haste": 5.0
+        "haste": 5.0,
+        "line": "AggroDecrease",
+        "req_lvl": 19
       }
     }
   },
@@ -3725,7 +3807,9 @@ const GEAR_DATA = [
         "str": 10,
         "dex": 10,
         "int": 10,
-        "wis": 10
+        "wis": 10,
+        "line": "Buff_Combat_Worn",
+        "req_lvl": 25
       }
     }
   },
@@ -3756,7 +3840,9 @@ const GEAR_DATA = [
         "str": 10,
         "dex": 10,
         "int": 10,
-        "wis": 10
+        "wis": 10,
+        "line": "Buff_Combat_Worn",
+        "req_lvl": 25
       }
     }
   },
@@ -3790,7 +3876,9 @@ const GEAR_DATA = [
         "str": 10,
         "dex": 10,
         "int": 10,
-        "wis": 10
+        "wis": 10,
+        "line": "Buff_Combat_Worn",
+        "req_lvl": 25
       }
     }
   },
@@ -4943,7 +5031,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "target_healing": 10
+        "target_healing": 10,
+        "line": "Regen",
+        "req_lvl": -1
       }
     }
   },
@@ -5397,7 +5487,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "target_healing": 20
+        "target_healing": 20,
+        "line": "Regen",
+        "req_lvl": -1
       }
     }
   },
@@ -5689,7 +5781,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "target_healing": 20
+        "target_healing": 20,
+        "line": "Regen",
+        "req_lvl": -1
       }
     }
   },
@@ -6003,7 +6097,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "movespeed": 6.0
+        "movespeed": 6.0,
+        "line": "Buff_Movespeed_Worn",
+        "req_lvl": -1
       }
     }
   },
@@ -6283,7 +6379,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "movespeed": 3.0
+        "movespeed": 3.0,
+        "line": "Buff_Movespeed_Worn",
+        "req_lvl": -1
       }
     }
   },
@@ -6987,7 +7085,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "haste": 13.0
+        "haste": 13.0,
+        "line": "Buff_Haste_Worn",
+        "req_lvl": 25
       }
     }
   },
@@ -7245,7 +7345,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "haste": 5.0
+        "haste": 5.0,
+        "line": "AggroDecrease",
+        "req_lvl": 25
       }
     }
   },
@@ -7304,7 +7406,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "haste": 5.0
+        "haste": 5.0,
+        "line": "AggroDecrease",
+        "req_lvl": 25
       }
     }
   },
@@ -7369,7 +7473,9 @@ const GEAR_DATA = [
         "dex": 6,
         "int": 6,
         "wis": 6,
-        "add_proc_chance": 5
+        "add_proc_chance": 5,
+        "line": "Azynthian_Buff",
+        "req_lvl": 35
       }
     }
   },
@@ -8501,7 +8607,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "mana": 75
+        "mana": 75,
+        "line": "Mana_Recovery_Buff",
+        "req_lvl": 35
       }
     }
   },
@@ -8533,7 +8641,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "haste": 5.0
+        "haste": 5.0,
+        "line": "AggroDecrease",
+        "req_lvl": 25
       }
     }
   },
@@ -8560,7 +8670,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "mana": 135
+        "mana": 135,
+        "line": "Mana_Recovery_Buff",
+        "req_lvl": 35
       }
     }
   },
@@ -9431,7 +9543,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "mana": 35
+        "mana": 35,
+        "line": "Mana_Recovery_Buff",
+        "req_lvl": -1
       }
     }
   },
@@ -9492,7 +9606,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "movespeed": 3.0
+        "movespeed": 3.0,
+        "line": "Buff_Movespeed_Worn",
+        "req_lvl": -1
       }
     }
   },
@@ -9765,7 +9881,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "target_healing": 10
+        "target_healing": 10,
+        "line": "Regen",
+        "req_lvl": -1
       }
     }
   },
@@ -9923,7 +10041,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "movespeed": 3.0
+        "movespeed": 3.0,
+        "line": "Buff_Movespeed_Worn",
+        "req_lvl": -1
       }
     }
   },
@@ -9956,7 +10076,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "mana": 35
+        "mana": 35,
+        "line": "Mana_Recovery_Buff",
+        "req_lvl": -1
       }
     }
   },
@@ -9985,7 +10107,9 @@ const GEAR_DATA = [
         "er": 4,
         "pr": 4,
         "vr": 4,
-        "atkroll": 1
+        "atkroll": 1,
+        "line": "Attack_Buff",
+        "req_lvl": -1
       }
     }
   },
@@ -10020,7 +10144,9 @@ const GEAR_DATA = [
         "er": 4,
         "pr": 4,
         "vr": 4,
-        "atkroll": 1
+        "atkroll": 1,
+        "line": "Attack_Buff",
+        "req_lvl": -1
       }
     }
   },
@@ -10073,7 +10199,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "target_healing": 20
+        "target_healing": 20,
+        "line": "Regen",
+        "req_lvl": -1
       }
     }
   },
@@ -10154,7 +10282,9 @@ const GEAR_DATA = [
         "er": 4,
         "pr": 4,
         "vr": 4,
-        "atkroll": 1
+        "atkroll": 1,
+        "line": "Attack_Buff",
+        "req_lvl": -1
       }
     }
   },
@@ -10206,7 +10336,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "mana": 75
+        "mana": 75,
+        "line": "Mana_Recovery_Buff",
+        "req_lvl": 35
       }
     }
   },
@@ -10357,7 +10489,9 @@ const GEAR_DATA = [
         "str": 10,
         "dex": 10,
         "int": 10,
-        "wis": 10
+        "wis": 10,
+        "line": "Buff_Combat_Worn",
+        "req_lvl": 25
       }
     }
   },
@@ -10458,7 +10592,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "mana": 35
+        "mana": 35,
+        "line": "Mana_Recovery_Buff",
+        "req_lvl": -1
       }
     }
   },
@@ -13878,7 +14014,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "haste": 17.0
+        "haste": 17.0,
+        "line": "Buff_Haste_Worn",
+        "req_lvl": 25
       }
     }
   },
@@ -15099,7 +15237,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "mana": 35
+        "mana": 35,
+        "line": "Mana_Recovery_Buff",
+        "req_lvl": -1
       }
     }
   },
@@ -15355,7 +15495,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "target_healing": 10
+        "target_healing": 10,
+        "line": "Regen",
+        "req_lvl": -1
       }
     }
   },
@@ -15461,7 +15603,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "mana": 35
+        "mana": 35,
+        "line": "Mana_Recovery_Buff",
+        "req_lvl": -1
       }
     }
   },
@@ -15674,7 +15818,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "haste": 15.0
+        "haste": 15.0,
+        "line": "Buff_Haste_Worn",
+        "req_lvl": 25
       }
     }
   },
@@ -15710,7 +15856,9 @@ const GEAR_DATA = [
         "er": 4,
         "pr": 4,
         "vr": 4,
-        "atkroll": 1
+        "atkroll": 1,
+        "line": "Attack_Buff",
+        "req_lvl": -1
       }
     }
   },
@@ -15821,7 +15969,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "mana": 35
+        "mana": 35,
+        "line": "Mana_Recovery_Buff",
+        "req_lvl": -1
       }
     }
   },
@@ -15849,7 +15999,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "haste": 13.0
+        "haste": 13.0,
+        "line": "Buff_Haste_Worn",
+        "req_lvl": 25
       }
     }
   },
@@ -15936,7 +16088,9 @@ const GEAR_DATA = [
     "effects": {
       "worn": {
         "end": 15,
-        "ac": 55
+        "ac": 55,
+        "line": "Global_Buff",
+        "req_lvl": 10
       }
     }
   },
@@ -16036,7 +16190,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "mana": 35
+        "mana": 35,
+        "line": "Mana_Recovery_Buff",
+        "req_lvl": -1
       }
     }
   },
@@ -16307,7 +16463,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "movespeed": 3.0
+        "movespeed": 3.0,
+        "line": "Buff_Movespeed_Worn",
+        "req_lvl": -1
       }
     }
   },
@@ -16338,7 +16496,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "mana": 75
+        "mana": 75,
+        "line": "Mana_Recovery_Buff",
+        "req_lvl": 35
       }
     }
   },
@@ -16556,7 +16716,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "haste": 5.0
+        "haste": 5.0,
+        "line": "AggroDecrease",
+        "req_lvl": 25
       }
     }
   },
@@ -17586,7 +17748,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "haste": 10.0
+        "haste": 10.0,
+        "line": "Buff_Haste_Worn",
+        "req_lvl": 10
       }
     }
   },
@@ -17903,7 +18067,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "haste": 13.0
+        "haste": 13.0,
+        "line": "Buff_Haste_Worn",
+        "req_lvl": 25
       }
     }
   },
@@ -17938,7 +18104,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "haste": 13.0
+        "haste": 13.0,
+        "line": "Buff_Haste_Worn",
+        "req_lvl": 25
       }
     }
   },
@@ -18059,7 +18227,9 @@ const GEAR_DATA = [
     "effects": {
       "worn": {
         "end": 15,
-        "ac": 55
+        "ac": 55,
+        "line": "Global_Buff",
+        "req_lvl": 10
       }
     }
   },
@@ -18196,7 +18366,9 @@ const GEAR_DATA = [
     },
     "effects": {
       "worn": {
-        "haste": 5.0
+        "haste": 5.0,
+        "line": "AggroDecrease",
+        "req_lvl": 25
       }
     }
   },
@@ -18254,7 +18426,9 @@ const GEAR_DATA = [
     "effects": {
       "worn": {
         "end": 15,
-        "ac": 55
+        "ac": 55,
+        "line": "Global_Buff",
+        "req_lvl": 10
       }
     }
   },

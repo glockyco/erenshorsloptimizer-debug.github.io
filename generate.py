@@ -125,6 +125,10 @@ GEAR_QUERY = """
         i.WeaponProcChance,
         i.WandProcChance,
         i.BowProcChance,
+        ws.Line  AS w_Line,
+        ws.RequiredLevel AS w_RequiredLevel,
+        aus.Line AS a_Line,
+        aus.RequiredLevel AS a_RequiredLevel,
         {worn_sel},
         {aura_sel},
         {proc_sel},
@@ -238,15 +242,30 @@ def spell_row_to_dict(row: sqlite3.Row, prefix: str) -> dict:
 
 
 def build_effects(row: sqlite3.Row) -> dict:
-    """Return an effects dict with sub-objects for each active effect bucket."""
+    """Return an effects dict with sub-objects for each active effect bucket.
+
+    worn and aura sub-objects include line/req_lvl metadata so the optimizer
+    can enforce the one-per-spell-line stacking rule at runtime.
+    """
     effects: dict = {}
 
     worn = spell_row_to_dict(row, "w_")
     if worn:
+        line = row["w_Line"]
+        req_lvl = row["w_RequiredLevel"]
+        # Generic line spells have no stacking restriction — omit metadata.
+        if line and line != "Generic":
+            worn["line"] = line
+            worn["req_lvl"] = req_lvl if req_lvl is not None else -1
         effects["worn"] = worn
 
     aura = spell_row_to_dict(row, "a_")
     if aura:
+        line = row["a_Line"]
+        req_lvl = row["a_RequiredLevel"]
+        if line and line != "Generic":
+            aura["line"] = line
+            aura["req_lvl"] = req_lvl if req_lvl is not None else -1
         effects["aura"] = aura
 
     proc = spell_row_to_dict(row, "wp_")
