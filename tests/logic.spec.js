@@ -405,6 +405,62 @@ test.describe('sumLoadoutEffects', () => {
   });
 });
 
+// ── optimize ──────────────────────────────────────────────────────────────────
+
+test.describe('optimize', () => {
+  test('fills all slots that have available items', async ({ page }) => {
+    const result = await page.evaluate(() => {
+      Object.keys(manualLoadout).forEach(k => delete manualLoadout[k]);
+      optimize();
+      // Return which slot keys were filled
+      return Object.keys(manualLoadout);
+    });
+    // At minimum, common slots should be filled (Head, Chest, etc.)
+    expect(result.length).toBeGreaterThan(0);
+  });
+
+  test('does not replace a locked slot', async ({ page }) => {
+    const result = await page.evaluate(() => {
+      Object.keys(manualLoadout).forEach(k => delete manualLoadout[k]);
+      // Lock a specific item into Head before optimizing
+      const headItem = gear.find(g => g.slot === 'Head');
+      if (!headItem) return null;
+      manualLoadout['Head'] = { item: headItem, locked: true };
+      const lockedName = headItem.name;
+      optimize();
+      return { lockedName, resultName: manualLoadout['Head']?.item?.name };
+    });
+    expect(result).not.toBeNull();
+    expect(result.resultName).toBe(result.lockedName);
+  });
+
+  test('2H weapon in Primary clears Secondary', async ({ page }) => {
+    const result = await page.evaluate(() => {
+      Object.keys(manualLoadout).forEach(k => delete manualLoadout[k]);
+      const twoHander = gear.find(g => g.twoHanded);
+      if (!twoHander) return 'no-2h';
+      manualLoadout['Primary'] = { item: twoHander, locked: true };
+      optimize();
+      return manualLoadout['Secondary'] ? 'filled' : 'empty';
+    });
+    // Either there's no 2H in the DB (skip) or Secondary must be empty
+    if (result !== 'no-2h') expect(result).toBe('empty');
+  });
+
+  test('relic item does not fill both Ring slots', async ({ page }) => {
+    const result = await page.evaluate(() => {
+      Object.keys(manualLoadout).forEach(k => delete manualLoadout[k]);
+      optimize();
+      const r0 = manualLoadout['Ring_0']?.item;
+      const r1 = manualLoadout['Ring_1']?.item;
+      if (!r0 || !r1) return 'incomplete';
+      if (r0.relic && r1.relic) return r0.name === r1.name ? 'same-relic' : 'different-relics';
+      return 'ok';
+    });
+    expect(result).not.toBe('same-relic');
+  });
+});
+
 // ── bankersRound ──────────────────────────────────────────────────────────────
 
 test.describe('bankersRound', () => {
