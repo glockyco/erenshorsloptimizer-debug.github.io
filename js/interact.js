@@ -108,7 +108,7 @@ function onSlotDragLeave(slotKey) {
   if (el) el.classList.remove('drag-over');
 }
 
-function onSlotDrop(e, slotKey) {
+function _dropOnBuilder(e, slotKey) {
   e.preventDefault();
   const el = document.getElementById('slot-' + slotKey);
   if (el) el.classList.remove('drag-over');
@@ -174,7 +174,8 @@ function toggleLockIn(prefix, key) {
 }
 
 function onSlotDropIn(e, prefix, key) {
-  onSlotDrop(e, key); // drag-drop only applies to builder
+  if (prefix === 'cur-') return;
+  _dropOnBuilder(e, key);
 }
 
 // ── Item quality / tier ───────────────────────────────────────────────────────
