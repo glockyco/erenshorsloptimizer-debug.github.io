@@ -67,6 +67,52 @@ The game database uses internal names that differ from what players see.
 Items with no class restriction in the database are assigned to all six
 classes. `generate.py` excludes the `Charm` and `General` slots.
 
+## gear.js Data Model
+
+Each entry in `GEAR_DATA` (and the `gear` array at runtime) has this shape:
+
+```js
+{
+  name: "Item Name",
+  slot: "Head",                  // equipment slot display name
+  classes: ["Wizard", ...],      // classes that can equip this item
+  stats: {                       // permanent base stats from ItemStats table
+    str, dex, agi, end,
+    int, wis, cha, res,
+    mr, er, pr, vr               // Magic/Elemental/Poison/Void Resist
+  },
+  effects: {
+    worn: [                      // WornEffect spells (always active while equipped)
+      {
+        haste, str, dex, ...,    // stat deltas granted by the spell
+        line: "Buff_Haste_Worn", // spell line (absent or "Generic" = always stacks)
+        req_lvl: 25              // required level used to resolve line conflicts
+      }
+    ],
+    aura: [ ... ],               // Aura spells — same shape as worn
+    proc: [                      // WeaponProcOnHit spells
+      { haste, str, ..., chance: 0.1 }  // no line/req_lvl (procs are not self-applied)
+    ],
+    wand_proc: [ ... ],          // Wand proc spells — same shape as proc
+    bow_proc:  [ ... ]           // Bow proc spells — same shape as proc
+  },
+  relic: true,                   // present and true only for relic items
+  source_info: {
+    type: "wiki" | "drop",
+    name: "Zone or NPC name",    // for wiki drops
+    monster: "Monster Name",     // for drop sources
+    rarity: "Common" | ...
+  },
+  twoHanded: true,               // present and true only for two-handed weapons
+  bothSlots: true                // present and true only for items that fill
+                                 // both Primary and Secondary simultaneously
+}
+```
+
+`generate.py` writes `gear.js` from the public game database. The `line` and
+`req_lvl` fields on worn/aura effects are populated only when the spell's line
+is not `Generic` — Generic spells always stack and need no conflict tracking.
+
 ## Application Logic (`main.js`)
 
 Key constants at the top of the file:
