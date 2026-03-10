@@ -461,6 +461,51 @@ test.describe('optimize', () => {
   });
 });
 
+// ── computeMaxScore ───────────────────────────────────────────────────────────
+
+test.describe('computeMaxScore', () => {
+  test('returns a positive number after gear loads', async ({ page }) => {
+    const result = await page.evaluate(() => {
+      weights = { str: 5, dex: 5, agi: 5, end: 5, int: 5, wis: 5, cha: 5, res: 5,
+                  mr: 0, er: 0, pr: 0, vr: 0, haste: 5 };
+      return computeMaxScore();
+    });
+    expect(result).toBeGreaterThan(0);
+  });
+
+  test('changes when weights change', async ({ page }) => {
+    const [score1, score2] = await page.evaluate(() => {
+      weights = { str: 1, dex: 0, agi: 0, end: 0, int: 0, wis: 0, cha: 0, res: 0,
+                  mr: 0, er: 0, pr: 0, vr: 0, haste: 0 };
+      const s1 = computeMaxScore();
+      weights = { str: 10, dex: 0, agi: 0, end: 0, int: 0, wis: 0, cha: 0, res: 0,
+                  mr: 0, er: 0, pr: 0, vr: 0, haste: 0 };
+      const s2 = computeMaxScore();
+      return [s1, s2];
+    });
+    expect(score2).toBeGreaterThan(score1);
+  });
+
+  test('relic ring counted once plus next-best, not twice', async ({ page }) => {
+    // Build a minimal gear list with one relic ring (score 10) and one
+    // non-relic ring (score 5). Max for Ring slots should be 15, not 20.
+    const result = await page.evaluate(() => {
+      weights = { str: 1, dex: 0, agi: 0, end: 0, int: 0, wis: 0, cha: 0, res: 0,
+                  mr: 0, er: 0, pr: 0, vr: 0, haste: 0 };
+      const saved = gear.slice();
+      gear.length = 0;
+      gear.push({ name: 'RelicRing',  slot: 'Ring', lvl: 1, stats: { str: 10 }, classes: ['Windblade'], relic: true,  source: 'wiki', id: 1 });
+      gear.push({ name: 'NormalRing', slot: 'Ring', lvl: 1, stats: { str: 5  }, classes: ['Windblade'], relic: false, source: 'wiki', id: 2 });
+      const max = computeMaxScore();
+      gear.length = 0;
+      saved.forEach(g => gear.push(g));
+      return max;
+    });
+    // relic (10) + normal (5) = 15; NOT relic×2 = 20
+    expect(result).toBe(15);
+  });
+});
+
 // ── bankersRound ──────────────────────────────────────────────────────────────
 
 test.describe('bankersRound', () => {
