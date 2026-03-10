@@ -46,9 +46,60 @@ SLOT_NAME_MAP = {
 
 ALL_CLASSES = ["Windblade", "Paladin", "Reaver", "Druid", "Stormcaller", "Arcanist"]
 
-STAT_KEYS = ["Str", "End", "Dex", "Agi", "Int", "Wis", "Cha", "Res"]
+# MR/ER/PR/VR are direct item stats (ItemStats table) — included here so
+# they appear in item.stats and are scored alongside other stats.
+STAT_KEYS = ["Str", "End", "Dex", "Agi", "Int", "Wis", "Cha", "Res", "MR", "ER", "PR", "VR"]
 
 TWOHANDED_WEAPON_TYPES = {"TwoHandMelee", "TwoHandBow", "TwoHandStaff"}
+
+# Spell columns to read for each effect bucket. All are in the Spells table.
+SPELL_FIELDS = [
+    "Haste",
+    "Str",
+    "Dex",
+    "End",
+    "Agi",
+    "Int",
+    "Wis",
+    "Cha",
+    "MR",
+    "ER",
+    "PR",
+    "VR",
+    "HP",
+    "AC",
+    "Mana",
+    "PercentLifesteal",
+    "AtkRollModifier",
+    "MovementSpeed",
+    "DamageShield",
+    "XPBonus",
+    "TargetDamage",
+    "TargetHealing",
+    "CasterHealing",
+    "AddProcChance",
+]
+
+# DB column name → JS key. Columns not listed are lowercased as-is.
+SPELL_KEY_MAP = {
+    "PercentLifesteal": "lifesteal",
+    "AtkRollModifier": "atkroll",
+    "MovementSpeed": "movespeed",
+    "DamageShield": "damage_shield",
+    "XPBonus": "xp_bonus",
+    "TargetDamage": "target_damage",
+    "TargetHealing": "target_healing",
+    "CasterHealing": "caster_healing",
+    "AddProcChance": "add_proc_chance",
+}
+
+# Build SELECT fragments for one spell join using a column prefix.
+_SPELL_SELECT = ", ".join(f"{{alias}}.{col} AS {{prefix}}{col}" for col in SPELL_FIELDS)
+
+
+def _spell_selects(alias: str, prefix: str) -> str:
+    return ", ".join(f"{alias}.{col} AS {prefix}{col}" for col in SPELL_FIELDS)
+
 
 GEAR_QUERY = """
     SELECT
@@ -65,16 +116,45 @@ GEAR_QUERY = """
         s.Wis,
         s.Cha,
         s.Res,
-        GROUP_CONCAT(c.ClassName, ',') AS Classes
+        s.MR,
+        s.ER,
+        s.PR,
+        s.VR,
+        GROUP_CONCAT(c.ClassName, ',') AS Classes,
+        i.WeaponProcChance,
+        i.WandProcChance,
+        i.BowProcChance,
+        {worn_sel},
+        {aura_sel},
+        {proc_sel},
+        {wand_sel},
+        {bow_sel}
     FROM Items i
     JOIN ItemStats s
         ON i.StableKey = s.ItemStableKey AND s.Quality = 'Normal'
     LEFT JOIN ItemClasses c
         ON i.StableKey = c.ItemStableKey
+    LEFT JOIN Spells ws
+        ON i.WornEffectStableKey = ws.StableKey
+    LEFT JOIN Spells aus
+        ON i.AuraStableKey = aus.StableKey
+    LEFT JOIN Spells wps
+        ON i.WeaponProcOnHitStableKey = wps.StableKey
+    LEFT JOIN Spells wds
+        ON i.WandEffectStableKey = wds.StableKey
+    LEFT JOIN Spells bws
+        ON i.BowEffectStableKey = bws.StableKey
     WHERE i.RequiredSlot NOT IN ({excluded})
     GROUP BY i.StableKey
     ORDER BY i.RequiredSlot, i.ItemLevel, i.ItemName
-""".format(excluded=", ".join(f"'{s}'" for s in EXCLUDED_SLOTS))
+""".format(
+    worn_sel=_spell_selects("ws", "w_"),
+    aura_sel=_spell_selects("aus", "a_"),
+    proc_sel=_spell_selects("wps", "wp_"),
+    wand_sel=_spell_selects("wds", "wdp_"),
+    bow_sel=_spell_selects("bws", "bp_"),
+    excluded=", ".join(f"'{s}'" for s in EXCLUDED_SLOTS),
+)
 
 # Craftable items: any item that is a crafting reward.
 CRAFTABLE_QUERY = """
@@ -141,6 +221,51 @@ def map_classes(raw: str | None) -> list[str]:
     return result
 
 
+def spell_row_to_dict(row: sqlite3.Row, prefix: str) -> dict:
+    """Extract non-zero spell fields from a query row using the given column prefix.
+
+    Returns an empty dict if there is no spell (all values null/zero).
+    """
+    result = {}
+    for col in SPELL_FIELDS:
+        val = row[f"{prefix}{col}"]
+        if not val:
+            continue
+        js_key = SPELL_KEY_MAP.get(col, col.lower())
+        result[js_key] = val
+    return result
+
+
+def build_effects(row: sqlite3.Row) -> dict:
+    """Return an effects dict with sub-objects for each active effect bucket."""
+    effects: dict = {}
+
+    worn = spell_row_to_dict(row, "w_")
+    if worn:
+        effects["worn"] = worn
+
+    aura = spell_row_to_dict(row, "a_")
+    if aura:
+        effects["aura"] = aura
+
+    proc = spell_row_to_dict(row, "wp_")
+    if proc:
+        proc["chance"] = row["WeaponProcChance"] or 0
+        effects["proc"] = proc
+
+    wand_proc = spell_row_to_dict(row, "wdp_")
+    if wand_proc:
+        wand_proc["chance"] = row["WandProcChance"] or 0
+        effects["wand_proc"] = wand_proc
+
+    bow_proc = spell_row_to_dict(row, "bp_")
+    if bow_proc:
+        bow_proc["chance"] = row["BowProcChance"] or 0
+        effects["bow_proc"] = bow_proc
+
+    return effects
+
+
 def build_sources(conn: sqlite3.Connection) -> dict[str, dict]:
     """Return a dict keyed by StableKey with the best single source for each item."""
     craftable: set[str] = set()
@@ -203,6 +328,9 @@ def build_gear(db_path: Path) -> list[dict]:
         source = sources.get(row["StableKey"])
         if source:
             item["source_info"] = source
+        effects = build_effects(row)
+        if effects:
+            item["effects"] = effects
         gear.append(item)
 
     return gear
