@@ -387,9 +387,22 @@ function computeMaxScore() {
     if (slot === 'Secondary') return;
     const pool = tieredGear.filter(g => g.lvl <= fl && (g.slot === slot || (g.bothSlots && slot === 'Primary')))
       .sort((a,b) => score(b)-score(a));
-    const picks = pool.slice(0, MULTI_SLOTS[slot]||1);
-    picks.forEach(item => { maxScore += score(item); });
-    if (slot === 'Primary') bestPrimary = picks[0] || null;
+    const n = MULTI_SLOTS[slot] || 1;
+    if (n > 1) {
+      // For multi-slots (Ring, Wrist): non-relic items can fill both slots
+      // with the same item; relic items may only fill one slot each.
+      const best = pool[0];
+      if (best) {
+        if (!best.relic) {
+          maxScore += score(best) * 2;
+        } else {
+          pool.slice(0, 2).forEach(item => { maxScore += score(item); });
+        }
+      }
+    } else {
+      if (pool[0]) maxScore += score(pool[0]);
+    }
+    if (slot === 'Primary') bestPrimary = pool[0] || null;
   });
   // Secondary: skip entirely if the best Primary is two-handed; otherwise
   // exclude the Primary pick to avoid counting the same bothSlots item twice.
@@ -397,7 +410,7 @@ function computeMaxScore() {
     const primaryName = bestPrimary?.name;
     const pool = tieredGear.filter(g => g.lvl <= fl && (g.slot === 'Secondary' || g.bothSlots) && g.name !== primaryName)
       .sort((a,b) => score(b)-score(a));
-    pool.slice(0, 1).forEach(item => { maxScore += score(item); });
+    if (pool[0]) maxScore += score(pool[0]);
   }
   return maxScore;
 }
@@ -1029,9 +1042,11 @@ function optimize() {
       // Skip locked slots
       if (manualLoadout[key] && manualLoadout[key].locked) return;
 
-      // Build pool of items not already chosen for another key of this slot
+      // Build pool of items not already chosen for another key of this slot.
+      // Only exclude relic items — non-relic items (e.g. most rings) can
+      // legitimately fill both slots with the same item.
       const usedNames = keys
-        .filter(k => k !== key && manualLoadout[k] && manualLoadout[k].locked)
+        .filter(k => k !== key && manualLoadout[k]?.item?.relic)
         .map(k => manualLoadout[k].item.name);
 
       let pool = bySlot[slot].filter(g => !usedNames.includes(g.name));
