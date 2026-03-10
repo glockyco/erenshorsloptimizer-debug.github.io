@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+
+# Downloaded database (input to generate.py — never committed)
+*.sqlite
+*.sqlite3
+*.db
+*.tmp
+*.temp
+
+# macOS
+.DS_Store
+.AppleDouble
+._*
+
+# Windows
+Thumbs.db
+[Dd]esktop.ini
+
+# Linux
+*~
+
+# Editors
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
