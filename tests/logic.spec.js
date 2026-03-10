@@ -239,37 +239,37 @@ test.describe('claimLines', () => {
 test.describe('score', () => {
   test('scores a stats-only item as sum(stat × weight)', async ({ page }) => {
     const result = await page.evaluate(() => {
-      window.__erenshorTest.weights = { str: 2, dex: 0, agi: 0, end: 0, int: 0, wis: 0, cha: 0, res: 0,
+      const w = { str: 2, dex: 0, agi: 0, end: 0, int: 0, wis: 0, cha: 0, res: 0,
                   mr: 0, er: 0, pr: 0, vr: 0, haste: 0 };
-      return window.__erenshorTest.score({ stats: { str: 10, dex: 5 } });
+      return window.__erenshorTest.score({ stats: { str: 10, dex: 5 } }, w);
     });
     expect(result).toBe(20); // str:10×2 + dex:5×0
   });
 
   test('worn haste contributes via haste weight', async ({ page }) => {
     const result = await page.evaluate(() => {
-      window.__erenshorTest.weights = { str: 0, dex: 0, agi: 0, end: 0, int: 0, wis: 0, cha: 0, res: 0,
+      const w = { str: 0, dex: 0, agi: 0, end: 0, int: 0, wis: 0, cha: 0, res: 0,
                   mr: 0, er: 0, pr: 0, vr: 0, haste: 5 };
-      return window.__erenshorTest.score({ stats: {}, effects: { worn: { haste: 10 } } });
+      return window.__erenshorTest.score({ stats: {}, effects: { worn: { haste: 10 } } }, w);
     });
     expect(result).toBe(50); // haste:10×5
   });
 
   test('worn stat from spell contributes once, not double-counted via item.stats', async ({ page }) => {
     const result = await page.evaluate(() => {
-      window.__erenshorTest.weights = { str: 3, dex: 0, agi: 0, end: 0, int: 0, wis: 0, cha: 0, res: 0,
+      const w = { str: 3, dex: 0, agi: 0, end: 0, int: 0, wis: 0, cha: 0, res: 0,
                   mr: 0, er: 0, pr: 0, vr: 0, haste: 0 };
       // item.stats has no str; worn spell grants str:10
-      return window.__erenshorTest.score({ stats: {}, effects: { worn: { str: 10 } } });
+      return window.__erenshorTest.score({ stats: {}, effects: { worn: { str: 10 } } }, w);
     });
     expect(result).toBe(30); // worn str:10×3, stats str:0×3
   });
 
   test('item with no stats returns 0', async ({ page }) => {
     const result = await page.evaluate(() => {
-      window.__erenshorTest.weights = { str: 5, dex: 5, agi: 5, end: 5, int: 5, wis: 5, cha: 5, res: 5,
+      const w = { str: 5, dex: 5, agi: 5, end: 5, int: 5, wis: 5, cha: 5, res: 5,
                   mr: 5, er: 5, pr: 5, vr: 5, haste: 5 };
-      return window.__erenshorTest.score(null);
+      return window.__erenshorTest.score(null, w);
     });
     expect(result).toBe(0);
   });
@@ -280,11 +280,12 @@ test.describe('score', () => {
 test.describe('scoreInContext', () => {
   test('unclaimed line contributes normally', async ({ page }) => {
     const result = await page.evaluate(() => {
-      window.__erenshorTest.weights = { str: 0, dex: 0, agi: 0, end: 0, int: 0, wis: 0, cha: 0, res: 0,
+      const w = { str: 0, dex: 0, agi: 0, end: 0, int: 0, wis: 0, cha: 0, res: 0,
                   mr: 0, er: 0, pr: 0, vr: 0, haste: 5 };
       return window.__erenshorTest.scoreInContext(
         { stats: {}, effects: { worn: { line: 'Buff_Haste_Worn', req_lvl: 25, haste: 10 } } },
-        {}
+        {},
+        w
       );
     });
     expect(result).toBe(50); // haste:10×5
@@ -292,11 +293,12 @@ test.describe('scoreInContext', () => {
 
   test('claimed line at equal req_lvl is zeroed', async ({ page }) => {
     const result = await page.evaluate(() => {
-      window.__erenshorTest.weights = { str: 0, dex: 0, agi: 0, end: 0, int: 0, wis: 0, cha: 0, res: 0,
+      const w = { str: 0, dex: 0, agi: 0, end: 0, int: 0, wis: 0, cha: 0, res: 0,
                   mr: 0, er: 0, pr: 0, vr: 0, haste: 5 };
       return window.__erenshorTest.scoreInContext(
         { stats: {}, effects: { worn: { line: 'Buff_Haste_Worn', req_lvl: 25, haste: 10 } } },
-        { 'Buff_Haste_Worn': 25 }
+        { 'Buff_Haste_Worn': 25 },
+        w
       );
     });
     expect(result).toBe(0);
@@ -304,7 +306,7 @@ test.describe('scoreInContext', () => {
 
   test('proc always contributes regardless of line context', async ({ page }) => {
     const result = await page.evaluate(() => {
-      window.__erenshorTest.weights = { str: 0, dex: 0, agi: 0, end: 0, int: 0, wis: 0, cha: 0, res: 0,
+      const w = { str: 0, dex: 0, agi: 0, end: 0, int: 0, wis: 0, cha: 0, res: 0,
                   mr: 0, er: 0, pr: 0, vr: 0, haste: 10 };
       // worn line is blocked, but proc haste should still score at ×0.5
       return window.__erenshorTest.scoreInContext(
@@ -312,7 +314,8 @@ test.describe('scoreInContext', () => {
             worn: { line: 'Buff_Haste_Worn', req_lvl: 25, haste: 10 },
             proc: { haste: 20 },
         }},
-        { 'Buff_Haste_Worn': 25 }
+        { 'Buff_Haste_Worn': 25 },
+        w
       );
     });
     expect(result).toBe(100); // proc haste: 20×0.5×10 = 100; worn zeroed
@@ -320,11 +323,12 @@ test.describe('scoreInContext', () => {
 
   test('base stats always score regardless of line context', async ({ page }) => {
     const result = await page.evaluate(() => {
-      window.__erenshorTest.weights = { str: 4, dex: 0, agi: 0, end: 0, int: 0, wis: 0, cha: 0, res: 0,
+      const w = { str: 4, dex: 0, agi: 0, end: 0, int: 0, wis: 0, cha: 0, res: 0,
                   mr: 0, er: 0, pr: 0, vr: 0, haste: 0 };
       return window.__erenshorTest.scoreInContext(
         { stats: { str: 10 }, effects: { worn: { line: 'Regen', req_lvl: 5, haste: 10 } } },
-        { 'Regen': 5 }
+        { 'Regen': 5 },
+        w
       );
     });
     expect(result).toBe(40); // str:10×4; worn zeroed
