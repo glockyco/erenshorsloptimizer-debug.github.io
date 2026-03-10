@@ -340,19 +340,17 @@ test.describe('scoreInContext', () => {
 test.describe('sumLoadoutEffects', () => {
   test('winner on a shared line contributes, loser is zeroed', async ({ page }) => {
     const result = await page.evaluate(() => {
-      // Clear loadout and populate with two items on the same line.
-      // Winner has higher req_lvl.
-      const ml = window.__erenshorTest.manualLoadout;
-      Object.keys(ml).forEach(k => delete ml[k]);
-      ml['Head'] = { item: {
-        name: 'HighHaste', stats: {},
-        effects: { worn: { line: 'Buff_Haste_Worn', req_lvl: 25, haste: 30 } },
-      }, locked: false };
-      ml['Neck'] = { item: {
-        name: 'LowHaste', stats: {},
-        effects: { worn: { line: 'Buff_Haste_Worn', req_lvl: 10, haste: 10 } },
-      }, locked: false };
-      return window.__erenshorTest.sumLoadoutEffects();
+      const loadout = {
+        Head: { item: {
+          name: 'HighHaste', stats: {},
+          effects: { worn: { line: 'Buff_Haste_Worn', req_lvl: 25, haste: 30 } },
+        }, locked: false },
+        Neck: { item: {
+          name: 'LowHaste', stats: {},
+          effects: { worn: { line: 'Buff_Haste_Worn', req_lvl: 10, haste: 10 } },
+        }, locked: false },
+      };
+      return window.__erenshorTest.sumLoadoutEffects(loadout);
     });
     expect(result.haste).toBe(30);
     expect(result.haste_worn).toBe(30);
@@ -360,17 +358,17 @@ test.describe('sumLoadoutEffects', () => {
 
   test('lineConflicts has one entry naming the blocked item and winner', async ({ page }) => {
     const result = await page.evaluate(() => {
-      const ml = window.__erenshorTest.manualLoadout;
-      Object.keys(ml).forEach(k => delete ml[k]);
-      ml['Head'] = { item: {
-        name: 'HighHaste', stats: {},
-        effects: { worn: { line: 'Buff_Haste_Worn', req_lvl: 25, haste: 30 } },
-      }, locked: false };
-      ml['Neck'] = { item: {
-        name: 'LowHaste', stats: {},
-        effects: { worn: { line: 'Buff_Haste_Worn', req_lvl: 10, haste: 10 } },
-      }, locked: false };
-      return window.__erenshorTest.sumLoadoutEffects().lineConflicts;
+      const loadout = {
+        Head: { item: {
+          name: 'HighHaste', stats: {},
+          effects: { worn: { line: 'Buff_Haste_Worn', req_lvl: 25, haste: 30 } },
+        }, locked: false },
+        Neck: { item: {
+          name: 'LowHaste', stats: {},
+          effects: { worn: { line: 'Buff_Haste_Worn', req_lvl: 10, haste: 10 } },
+        }, locked: false },
+      };
+      return window.__erenshorTest.sumLoadoutEffects(loadout).lineConflicts;
     });
     expect(result).toHaveLength(1);
     expect(result[0].itemName).toBe('LowHaste');
@@ -379,17 +377,17 @@ test.describe('sumLoadoutEffects', () => {
 
   test('Generic-line effects never conflict', async ({ page }) => {
     const result = await page.evaluate(() => {
-      const ml = window.__erenshorTest.manualLoadout;
-      Object.keys(ml).forEach(k => delete ml[k]);
-      ml['Head'] = { item: {
-        name: 'ItemA', stats: {},
-        effects: { worn: { haste: 10 } }, // no line = Generic
-      }, locked: false };
-      ml['Neck'] = { item: {
-        name: 'ItemB', stats: {},
-        effects: { worn: { haste: 20 } },
-      }, locked: false };
-      return window.__erenshorTest.sumLoadoutEffects();
+      const loadout = {
+        Head: { item: {
+          name: 'ItemA', stats: {},
+          effects: { worn: { haste: 10 } }, // no line = Generic
+        }, locked: false },
+        Neck: { item: {
+          name: 'ItemB', stats: {},
+          effects: { worn: { haste: 20 } },
+        }, locked: false },
+      };
+      return window.__erenshorTest.sumLoadoutEffects(loadout);
     });
     expect(result.haste).toBe(30);
     expect(result.lineConflicts).toHaveLength(0);
@@ -397,17 +395,17 @@ test.describe('sumLoadoutEffects', () => {
 
   test('items on different lines both contribute', async ({ page }) => {
     const result = await page.evaluate(() => {
-      const ml = window.__erenshorTest.manualLoadout;
-      Object.keys(ml).forEach(k => delete ml[k]);
-      ml['Head'] = { item: {
-        name: 'HasteItem', stats: {},
-        effects: { worn: { line: 'Buff_Haste_Worn', req_lvl: 25, haste: 20 } },
-      }, locked: false };
-      ml['Neck'] = { item: {
-        name: 'RegenItem', stats: {},
-        effects: { worn: { line: 'Regen', req_lvl: 10, haste: 5 } },
-      }, locked: false };
-      return window.__erenshorTest.sumLoadoutEffects();
+      const loadout = {
+        Head: { item: {
+          name: 'HasteItem', stats: {},
+          effects: { worn: { line: 'Buff_Haste_Worn', req_lvl: 25, haste: 20 } },
+        }, locked: false },
+        Neck: { item: {
+          name: 'RegenItem', stats: {},
+          effects: { worn: { line: 'Regen', req_lvl: 10, haste: 5 } },
+        }, locked: false },
+      };
+      return window.__erenshorTest.sumLoadoutEffects(loadout);
     });
     expect(result.haste).toBe(25);
     expect(result.lineConflicts).toHaveLength(0);
