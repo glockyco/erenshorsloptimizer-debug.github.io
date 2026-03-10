@@ -310,6 +310,24 @@ function renderEffectsPanel(fx) {
 
 // ── Loadout panels ────────────────────────────────────────────────────────────
 
+// deltaTotals: stat totals from the other panel for ▲/▼ comparison, or null.
+function renderStatTotals(totals, deltaTotals) {
+  return STATS.map(s => {
+    const val   = totals[s.key] || 0;
+    const delta = deltaTotals ? val - (deltaTotals[s.key] || 0) : 0;
+    const isNeg = val < 0;
+    const color = isNeg ? 'var(--red-light)' : val > 0 ? 'var(--text-bright)' : 'var(--text-dim)';
+    const deltaHtml = deltaTotals && delta !== 0
+      ? `<span style="font-size:.6rem;font-family:'Cinzel',serif;color:${delta > 0 ? 'var(--green-light)' : 'var(--red-light)'};display:block;line-height:1">${delta > 0 ? '▲' : '▼'}${Math.abs(delta)}</span>`
+      : '';
+    return `<div class="stat-total">
+      <span class="stat-total-name" style="font-size:.65rem">${s.abbr}</span>
+      <span class="stat-total-val" style="color:${color};font-size:${Math.min(1.1, 0.7 + val / 80)}rem">${isNeg ? '' : val > 0 ? '+' : ''}${val}</span>
+      ${deltaHtml}
+    </div>`;
+  }).join('');
+}
+
 function renderCurrentGear() {
   const { slotHtml, totals, totalScore } = renderSlotGrid(state.currentLoadout, { showLock: false, showTier: true, showSource: false, prefix: 'cur-' });
   state.loadoutScores.current = totalScore;
@@ -329,15 +347,7 @@ function renderCurrentGear() {
         </div>
         <div style="width:1px;background:var(--border);align-self:stretch;margin:0 .5rem"></div>
         <div style="display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;flex:1">
-          ${STATS.map(s => {
-            const val = totals[s.key] || 0;
-            const isNeg = val < 0;
-            const color = isNeg ? 'var(--red-light)' : val > 0 ? 'var(--text-bright)' : 'var(--text-dim)';
-            return `<div class="stat-total">
-              <span class="stat-total-name" style="font-size:.65rem">${s.abbr}</span>
-              <span class="stat-total-val" style="color:${color};font-size:${Math.min(1.1, 0.7 + val / 80)}rem">${isNeg ? '' : val > 0 ? '+' : ''}${val}</span>
-            </div>`;
-          }).join('')}
+          ${renderStatTotals(totals, null)}
         </div>
       </div>
       <div style="margin-top:1rem"><div class="result-grid">${slotHtml}</div></div>
@@ -384,20 +394,7 @@ function renderManualLoadout() {
         </div>
         <div style="width:1px;background:var(--border);align-self:stretch;margin:0 .5rem"></div>
         <div style="display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;flex:1">
-          ${STATS.map(s => {
-            const val = totals[s.key] || 0;
-            const delta = hasCurrent ? val - (curTotals[s.key] || 0) : 0;
-            const isNeg = val < 0;
-            const color = isNeg ? 'var(--red-light)' : val > 0 ? 'var(--text-bright)' : 'var(--text-dim)';
-            const deltaHtml = hasCurrent && delta !== 0
-              ? `<span style="font-size:.6rem;font-family:'Cinzel',serif;color:${delta > 0 ? 'var(--green-light)' : 'var(--red-light)'};display:block;line-height:1">${delta > 0 ? '▲' : '▼'}${Math.abs(delta)}</span>`
-              : '';
-            return `<div class="stat-total">
-              <span class="stat-total-name" style="font-size:.65rem">${s.abbr}</span>
-              <span class="stat-total-val" style="color:${color};font-size:${Math.min(1.1, 0.7 + val / 80)}rem">${isNeg ? '' : val > 0 ? '+' : ''}${val}</span>
-              ${deltaHtml}
-            </div>`;
-          }).join('')}
+          ${renderStatTotals(totals, hasCurrent ? curTotals : null)}
         </div>
       </div>
       ${effBar(totalScore, maxScore)}
