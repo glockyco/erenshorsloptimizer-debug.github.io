@@ -68,4 +68,91 @@ test.describe('Erenshor Gear Sloptimizer', () => {
       page.locator('#class-bar .class-btn.active')
     ).toContainText('Paladin');
   });
+
+  test('stat totals row renders .stat-total elements after optimizing', async ({ page }) => {
+    await page.locator('.optimize-btn').click();
+    await expect(page.locator('#loadout-builder-panel .result-item-name').first()).toBeVisible({ timeout: 5000 });
+    const totals = page.locator('#loadout-builder-panel .stat-total');
+    await expect(totals.first()).toBeVisible();
+    // One column per stat in STATS (12 stats defined in data.js)
+    expect(await totals.count()).toBe(12);
+  });
+
+  test('tier badge renders after cycling a slot to blessed', async ({ page }) => {
+    await page.locator('.optimize-btn').click();
+    await expect(page.locator('#loadout-builder-panel .result-item-name').first()).toBeVisible({ timeout: 5000 });
+    // Click the tier badge button on the first equipped slot to cycle to Blessed
+    const tierBtn = page.locator('#loadout-builder-panel .result-slot.equipped button', { hasText: /Base|Blessed|Godly/ }).first();
+    await tierBtn.click();
+    await expect(
+      page.locator('#loadout-builder-panel .result-slot.equipped button', { hasText: /Blessed|Godly/ }).first()
+    ).toBeVisible();
+  });
+
+  test('source tag renders in at least one slot after optimizing', async ({ page }) => {
+    await page.locator('.optimize-btn').click();
+    await expect(page.locator('#loadout-builder-panel .result-item-name').first()).toBeVisible({ timeout: 5000 });
+    // Source info appears as an italic div containing a source icon
+    const sourceDiv = page.locator('#loadout-builder-panel .result-slot.equipped div[title]').first();
+    await expect(sourceDiv).toBeVisible();
+  });
+
+  test('effects panel renders when loadout has haste items', async ({ page }) => {
+    // Windblade default has haste weight 8 and haste items in DB; optimizer fills them
+    await page.locator('.optimize-btn').click();
+    await expect(page.locator('#loadout-builder-panel .result-item-name').first()).toBeVisible({ timeout: 5000 });
+    // The effects panel header is always "Spell & Passive Effects" when present
+    await expect(page.locator('#loadout-builder-panel').getByText('Spell & Passive Effects')).toBeVisible();
+  });
+
+  test('comparison bar renders when both panels are filled', async ({ page }) => {
+    // Fill builder via optimizer
+    await page.locator('.optimize-btn').click();
+    await expect(page.locator('#loadout-builder-panel .result-item-name').first()).toBeVisible({ timeout: 5000 });
+    // Fill current gear by clicking the first slot and selecting the first item
+    await page.locator('#current-gear-panel .result-slot').first().click();
+    await expect(page.locator('#slot-modal-backdrop')).toBeVisible({ timeout: 3000 });
+    await page.locator('.smi').first().click();
+    // Comparison bar should now be visible with the heading text
+    await expect(page.locator('#comparison-bar').getByText('Loadout Comparison')).toBeVisible();
+  });
+
+  test('delta arrows render in builder score bar when current gear differs', async ({ page }) => {
+    await page.locator('.optimize-btn').click();
+    await expect(page.locator('#loadout-builder-panel .result-item-name').first()).toBeVisible({ timeout: 5000 });
+    // Fill all current gear slots by optimizing, then swap one item to create a
+    // score difference. We inject a minimal item into current gear via the test
+    // surface to guarantee the totals differ from the builder.
+    await page.evaluate(() => {
+      const ml = window.__erenshorTest.state.manualLoadout;
+      const cl = window.__erenshorTest.state.currentLoadout;
+      // Copy first builder slot to current gear but zero out its stats so scores differ
+      const firstKey = Object.keys(ml)[0];
+      if (firstKey) {
+        cl[firstKey] = { item: { ...ml[firstKey].item, stats: {} }, locked: false };
+      }
+      renderBothLoadouts();
+    });
+    // Delta arrows (▲ or ▼) should now be visible in stat-total cells
+    await expect(
+      page.locator('#loadout-builder-panel .stat-total').getByText(/[▲▼]/).first()
+    ).toBeVisible();
+  });
+
+  test('slot modal opens and lists items when a slot is clicked', async ({ page }) => {
+    await page.locator('#current-gear-panel .result-slot').first().click();
+    await expect(page.locator('#slot-modal-backdrop')).toBeVisible({ timeout: 3000 });
+    await expect(page.locator('#slot-modal-results .smi').first()).toBeVisible();
+  });
+
+  test('lock button toggles locked class on slot', async ({ page }) => {
+    await page.locator('.optimize-btn').click();
+    await expect(page.locator('#loadout-builder-panel .result-item-name').first()).toBeVisible({ timeout: 5000 });
+    // Initially no locked slots
+    await expect(page.locator('#loadout-builder-panel .result-slot.locked')).toHaveCount(0);
+    // Click the first lock button
+    await page.locator('#loadout-builder-panel .lock-btn').first().click();
+    // One slot should now carry the locked class
+    await expect(page.locator('#loadout-builder-panel .result-slot.locked')).toHaveCount(1);
+  });
 });
