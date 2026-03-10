@@ -1,15 +1,15 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 
-// gear.json loads asynchronously via fetch(); we wait for the gear count to
-// appear in #gear-count before asserting anything that depends on it.
+// gear.js defines GEAR_DATA synchronously; init() runs after DOMContentLoaded.
+// We wait for #gear-count to be populated before asserting anything that
+// depends on the gear list being rendered.
 const GEAR_COUNT_RE = /\(\d+ items\)/;
 
 test.describe('Erenshor Gear Sloptimizer', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/');
-    // Wait until gear.json has been fetched and the gear count is rendered.
-    // This covers the full init() path including WIKI_GEAR population.
+    // Wait until init() has run and the gear count is rendered.
     await expect(page.locator('#gear-count')).toHaveText(GEAR_COUNT_RE, { timeout: 10000 });
   });
 
@@ -17,7 +17,7 @@ test.describe('Erenshor Gear Sloptimizer', () => {
     await expect(page).toHaveTitle('Erenshor Gear Sloptimizer');
   });
 
-  test('gear.json loads and populates the gear list', async ({ page }) => {
+  test('gear.js loads and populates the gear list', async ({ page }) => {
     const text = await page.locator('#gear-count').textContent();
     const match = text?.match(/\((\d+) items\)/);
     expect(match).not.toBeNull();

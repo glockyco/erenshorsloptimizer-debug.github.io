@@ -1019,18 +1019,15 @@ function makeToggle(headerId) {
   });
 }
 
-// ── Bootstrap: fetch gear data then initialise ────────────────────────────────
-fetch('gear.json')
-  .then(r => {
-    if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    return r.json();
-  })
-  .then(data => {
-    window.WIKI_GEAR = data;
-    init();
-    makeToggle('tutorial-header');
-    makeToggle('notes-header');
-  })
-  .catch(() => {
-    document.body.innerHTML = '<p style="color:red;padding:2rem">Failed to load gear data. Make sure gear.json exists (run: uv run generate.py)</p>';
-  });
+// ── Bootstrap ─────────────────────────────────────────────────────────────────
+// GEAR_DATA is defined by gear.js, loaded as a plain <script> tag before
+// main.js. This allows the page to work when opened directly as a file://
+// URL without needing a local HTTP server.
+if (typeof GEAR_DATA === 'undefined') {
+  document.body.innerHTML = '<p style="color:red;padding:2rem">Failed to load gear data. Make sure gear.js exists (run: uv run generate.py)</p>';
+} else {
+  window.WIKI_GEAR = GEAR_DATA;
+  init();
+  makeToggle('tutorial-header');
+  makeToggle('notes-header');
+}

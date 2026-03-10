@@ -18,8 +18,8 @@ step. Pushing to `main` deploys immediately.
 | `index.html` | Page shell: meta tags, font link, structural HTML | Yes |
 | `style.css` | All CSS, extracted verbatim from the original | Yes |
 | `main.js` | All application logic | Yes |
-| `gear.json` | Gear data loaded at runtime by `main.js` | **Generated — do not edit by hand** |
-| `generate.py` | Fetches the game DB and writes `gear.json` | Yes |
+| `gear.js` | Gear data loaded as a `<script>` tag by `index.html` | **Generated — do not edit by hand** |
+| `generate.py` | Fetches the game DB and writes `gear.js` | Yes |
 | `LICENSE` | CC0-1.0 | No |
 
 ## Data Flow
@@ -27,19 +27,20 @@ step. Pushing to `main` deploys immediately.
 ```
 Game database (public URL)
     ↓  generate.py
-gear.json  (committed to repo)
-    ↓  fetch('gear.json')  at page load
+gear.js  (committed to repo)
+    ↓  <script src="gear.js">  — defines GEAR_DATA synchronously
 main.js  (scores and optimizes gear)
 ```
 
-`gear.json` is committed so the site works without any server-side logic.
-Run `generate.py` whenever the game updates and commit the result.
+`gear.js` is committed so the page works when opened directly as a
+`file://` URL with no local server. Run `generate.py` whenever the
+game updates and commit the result.
 
 ## How to Update Gear Data
 
 ```
 uv run generate.py
-git add gear.json
+git add gear.js
 git commit -m "chore: update gear data"
 git push
 ```

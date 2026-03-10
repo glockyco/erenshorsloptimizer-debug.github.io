@@ -1,10 +1,10 @@
 # /// script
 # dependencies = ["requests"]
 # ///
-"""Generate gear.json from the Erenshor game database.
+"""Generate gear.js from the Erenshor game database.
 
 Downloads the public Erenshor SQLite database, queries all equippable
-gear (excluding the Charm slot), and writes gear.json for use by the
+gear (excluding the Charm slot), and writes gear.js for use by the
 optimizer.
 
 Usage:
@@ -20,7 +20,7 @@ import requests
 
 DB_URL = "https://erenshor-maps.wowmuch1.workers.dev/db/erenshor.sqlite"
 
-OUTPUT = Path(__file__).parent / "gear.json"
+OUTPUT = Path(__file__).parent / "gear.js"
 
 # Slots excluded from the optimizer.
 # Charm items use proficiency scaling rather than flat stats and are
@@ -132,7 +132,7 @@ def main() -> None:
     finally:
         tmp_path.unlink(missing_ok=True)
 
-    OUTPUT.write_text(json.dumps(gear, indent=2) + "\n", encoding="utf-8")
+    OUTPUT.write_text("const GEAR_DATA = " + json.dumps(gear, indent=2) + ";\n", encoding="utf-8")
     print(f"Wrote {len(gear)} items to {OUTPUT}")
 
 

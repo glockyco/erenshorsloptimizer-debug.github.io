@@ -1,4 +1,4 @@
-[
+const GEAR_DATA = [
   {
     "name": "Cloth Sleeves",
     "slot": "Arms",
@@ -11613,4 +11613,4 @@
       "Stormcaller"
     ]
   }
-]
+];
