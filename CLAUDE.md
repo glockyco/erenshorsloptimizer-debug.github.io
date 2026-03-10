@@ -158,8 +158,26 @@ Key constants at the top of the file:
 Key functions:
 
 - `init()` — called after `gear.js` defines `GEAR_DATA`; sets up the UI
-- `score(item, weights)` — returns a numeric score for an item given weights
-- `optimize()` — fills the loadout builder with highest-scoring items
+- `score(item)` — standalone per-item score; sums `item.stats` weights plus
+  worn+aura spell stat contributions and proc×0.5; no cross-item context
+- `scoreInContext(item, claimedLines)` — like `score()` but zeros out worn/aura
+  contributions whose spell line is already claimed; used by `optimize()` and
+  `computeMaxScore()`
+- `effectBlocked(effect, claimedLines)` — returns true if the effect's line is
+  claimed at equal-or-higher `req_lvl`
+- `claimLines(item, claimedLines)` — registers an item's worn/aura lines into
+  the running map after placement
+- `getItemEffects(item)` — returns worn+aura+proc×0.5 stat totals for scoring,
+  including resist stats
+- `getItemPermEffects(item)` — returns worn+aura permanent totals plus raw proc
+  sub-label values for display in the effects panel
+- `sumLoadoutEffects()` — two-pass spell-line resolution across the full
+  equipped loadout; returns effect totals plus a `lineConflicts` list for
+  in-panel conflict warnings
+- `computeMaxScore()` — relic-aware, line-stacking-aware theoretical maximum
+  score across all slots; used to normalise the Priority Score display
+- `optimize()` — relic-aware, line-stacking-aware slot filler; threads a
+  `claimedLines` map through each slot pass
 - `renderBothLoadouts()` — renders current gear and loadout builder panels
 
 Gear data is held in the module-level `gear` array. Wiki gear (from
