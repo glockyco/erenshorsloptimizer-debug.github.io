@@ -1002,6 +1002,12 @@ function optimize() {
       const best = sorted[0];
       if (best) {
         manualLoadout[key] = { item: best, locked: false, fallback: isFallback };
+        // If a 2H weapon was just chosen for Primary, clear Secondary so the
+        // optimizer does not also fill it — that would be an impossible loadout.
+        if (key === 'Primary' && best.twoHanded) {
+          bySlot['Secondary'] = [];
+          bySlotFallback['Secondary'] = [];
+        }
       }
     });
   });
