@@ -46,45 +46,50 @@ const STATS = [
 const SLOTS = ['Head','Neck','Chest','Back','Arms','Waist','Legs','Feet','Hands','Wrist','Ring','Primary','Secondary','Aura'];
 const MULTI_SLOTS = {Ring:2, Wrist:2};
 
-// Spell & resist effects keyed by item name (worn=always-on, proc=half value)
-const ITEM_EFFECTS = {"Solunarian Armguard": {"mr_stat": 2.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Polished Steel Armguards": {"mr_stat": 5.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Fungus Covered Armband": {"mr_stat": 1.0, "pr_stat": 3.0}, "Boatman's Armband": {"mr_stat": 1.0, "er_stat": 1.0}, "Desert Silk Sleeves": {"mr_stat": 2.0, "er_stat": 2.0}, "Ancient Guardian Sleeve": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 2.0}, "Flaming Vambraces": {"er_stat": 4.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Islander Bandit Armwrap": {"er_stat": 1.0, "pr_stat": 1.0}, "Battlemage Sleeves": {"mr_stat": 4.0, "er_stat": 1.0}, "Chewed Armwraps": {"pr_stat": 1.0, "vr_stat": 2.0}, "Dueling Armguards": {"mr_stat": 2.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Vaporous Armguard": {"vr_stat": 15.0}, "Charred Sleeves": {"mr_stat": 1.0, "er_stat": 2.0, "pr_stat": 1.0}, "Gifted Sleeves": {"pr_stat": 5.0, "vr_stat": 2.0}, "Priel Steel Armguards": {"mr_stat": 1.0, "er_stat": 1.0}, "Braxonian Leather Sleeves": {"mr_stat": 2.0, "er_stat": 2.0}, "Braxonian Royal Armband": {"er_stat": 2.0, "pr_stat": 2.0}, "Braxonian Spaulders": {"mr_stat": 2.0, "er_stat": 2.0}, "Feathery Vambraces": {"pr_stat": 1.0}, "Dreamy Sleeves": {"vr_stat": 4.0}, "Armbands of Order": {"mr_stat": 2.0, "er_stat": 2.0}, "Crested Spaulders": {"mr_stat": 3.0, "er_stat": 3.0, "vr_stat": 3.0}, "Age-Old Armlet": {"er_stat": 3.0}, "Armband of Generals": {"mr_stat": 2.0, "er_stat": 2.0, "pr_stat": 2.0, "vr_stat": 3.0}, "Bonebanded Armguard": {"mr_stat": 3.0, "pr_stat": 3.0, "vr_stat": 3.0}, "Armguards of Presence": {"mr_stat": 2.0, "pr_stat": 2.0, "vr_stat": 5.0, "haste_worn": 17.0, "atkroll_worn": 1.0}, "Aged Plate Sleeves": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Azure Plate Vambraces": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Archer's Vambrace": {"er_stat": 1.0}, "Etched Armlet": {"pr_stat": 1.0}, "Faerie Sleeves": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Vinewrapped Vambracers": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Aged Prism": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Ancient Presence": {"mr_stat": 3.0, "er_stat": 3.0, "pr_stat": 3.0, "vr_stat": 3.0}, "Gift of Azynthi": {"mr_stat": 2.0, "er_stat": 2.0, "pr_stat": 2.0, "vr_stat": 2.0}, "Spark of Light": {"haste_aura": 5.0}, "Essence of Flame": {"haste_aura": 10.0}, "Glow of Eternity": {"haste_aura": 15.0}, "Flame of the Redemption": {"haste_aura": 20.0}, "Pyre of the Cleansed": {"haste_aura": 30.0}, "Corruption of Sivakaya": {"mr_stat": 2.0, "er_stat": 2.0, "pr_stat": 2.0, "vr_stat": 2.0}, "Sprout": {"lifesteal_aura": 2.0}, "Bloom": {"lifesteal_aura": 4.0}, "Wilt": {"lifesteal_aura": 6.0}, "Decay": {"lifesteal_aura": 10.0}, "Gem of Echoes": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Hallows Eve": {"mr_stat": 5.0, "er_stat": 5.0, "pr_stat": 5.0, "vr_stat": 5.0}, "Chunk of Living Stone": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Amber's Gift": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Falling Shadow": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Looming Void": {"mr_stat": 2.0, "er_stat": 2.0, "pr_stat": 2.0, "vr_stat": 2.0}, "End of Life": {"mr_stat": 3.0, "er_stat": 3.0, "pr_stat": 3.0, "vr_stat": 3.0}, "Evacuate Soul": {"mr_stat": 4.0, "er_stat": 4.0, "pr_stat": 4.0, "vr_stat": 4.0}, "Dawn's Light": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Morning Glow": {"mr_stat": 2.0, "er_stat": 2.0, "pr_stat": 2.0, "vr_stat": 2.0}, "Rising Moon": {"mr_stat": 3.0, "er_stat": 3.0, "pr_stat": 3.0, "vr_stat": 3.0}, "Eclipse": {"mr_stat": 4.0, "er_stat": 4.0, "pr_stat": 4.0, "vr_stat": 4.0}, "Spirit of the Steed": {"movespeed_aura": 15.0}, "Rolling Clouds": {"haste_aura": 5.0, "mr_aura": 2.0}, "Falling Rain": {"haste_aura": 10.0, "mr_aura": 4.0}, "Distant Thunder": {"haste_aura": 15.0, "mr_aura": 6.0}, "Lightning Strike": {"haste_aura": 20.0, "mr_aura": 8.0}, "Sage's Trinket": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Scent of the Sea": {"haste_aura": 5.0, "dex_aura": 3.0, "agi_aura": 3.0}, "Force of the Sea": {"haste_aura": 10.0, "dex_aura": 6.0, "agi_aura": 6.0}, "Freedom of the Sky": {"haste_aura": 15.0, "dex_aura": 9.0, "agi_aura": 9.0}, "Whispers of Wind": {"haste_aura": 20.0, "dex_aura": 12.0, "agi_aura": 12.0}, "Wisp's Presence": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Backplate": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Call To Arms": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Gambler's Cape": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Fungal Scab Cape": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Cape of the Sands": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Seawashed Cloak": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Distinguished Cape": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Dreamthread Wings": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Honor Strip": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Layer Cape": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Lost Cape": {"mr_stat": 2.0, "er_stat": 2.0, "pr_stat": 2.0, "vr_stat": 2.0}, "Ritual Cape": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Tamer's Pack": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Feathered Cape": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Flowing Cloak": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Blue Leaf Cape": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Red Leaf Cape": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Abyssal Shell": {"mr_stat": 2.0, "er_stat": 2.0, "pr_stat": 2.0, "vr_stat": 2.0}, "Arboreal Cape": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Lifewind": {"mr_stat": 2.0, "er_stat": 2.0, "pr_stat": 2.0, "vr_stat": 2.0}, "Night Wave": {"mr_stat": 2.0, "er_stat": 2.0, "pr_stat": 2.0, "vr_stat": 2.0}, "Braxonian Cape": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Assassin's Bane": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Nightbane": {"mr_stat": 3.0, "er_stat": 3.0, "pr_stat": 3.0, "vr_stat": 3.0}, "Shadowclasp": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Wingwoven Cape": {"mr_stat": 3.0, "er_stat": 3.0, "pr_stat": 3.0, "vr_stat": 3.0}, "Azynthian Cape": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Sivakayan Wings": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Wardwarped Cape": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Plaguewind": {"mr_stat": 3.0, "er_stat": 3.0, "pr_stat": 3.0, "vr_stat": 3.0}, "Verdant Embrace": {"mr_stat": 3.0, "er_stat": 3.0, "pr_stat": 3.0, "vr_stat": 3.0}, "Lightkeeper's Cape": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Priel Standard": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}, "Satin Cloak": {"mr_stat": 1.0, "er_stat": 1.0, "pr_stat": 1.0, "vr_stat": 1.0}};
-
-
-
 
 function getItemEffects(item) {
-  // Returns aggregated effect totals for a single item
-  // _aura and _worn are always-on; _proc is discounted at 50%
-  const e = ITEM_EFFECTS[item.name] || {};
+  // Returns aggregated effect totals for scoring and display. Worn and aura
+  // effects are always-on; proc effects are discounted at 50%. Spell-sourced
+  // resists (mr/er/pr/vr) are separate from item.stats resists — both feed
+  // into score() but through different paths (item.stats via STAT_KEYS,
+  // spell effects via STATS.forEach on the return value of this function).
+  const e = item.effects || {};
+  const w = e.worn || {}, a = e.aura || {}, p = e.proc || {};
   return {
-    haste:     (e.haste_worn||0) + (e.haste_aura||0) + (e.haste_proc||0)*0.5,
-    lifesteal: (e.lifesteal_worn||0) + (e.lifesteal_aura||0) + (e.lifesteal_proc||0)*0.5,
-    atkroll:   (e.atkroll_worn||0) + (e.atkroll_aura||0) + (e.atkroll_proc||0)*0.5,
-    movespeed: (e.movespeed_worn||0) + (e.movespeed_aura||0) + (e.movespeed_proc||0)*0.5,
-    mr: (e.mr_stat||0) + (e.mr_worn||0) + (e.mr_aura||0) + (e.mr_proc||0)*0.5,
-    er: (e.er_stat||0) + (e.er_worn||0) + (e.er_aura||0) + (e.er_proc||0)*0.5,
-    pr: (e.pr_stat||0) + (e.pr_worn||0) + (e.pr_aura||0) + (e.pr_proc||0)*0.5,
-    vr: (e.vr_stat||0) + (e.vr_worn||0) + (e.vr_aura||0) + (e.vr_proc||0)*0.5,
-    // Aura stats that feed into main stat scoring
-    str: (e.str_aura||0), dex: (e.dex_aura||0), agi: (e.agi_aura||0),
-    end: (e.end_aura||0), int: (e.int_aura||0), wis: (e.wis_aura||0), cha: (e.cha_aura||0),
+    haste:     (w.haste||0)     + (a.haste||0)     + (p.haste||0)*0.5,
+    lifesteal: (w.lifesteal||0) + (a.lifesteal||0) + (p.lifesteal||0)*0.5,
+    atkroll:   (w.atkroll||0)   + (a.atkroll||0)   + (p.atkroll||0)*0.5,
+    movespeed: (w.movespeed||0) + (a.movespeed||0),
+    mr: (w.mr||0) + (a.mr||0) + (p.mr||0)*0.5,
+    er: (w.er||0) + (a.er||0) + (p.er||0)*0.5,
+    pr: (w.pr||0) + (a.pr||0) + (p.pr||0)*0.5,
+    vr: (w.vr||0) + (a.vr||0) + (p.vr||0)*0.5,
+    // Worn + aura stats feed into main stat scoring via STATS.forEach in score()
+    str: (w.str||0) + (a.str||0), dex: (w.dex||0) + (a.dex||0),
+    agi: (w.agi||0) + (a.agi||0), end: (w.end||0) + (a.end||0),
+    int: (w.int||0) + (a.int||0), wis: (w.wis||0) + (a.wis||0),
+    cha: (w.cha||0) + (a.cha||0),
   };
 }
 
 function sumLoadoutEffects() {
-  const out = {haste:0, haste_worn:0, haste_aura:0, haste_proc:0, lifesteal:0, atkroll:0, movespeed:0, mr:0, er:0, pr:0, vr:0};
+  const out = {haste:0, haste_worn:0, haste_aura:0, haste_proc:0,
+               lifesteal:0, atkroll:0, movespeed:0, mr:0, er:0, pr:0, vr:0};
   Object.values(manualLoadout).forEach(entry => {
     if (!entry?.item) return;
-    const e = getItemEffects(entry.item);
-    const rawE = ITEM_EFFECTS[entry.item.name] || {};
-    out.haste_worn += rawE.haste_worn || 0;
-    out.haste_aura += rawE.haste_aura || 0;
-    out.haste_proc += (rawE.haste_proc || 0) * 0.5;
-    out.haste      += e.haste;
-    out.lifesteal  += e.lifesteal;
-    out.atkroll    += e.atkroll;
-    out.movespeed  += e.movespeed;
-    out.mr += e.mr; out.er += e.er; out.pr += e.pr; out.vr += e.vr;
+    const e = entry.item.effects || {};
+    const w = e.worn || {}, a = e.aura || {}, p = e.proc || {};
+    out.haste_worn  += w.haste || 0;
+    out.haste_aura  += a.haste || 0;
+    out.haste_proc  += (p.haste || 0) * 0.5;
+    out.haste       += (w.haste||0) + (a.haste||0) + (p.haste||0)*0.5;
+    out.lifesteal   += (w.lifesteal||0) + (a.lifesteal||0) + (p.lifesteal||0)*0.5;
+    out.atkroll     += (w.atkroll||0)   + (a.atkroll||0)   + (p.atkroll||0)*0.5;
+    out.movespeed   += (w.movespeed||0) + (a.movespeed||0);
+    out.mr += (w.mr||0) + (a.mr||0) + (p.mr||0)*0.5;
+    out.er += (w.er||0) + (a.er||0) + (p.er||0)*0.5;
+    out.pr += (w.pr||0) + (a.pr||0) + (p.pr||0)*0.5;
+    out.vr += (w.vr||0) + (a.vr||0) + (p.vr||0)*0.5;
   });
   // Cap total haste at 60
   out.haste = Math.min(out.haste, 60);
