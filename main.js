@@ -200,7 +200,7 @@ function switchClass(cls, initial=false) {
   if (!initial) {
     gear = gear.filter(g => g.source === 'manual');
     WIKI_GEAR.forEach(item => {
-      if (item.classes.includes(cls)) gear.push({...item, id: Date.now()+Math.random()});
+      if (item.classes.includes(cls)) gear.push({...item, source:'wiki', id: Date.now()+Math.random()});
     });
   }
   renderGearList();
@@ -243,7 +243,7 @@ function loadWikiGear() {
   const ex = new Set(gear.map(g=>g.name.toLowerCase())); let added=0;
   WIKI_GEAR.forEach(item => {
     if (item.classes.includes(activeClass) && !ex.has(item.name.toLowerCase())) {
-      gear.push({...item, id:Date.now()+Math.random()}); added++;
+      gear.push({...item, source:'wiki', id:Date.now()+Math.random()}); added++;
     }
   });
   renderGearList();
