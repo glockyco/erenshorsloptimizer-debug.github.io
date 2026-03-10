@@ -330,6 +330,81 @@ test.describe('scoreInContext', () => {
   });
 });
 
+// ── sumLoadoutEffects ─────────────────────────────────────────────────────────
+
+test.describe('sumLoadoutEffects', () => {
+  test('winner on a shared line contributes, loser is zeroed', async ({ page }) => {
+    const result = await page.evaluate(() => {
+      // Clear loadout and populate with two items on the same line.
+      // Winner has higher req_lvl.
+      Object.keys(manualLoadout).forEach(k => delete manualLoadout[k]);
+      manualLoadout['Head'] = { item: {
+        name: 'HighHaste', stats: {},
+        effects: { worn: { line: 'Buff_Haste_Worn', req_lvl: 25, haste: 30 } },
+      }, locked: false };
+      manualLoadout['Neck'] = { item: {
+        name: 'LowHaste', stats: {},
+        effects: { worn: { line: 'Buff_Haste_Worn', req_lvl: 10, haste: 10 } },
+      }, locked: false };
+      return sumLoadoutEffects();
+    });
+    expect(result.haste).toBe(30);
+    expect(result.haste_worn).toBe(30);
+  });
+
+  test('lineConflicts has one entry naming the blocked item and winner', async ({ page }) => {
+    const result = await page.evaluate(() => {
+      Object.keys(manualLoadout).forEach(k => delete manualLoadout[k]);
+      manualLoadout['Head'] = { item: {
+        name: 'HighHaste', stats: {},
+        effects: { worn: { line: 'Buff_Haste_Worn', req_lvl: 25, haste: 30 } },
+      }, locked: false };
+      manualLoadout['Neck'] = { item: {
+        name: 'LowHaste', stats: {},
+        effects: { worn: { line: 'Buff_Haste_Worn', req_lvl: 10, haste: 10 } },
+      }, locked: false };
+      return sumLoadoutEffects().lineConflicts;
+    });
+    expect(result).toHaveLength(1);
+    expect(result[0].itemName).toBe('LowHaste');
+    expect(result[0].blockedBy).toBe('HighHaste');
+  });
+
+  test('Generic-line effects never conflict', async ({ page }) => {
+    const result = await page.evaluate(() => {
+      Object.keys(manualLoadout).forEach(k => delete manualLoadout[k]);
+      manualLoadout['Head'] = { item: {
+        name: 'ItemA', stats: {},
+        effects: { worn: { haste: 10 } }, // no line = Generic
+      }, locked: false };
+      manualLoadout['Neck'] = { item: {
+        name: 'ItemB', stats: {},
+        effects: { worn: { haste: 20 } },
+      }, locked: false };
+      return sumLoadoutEffects();
+    });
+    expect(result.haste).toBe(30);
+    expect(result.lineConflicts).toHaveLength(0);
+  });
+
+  test('items on different lines both contribute', async ({ page }) => {
+    const result = await page.evaluate(() => {
+      Object.keys(manualLoadout).forEach(k => delete manualLoadout[k]);
+      manualLoadout['Head'] = { item: {
+        name: 'HasteItem', stats: {},
+        effects: { worn: { line: 'Buff_Haste_Worn', req_lvl: 25, haste: 20 } },
+      }, locked: false };
+      manualLoadout['Neck'] = { item: {
+        name: 'RegenItem', stats: {},
+        effects: { worn: { line: 'Regen', req_lvl: 10, haste: 5 } },
+      }, locked: false };
+      return sumLoadoutEffects();
+    });
+    expect(result.haste).toBe(25);
+    expect(result.lineConflicts).toHaveLength(0);
+  });
+});
+
 // ── bankersRound ──────────────────────────────────────────────────────────────
 
 test.describe('bankersRound', () => {
