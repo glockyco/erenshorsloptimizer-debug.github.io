@@ -80,6 +80,17 @@ function updateSliderHighlights() {
 
 // ── Gear list ─────────────────────────────────────────────────────────────────
 
+function getFiltered() {
+  const fn = document.getElementById('filter-name').value.toLowerCase();
+  const fs = document.getElementById('filter-slot').value;
+  const fl = parseInt(document.getElementById('filter-level').value) || 999;
+  return state.gear.filter(g =>
+    (!fn || g.name.toLowerCase().includes(fn)) &&
+    (!fs || g.slot === fs) &&
+    (g.lvl <= fl)
+  );
+}
+
 function renderGearList() {
   const c = document.getElementById('gear-list');
   document.getElementById('gear-count').textContent = `(${state.gear.length} items)`;
