@@ -48,10 +48,13 @@ ALL_CLASSES = ["Windblade", "Paladin", "Reaver", "Druid", "Stormcaller", "Arcani
 
 STAT_KEYS = ["Str", "End", "Dex", "Agi", "Int", "Wis", "Cha", "Res"]
 
+TWOHANDED_WEAPON_TYPES = {"TwoHandMelee", "TwoHandBow", "TwoHandStaff"}
+
 QUERY = """
     SELECT
         i.ItemName,
         i.RequiredSlot,
+        i.ThisWeaponType,
         i.ItemLevel,
         s.Str,
         s.End,
@@ -108,15 +111,18 @@ def build_gear(db_path: Path) -> list[dict]:
     for row in rows:
         slot = SLOT_NAME_MAP.get(row["RequiredSlot"], row["RequiredSlot"])
         stats = {k.lower(): row[k] for k in STAT_KEYS if row[k]}
-        gear.append(
-            {
-                "name": row["ItemName"],
-                "slot": slot,
-                "lvl": row["ItemLevel"],
-                "stats": stats,
-                "classes": map_classes(row["Classes"]),
-            }
-        )
+        item: dict = {
+            "name": row["ItemName"],
+            "slot": slot,
+            "lvl": row["ItemLevel"],
+            "stats": stats,
+            "classes": map_classes(row["Classes"]),
+        }
+        if row["ThisWeaponType"] in TWOHANDED_WEAPON_TYPES:
+            item["twoHanded"] = True
+        if row["RequiredSlot"] == "PrimaryOrSecondary":
+            item["bothSlots"] = True
+        gear.append(item)
 
     return gear
 

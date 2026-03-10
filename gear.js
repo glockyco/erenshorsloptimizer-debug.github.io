@@ -6709,7 +6709,8 @@ const GEAR_DATA = [
     "stats": {},
     "classes": [
       "Stormcaller"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Rusty Greatsword",
@@ -6719,7 +6720,8 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Carved Bow",
@@ -6728,7 +6730,8 @@ const GEAR_DATA = [
     "stats": {},
     "classes": [
       "Stormcaller"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Nightfall",
@@ -6738,7 +6741,8 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Old Halberd",
@@ -6748,7 +6752,8 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Rotwood Bow",
@@ -6757,7 +6762,8 @@ const GEAR_DATA = [
     "stats": {},
     "classes": [
       "Stormcaller"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Standard Halberd",
@@ -6767,7 +6773,8 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Whitewood",
@@ -6779,7 +6786,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Stormcaller"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Executioner's Bow",
@@ -6795,7 +6803,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Stormcaller"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Heavy Bladed Mace",
@@ -6807,7 +6816,8 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Sea Giant's Cutlass",
@@ -6821,7 +6831,8 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Ogre Tooth Club",
@@ -6851,7 +6862,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Druid"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Recurve Bow",
@@ -6864,7 +6876,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Stormcaller"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Spidersmasher",
@@ -6876,7 +6889,8 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Anointed Sword",
@@ -6905,7 +6919,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Stormcaller"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Molorai Bow",
@@ -6917,7 +6932,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Stormcaller"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Seastring",
@@ -6930,7 +6946,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Stormcaller"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Awaken",
@@ -6940,7 +6957,8 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Tarnished Halberd",
@@ -6953,7 +6971,8 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Woebringer - Halberd of Stone",
@@ -6967,7 +6986,8 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Diamondine Mace",
@@ -7024,7 +7044,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Stormcaller"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Dreamslayer",
@@ -7082,7 +7103,8 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Sivakayan Axe",
@@ -7111,7 +7133,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Stormcaller"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Unholy Bonesaw",
@@ -7140,7 +7163,8 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Lamplighter's Pole",
@@ -7155,7 +7179,8 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Druid"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Smoldering Blade",
@@ -7169,7 +7194,8 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Braxonian Bow",
@@ -7183,7 +7209,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Stormcaller"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Lamentation",
@@ -7218,7 +7245,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "World Builder",
@@ -7251,7 +7279,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Deathgiver",
@@ -7266,7 +7295,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Stormcaller"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Fungal Greatsword",
@@ -7281,7 +7311,8 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Necromantic Bow",
@@ -7295,7 +7326,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Stormcaller"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Soulshiver",
@@ -7309,7 +7341,8 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Azynthian Blade",
@@ -7357,7 +7390,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Stormcaller"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Siva Bow",
@@ -7372,7 +7406,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Stormcaller"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Icy Bow",
@@ -7384,7 +7419,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Stormcaller"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Executioner of Azure",
@@ -7463,7 +7499,8 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Monarch's Blade",
@@ -7479,7 +7516,8 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Reaver's Steel",
@@ -7494,7 +7532,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Reaver"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Thryne, Sledge of Creation",
@@ -7512,7 +7551,8 @@ const GEAR_DATA = [
     "classes": [
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Arc, Crescent of the Void",
@@ -7527,7 +7567,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Stormcaller"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Eon, Blade of Time",
@@ -7560,7 +7601,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Reaver"
-    ]
+    ],
+    "twoHanded": true
   },
   {
     "name": "Copper Sceptre",
@@ -7574,7 +7616,8 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Druid"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Journeyman's Pick",
@@ -7588,7 +7631,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Mason's Pick",
@@ -7602,7 +7646,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Unusual Copper Sceptre",
@@ -7616,7 +7661,8 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Druid"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Copper Sword",
@@ -7627,7 +7673,8 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Hardened Copper Sword",
@@ -7638,7 +7685,8 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Rusty Dagger",
@@ -7652,7 +7700,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Rusty Hatchet",
@@ -7663,7 +7712,8 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Rusty Shortsword",
@@ -7676,7 +7726,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Basic Pick",
@@ -7690,7 +7741,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Brackwood Mace",
@@ -7704,7 +7756,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Weak Wand",
@@ -7718,7 +7771,8 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Druid"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Priel Knife",
@@ -7735,7 +7789,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Steel Long Sword",
@@ -7746,7 +7801,8 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Idol of Sivakaya",
@@ -7761,7 +7817,8 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Bear Bone Club",
@@ -7778,7 +7835,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Gourd Carver",
@@ -7793,7 +7851,8 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Lamplighter's Spark",
@@ -7809,7 +7868,8 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Polished Longsword",
@@ -7820,7 +7880,8 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Rotting Cudgel",
@@ -7837,7 +7898,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Molorai Axe",
@@ -7854,7 +7916,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Runed Molorai Axe",
@@ -7871,7 +7934,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Adept Wand",
@@ -7885,7 +7949,8 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Druid"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Petrified Club",
@@ -7903,7 +7968,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Argo's Grimoire",
@@ -7919,7 +7985,8 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Thorn",
@@ -7932,7 +7999,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Druid"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Blade of the Sea",
@@ -7946,7 +8014,8 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Eyestalk Wand",
@@ -7959,7 +8028,8 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Druid"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Short Sword of Viropha",
@@ -7973,7 +8043,8 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "The Interrogator",
@@ -7993,7 +8064,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Wand of Air",
@@ -8007,7 +8079,8 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Druid"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Bloodletter",
@@ -8024,7 +8097,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Hardened Sceptre",
@@ -8039,7 +8113,8 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Druid"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Razor Waveblade",
@@ -8053,7 +8128,8 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Jellystick",
@@ -8069,7 +8145,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Ogrespice Bundle",
@@ -8083,7 +8160,8 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Druid"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Whipsword",
@@ -8095,7 +8173,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Windblade"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Spectral Dagger",
@@ -8112,7 +8191,8 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Spectral Sceptre",
@@ -8128,7 +8208,8 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Druid"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Molorai Broadsword",
@@ -8139,7 +8220,8 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Pearlescent Kelp Totem",
@@ -8155,7 +8237,8 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Acolyte's Cudgel",
@@ -8172,7 +8255,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Blackflame Torch",
@@ -8185,7 +8269,8 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Fungal Bouquet",
@@ -8200,7 +8285,8 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Druid"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Priest's Stein",
@@ -8214,7 +8300,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Druid"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Scorched Walking Stick",
@@ -8229,7 +8316,8 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Sivakayan Hookblade",
@@ -8242,7 +8330,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Windblade"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Songmaker",
@@ -8258,7 +8347,8 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Boneweaver's Leg",
@@ -8272,7 +8362,8 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Druid"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Ebonshade",
@@ -8292,7 +8383,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Queen's Fang",
@@ -8311,7 +8403,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Thorned Branch",
@@ -8328,7 +8421,8 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Cinder of Birth",
@@ -8343,7 +8437,8 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Sleeper's Pin",
@@ -8363,7 +8458,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Dreamy Wand",
@@ -8377,7 +8473,8 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Druid"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Spectral Sword",
@@ -8395,7 +8492,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Crystallized Tactics",
@@ -8411,7 +8509,8 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "End's Bane",
@@ -8428,7 +8527,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Fernallan Sceptre",
@@ -8442,7 +8542,8 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Druid"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Sivakayan Sceptre",
@@ -8456,7 +8557,8 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Druid"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Sivakayan Straightsword",
@@ -8467,7 +8569,8 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Celestial Spike",
@@ -8484,7 +8587,8 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Demon Claw",
@@ -8498,7 +8602,8 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Diamond Claw",
@@ -8518,7 +8623,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Memories of Snow",
@@ -8533,7 +8639,8 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Sivakayan Wand",
@@ -8548,7 +8655,8 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Druid"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Stone Sword",
@@ -8567,7 +8675,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Volcanic Sceptre",
@@ -8582,7 +8691,8 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Druid"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Wyrm Bone",
@@ -8602,7 +8712,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Ephermalia, Blade of Waning",
@@ -8623,7 +8734,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Resonating Crystal",
@@ -8639,7 +8751,8 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Asp's Fang",
@@ -8661,7 +8774,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Brax's Candle",
@@ -8675,7 +8789,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Arcanist"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Ceto",
@@ -8690,7 +8805,8 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Bombastic Wand",
@@ -8705,7 +8821,8 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Druid"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Braxonian Mace",
@@ -8723,7 +8840,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Diamond Edged Sword",
@@ -8740,7 +8858,8 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Fungal Longsword",
@@ -8757,7 +8876,8 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Looming Reaper",
@@ -8771,7 +8891,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Druid"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Mithril Short Sword",
@@ -8790,7 +8911,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Braxonian Testament",
@@ -8806,7 +8928,8 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Glowing Blue Stone",
@@ -8822,7 +8945,8 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Oslind's Eviscerator",
@@ -8839,7 +8963,8 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Siva-Braxonian Teachings",
@@ -8857,7 +8982,8 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Garg Wand",
@@ -8872,7 +8998,8 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Druid"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Petrified Wood Cane",
@@ -8890,7 +9017,8 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Traitor's Steel",
@@ -8910,7 +9038,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Twisted Branch",
@@ -8926,7 +9055,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Druid"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Azynthian Dagger",
@@ -8943,7 +9073,8 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Charged Sword",
@@ -8965,7 +9096,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Cryptid Claws",
@@ -8983,7 +9115,8 @@ const GEAR_DATA = [
       "Druid",
       "Windblade",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Messenger",
@@ -8998,7 +9131,8 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Windblade"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Ulor's Encyclopedia",
@@ -9016,7 +9150,8 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Ascended Remains",
@@ -9032,7 +9167,8 @@ const GEAR_DATA = [
       "Arcanist",
       "Druid",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Esen",
@@ -9049,7 +9185,8 @@ const GEAR_DATA = [
       "Windblade",
       "Paladin",
       "Reaver"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Apotheosis",
@@ -9072,7 +9209,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Horn of Aeiros",
@@ -9094,7 +9232,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Tome of Necromancy",
@@ -9110,7 +9249,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Arcanist"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Corruptor",
@@ -9126,7 +9266,8 @@ const GEAR_DATA = [
     "classes": [
       "Arcanist",
       "Druid"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Eternox, Remnant of the Void",
@@ -9142,7 +9283,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Druid"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Lux, Carver of Stars",
@@ -9157,7 +9299,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Windblade"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Reaper of Regrowth",
@@ -9176,7 +9319,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Singularity, Vessel of Creation",
@@ -9191,7 +9335,8 @@ const GEAR_DATA = [
     },
     "classes": [
       "Arcanist"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Deciding Blade",
@@ -9210,7 +9355,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Nighthollow Candle",
@@ -9224,7 +9370,8 @@ const GEAR_DATA = [
       "Paladin",
       "Reaver",
       "Stormcaller"
-    ]
+    ],
+    "bothSlots": true
   },
   {
     "name": "Unsocketed Ring",
