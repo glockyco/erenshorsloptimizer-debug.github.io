@@ -417,7 +417,7 @@ test.describe('sumLoadoutEffects', () => {
 test.describe('optimize', () => {
   test('fills all slots that have available items', async ({ page }) => {
     const result = await page.evaluate(() => {
-      const ml = window.__erenshorTest.manualLoadout;
+      const ml = window.__erenshorTest.state.manualLoadout;
       Object.keys(ml).forEach(k => delete ml[k]);
       window.__erenshorTest.optimize();
       // Return which slot keys were filled
@@ -429,10 +429,10 @@ test.describe('optimize', () => {
 
   test('does not replace a locked slot', async ({ page }) => {
     const result = await page.evaluate(() => {
-      const ml = window.__erenshorTest.manualLoadout;
+      const ml = window.__erenshorTest.state.manualLoadout;
       Object.keys(ml).forEach(k => delete ml[k]);
       // Lock a specific item into Head before optimizing
-      const headItem = window.__erenshorTest.gear.find(g => g.slot === 'Head');
+      const headItem = window.__erenshorTest.state.gear.find(g => g.slot === 'Head');
       if (!headItem) return null;
       ml['Head'] = { item: headItem, locked: true };
       const lockedName = headItem.name;
@@ -445,9 +445,9 @@ test.describe('optimize', () => {
 
   test('2H weapon in Primary clears Secondary', async ({ page }) => {
     const result = await page.evaluate(() => {
-      const ml = window.__erenshorTest.manualLoadout;
+      const ml = window.__erenshorTest.state.manualLoadout;
       Object.keys(ml).forEach(k => delete ml[k]);
-      const twoHander = window.__erenshorTest.gear.find(g => g.twoHanded);
+      const twoHander = window.__erenshorTest.state.gear.find(g => g.twoHanded);
       if (!twoHander) return 'no-2h';
       ml['Primary'] = { item: twoHander, locked: true };
       window.__erenshorTest.optimize();
@@ -459,7 +459,7 @@ test.describe('optimize', () => {
 
   test('relic item does not fill both Ring slots', async ({ page }) => {
     const result = await page.evaluate(() => {
-      const ml = window.__erenshorTest.manualLoadout;
+      const ml = window.__erenshorTest.state.manualLoadout;
       Object.keys(ml).forEach(k => delete ml[k]);
       window.__erenshorTest.optimize();
       const r0 = ml['Ring_0']?.item;
@@ -477,7 +477,7 @@ test.describe('optimize', () => {
 test.describe('computeMaxScore', () => {
   test('returns a positive number after gear loads', async ({ page }) => {
     const result = await page.evaluate(() => {
-      window.__erenshorTest.weights = { str: 5, dex: 5, agi: 5, end: 5, int: 5, wis: 5, cha: 5, res: 5,
+      window.__erenshorTest.state.weights = { str: 5, dex: 5, agi: 5, end: 5, int: 5, wis: 5, cha: 5, res: 5,
                   mr: 0, er: 0, pr: 0, vr: 0, haste: 5 };
       return window.__erenshorTest.computeMaxScore();
     });
@@ -486,10 +486,10 @@ test.describe('computeMaxScore', () => {
 
   test('changes when weights change', async ({ page }) => {
     const [score1, score2] = await page.evaluate(() => {
-      window.__erenshorTest.weights = { str: 1, dex: 0, agi: 0, end: 0, int: 0, wis: 0, cha: 0, res: 0,
+      window.__erenshorTest.state.weights = { str: 1, dex: 0, agi: 0, end: 0, int: 0, wis: 0, cha: 0, res: 0,
                   mr: 0, er: 0, pr: 0, vr: 0, haste: 0 };
       const s1 = window.__erenshorTest.computeMaxScore();
-      window.__erenshorTest.weights = { str: 10, dex: 0, agi: 0, end: 0, int: 0, wis: 0, cha: 0, res: 0,
+      window.__erenshorTest.state.weights = { str: 10, dex: 0, agi: 0, end: 0, int: 0, wis: 0, cha: 0, res: 0,
                   mr: 0, er: 0, pr: 0, vr: 0, haste: 0 };
       const s2 = window.__erenshorTest.computeMaxScore();
       return [s1, s2];
@@ -501,9 +501,9 @@ test.describe('computeMaxScore', () => {
     // Build a minimal gear list with one relic ring (score 10) and one
     // non-relic ring (score 5). Max for Ring slots should be 15, not 20.
     const result = await page.evaluate(() => {
-      window.__erenshorTest.weights = { str: 1, dex: 0, agi: 0, end: 0, int: 0, wis: 0, cha: 0, res: 0,
+      window.__erenshorTest.state.weights = { str: 1, dex: 0, agi: 0, end: 0, int: 0, wis: 0, cha: 0, res: 0,
                   mr: 0, er: 0, pr: 0, vr: 0, haste: 0 };
-      const g = window.__erenshorTest.gear;
+      const g = window.__erenshorTest.state.gear;
       const saved = g.slice();
       g.length = 0;
       g.push({ name: 'RelicRing',  slot: 'Ring', lvl: 1, stats: { str: 10 }, classes: ['Windblade'], relic: true,  source: 'wiki', id: 1 });
