@@ -608,7 +608,7 @@ function renderManualLoadout() {
             ${hasResist && fx.mr > 0 ? pill('MAG RESIST', fx.mr, '', 'var(--text-dim)') : ''}
             ${hasResist && fx.er > 0 ? pill('ELEM RESIST', fx.er, '', 'var(--text-dim)') : ''}
             ${hasResist && fx.pr > 0 ? pill('PHY RESIST', fx.pr, '', 'var(--text-dim)') : ''}
-            ${hasResist && fx.vr ? pill('VOID RESIST', fx.vr, '', 'var(--text-dim)') : ''}
+            ${hasResist && fx.vr > 0 ? pill('VOID RESIST', fx.vr, '', 'var(--text-dim)') : ''}
           </div>
         </div>`;
       })()}
