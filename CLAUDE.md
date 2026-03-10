@@ -113,6 +113,37 @@ Each entry in `GEAR_DATA` (and the `gear` array at runtime) has this shape:
 `req_lvl` fields on worn/aura effects are populated only when the spell's line
 is not `Generic` — Generic spells always stack and need no conflict tracking.
 
+## Spell Line Stacking
+
+The game engine (`Stats.cs`, `CheckForHigherLevelSE`) enforces **one active
+buff per spell line** — only the effect with the highest `req_lvl` on a given
+line can be active at once. Lower-level effects on the same line are silently
+suppressed. Spells on the `Generic` line are fully exempt and always stack.
+
+This applies to **worn** and **aura** effects. Proc effects also technically
+have lines but are not self-applied, so they are lower priority and not tracked
+for conflict purposes.
+
+Real-world lines with multiple conflicting items include `Buff_Haste_Worn`,
+`Mana_Recovery_Buff`, `Regen`, `Attack_Buff`, `Buff_Movespeed_Worn`,
+`Global_Buff`, and `Buff_Combat_Worn`.
+
+The optimizer handles this with three helpers in `main.js`:
+
+- `effectBlocked(effect, claimedLines)` — returns true if the effect's line is
+  already claimed at an equal-or-higher `req_lvl`.
+- `claimLines(item, claimedLines)` — registers all worn/aura lines from an item
+  into the running `claimedLines` map after the item is placed.
+- `scoreInContext(item, claimedLines)` — like `score()` but zeros out any
+  worn/aura contribution whose spell line is already claimed.
+
+`optimize()` and `computeMaxScore()` both thread a `claimedLines` map through
+their slot passes so that line conflicts are resolved correctly across the full
+loadout. `sumLoadoutEffects()` does a two-pass resolution — first finding the
+highest-`req_lvl` winner per line across all equipped items, then accumulating
+only winning effects — and returns a `lineConflicts` list used to render
+in-panel warnings.
+
 ## Application Logic (`main.js`)
 
 Key constants at the top of the file:
