@@ -1,10 +1,11 @@
 # /// script
 # dependencies = ["requests"]
 # ///
-"""Generate gear.js from the Erenshor game database.
+"""Generate gear.js from a community-hosted Erenshor database.
 
-Downloads the public Erenshor SQLite database, queries all equippable
-gear (including Charms), and writes gear.js for use by the optimizer.
+Downloads a community-hosted SQLite database of data-mined Erenshor
+game data, queries all equippable gear, and writes gear.js for use by
+the optimizer.
 
 Usage:
     uv run generate.py
