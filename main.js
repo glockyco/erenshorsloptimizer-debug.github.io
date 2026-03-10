@@ -652,20 +652,34 @@ function renderManualLoadout() {
       </div>
       ${effBar(totalScore, maxScore)}
       ${(() => {
-        const hasHaste = fx.haste > 0;
-        const hasLifesteal = fx.lifesteal > 0;
-        const hasAtkroll = fx.atkroll > 0;
-        const hasMovespeed = fx.movespeed > 0;
-        const hasResist = fx.mr > 0 || fx.er > 0 || fx.pr > 0 || fx.vr > 0;
-        const hasWandProc = !!fx.wand_proc;
-        const hasBowProc = !!fx.bow_proc;
+        const hasHaste     = fx.haste > 0     || fx.haste_proc > 0;
+        const hasLifesteal = fx.lifesteal > 0 || fx.lifesteal_proc > 0;
+        const hasAtkroll   = fx.atkroll > 0   || fx.atkroll_proc > 0;
+        const hasMovespeed = fx.movespeed > 0 || fx.movespeed_proc > 0;
+        const hasResist    = fx.mr > 0 || fx.er > 0 || fx.pr > 0 || fx.vr > 0
+                          || fx.mr_proc > 0 || fx.er_proc > 0 || fx.pr_proc > 0 || fx.vr_proc > 0;
+        const hasWandProc  = !!fx.wand_proc;
+        const hasBowProc   = !!fx.bow_proc;
         if (!hasHaste && !hasLifesteal && !hasAtkroll && !hasMovespeed && !hasResist
             && !hasWandProc && !hasBowProc) return '';
-        const pill = (label, val, unit='', color='var(--blue-light)') =>
-          `<div style="display:flex;flex-direction:column;gap:.1rem">
+
+        // Renders a pill with a permanent total and an optional proc sub-label.
+        // procVal is the raw (undiscounted) proc value; unit is appended to both.
+        const pill = (label, val, procVal, unit='', color='var(--blue-light)') => {
+          const procLine = procVal > 0
+            ? `<span style="font-size:.65rem;color:var(--text-dim)">▪ ${fmt(procVal)}${unit} proc</span>`
+            : '';
+          const totalLine = val > 0
+            ? `<span style="font-family:'Cinzel',serif;font-size:.95rem;color:${color};font-weight:600">+${fmt(val)}${unit}</span>`
+            : `<span style="font-family:'Cinzel',serif;font-size:.95rem;color:var(--text-dim);font-weight:600">—</span>`;
+          return `<div style="display:flex;flex-direction:column;gap:.1rem">
             <span style="font-family:'Cinzel',serif;font-size:.6rem;color:var(--text-dim);letter-spacing:.06em">${label}</span>
-            <span style="font-family:'Cinzel',serif;font-size:.95rem;color:${color};font-weight:600">+${typeof val==='number'?val.toFixed(1).replace(/\.0$/,''):val}${unit}</span>
+            ${totalLine}
+            ${procLine}
           </div>`;
+        };
+        const fmt = v => typeof v === 'number' ? v.toFixed(1).replace(/\.0$/, '') : v;
+
         const procPill = (label, proc, color) => {
           const dmg = proc.target_damage || 0;
           const heal = proc.target_healing || 0;
@@ -678,29 +692,30 @@ function renderManualLoadout() {
             <span style="font-size:.65rem;color:var(--text-dim)">@ ${chance}% chance</span>
           </div>`;
         };
+
         const hasteColor = fx.haste >= 55 ? '#ff9944' : fx.haste >= 30 ? '#a0c8ff' : 'var(--blue-light)';
-        const hasteLabel = fx.haste >= 60 ? 'HASTE (cap)' : 'HASTE';
-        const hastePills = hasHaste ? `
+        const hastePill = hasHaste ? `
           <div style="display:flex;flex-direction:column;gap:.1rem">
-            <span style="font-family:'Cinzel',serif;font-size:.6rem;color:var(--text-dim);letter-spacing:.06em">${hasteLabel}</span>
-            <span style="font-family:'Cinzel',serif;font-size:.95rem;color:${hasteColor};font-weight:600">+${fx.haste.toFixed(1).replace(/\.0$/,'')}%</span>
+            <span style="font-family:'Cinzel',serif;font-size:.6rem;color:var(--text-dim);letter-spacing:.06em">HASTE</span>
+            ${fx.haste > 0 ? `<span style="font-family:'Cinzel',serif;font-size:.95rem;color:${hasteColor};font-weight:600">+${fmt(fx.haste)}%</span>` : `<span style="font-family:'Cinzel',serif;font-size:.95rem;color:var(--text-dim);font-weight:600">—</span>`}
             <span style="font-size:.65rem;color:var(--text-dim)">
-              ${fx.haste_worn > 0 ? `<span style="color:#a0c8ff">▪ ${fx.haste_worn.toFixed(1).replace(/\.0$/,'')}% worn</span>` : ''}
-              ${fx.haste_aura > 0 ? `<span style="color:#c0a0ff;margin-left:.3rem">▪ ${fx.haste_aura.toFixed(1).replace(/\.0$/,'')}% aura</span>` : ''}
-              ${fx.haste_proc > 0 ? `<span style="color:var(--text-dim);margin-left:.3rem">▪ ${fx.haste_proc.toFixed(1).replace(/\.0$/,'')}% proc</span>` : ''}
+              ${fx.haste_worn > 0 ? `<span style="color:#a0c8ff">▪ ${fmt(fx.haste_worn)}% worn</span>` : ''}
+              ${fx.haste_aura > 0 ? `<span style="color:#c0a0ff;margin-left:.3rem">▪ ${fmt(fx.haste_aura)}% aura</span>` : ''}
+              ${fx.haste_proc > 0 ? `<span style="color:var(--text-dim);margin-left:.3rem">▪ ${fmt(fx.haste_proc)}% proc</span>` : ''}
             </span>
           </div>` : '';
+
         return `<div style="margin-top:.75rem;padding:.65rem .9rem;background:var(--surface2);border:1px solid var(--border);border-radius:3px;border-left:2px solid var(--blue-light)">
           <div style="font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.12em;color:var(--text-dim);text-transform:uppercase;margin-bottom:.5rem">Spell &amp; Passive Effects</div>
           <div style="display:flex;flex-wrap:wrap;gap:.5rem 1.5rem">
-            ${hastePills}
-            ${hasLifesteal ? pill('LIFESTEAL', fx.lifesteal, '%', '#e08080') : ''}
-            ${hasAtkroll ? pill('ATK ROLL', fx.atkroll, '', '#c9a227') : ''}
-            ${hasMovespeed ? pill('MOVE SPD', fx.movespeed, '%', '#80e0a0') : ''}
-            ${hasResist && fx.mr > 0 ? pill('MAG RESIST', fx.mr, '', 'var(--text-dim)') : ''}
-            ${hasResist && fx.er > 0 ? pill('ELEM RESIST', fx.er, '', 'var(--text-dim)') : ''}
-            ${hasResist && fx.pr > 0 ? pill('PHY RESIST', fx.pr, '', 'var(--text-dim)') : ''}
-            ${hasResist && fx.vr > 0 ? pill('VOID RESIST', fx.vr, '', 'var(--text-dim)') : ''}
+            ${hastePill}
+            ${hasLifesteal ? pill('LIFESTEAL', fx.lifesteal, fx.lifesteal_proc, '%', '#e08080') : ''}
+            ${hasAtkroll   ? pill('ATK ROLL',  fx.atkroll,   fx.atkroll_proc,   '',  '#c9a227') : ''}
+            ${hasMovespeed ? pill('MOVE SPD',  fx.movespeed, fx.movespeed_proc, '%', '#80e0a0') : ''}
+            ${fx.mr > 0 || fx.mr_proc > 0 ? pill('MAG RESIST',  fx.mr, fx.mr_proc, '', 'var(--text-dim)') : ''}
+            ${fx.er > 0 || fx.er_proc > 0 ? pill('ELEM RESIST', fx.er, fx.er_proc, '', 'var(--text-dim)') : ''}
+            ${fx.pr > 0 || fx.pr_proc > 0 ? pill('PHY RESIST',  fx.pr, fx.pr_proc, '', 'var(--text-dim)') : ''}
+            ${fx.vr > 0 || fx.vr_proc > 0 ? pill('VOID RESIST', fx.vr, fx.vr_proc, '', 'var(--text-dim)') : ''}
             ${hasWandProc ? procPill('WAND PROC', fx.wand_proc, '#c0a0ff') : ''}
             ${hasBowProc  ? procPill('BOW PROC',  fx.bow_proc,  '#a0d0a0') : ''}
           </div>
