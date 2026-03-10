@@ -86,6 +86,12 @@ function clearAllGear() {
   }
 }
 
+// ── Slot helpers ──────────────────────────────────────────────────────────────
+
+function itemFitsSlot(item, targetSlot) {
+  return item.slot === targetSlot || (item.bothSlots && (targetSlot === 'Primary' || targetSlot === 'Secondary'));
+}
+
 // ── Drag and drop ─────────────────────────────────────────────────────────────
 
 function onItemDragStart(e, id) {
@@ -118,7 +124,7 @@ function _dropOnBuilder(e, slotKey) {
   const targetSlot = slotFromKey(slotKey);
   const primaryItem = state.manualLoadout['Primary']?.item;
   const secondaryBlocked = primaryItem?.twoHanded && targetSlot === 'Secondary';
-  const slotOk = !secondaryBlocked && (item.slot === targetSlot || (item.bothSlots && (targetSlot === 'Primary' || targetSlot === 'Secondary')));
+  const slotOk = !secondaryBlocked && itemFitsSlot(item, targetSlot);
   if (!slotOk) {
     if (el) {
       el.classList.add('drag-reject');
@@ -225,7 +231,7 @@ function openSlotModal(slotKey) {
   state.modalTargetSlot = slotKey;
   state.modalActiveIdx  = -1;
   const slot  = slotFromKey(slotKey);
-  const label = slotKey.includes('_') ? slotKey.replace('_0', ' 1').replace('_1', ' 2') : slot;
+  const label = slotLabelFromKey(slotKey);
   const activeLoadout = getLoadoutByPrefix(state.modalTargetPrefix);
   const current = activeLoadout[slotKey]?.item?.name || '';
 
@@ -271,11 +277,7 @@ function onModalSearch() {
   state.modalActiveIdx = -1;
   const slot = slotFromKey(state.modalTargetSlot);
 
-  let pool = state.gear.filter(g => {
-    if (g.slot === slot) return true;
-    if (g.bothSlots && (slot === 'Primary' || slot === 'Secondary')) return true;
-    return false;
-  });
+  let pool = state.gear.filter(g => itemFitsSlot(g, slot));
   if (q.length >= 1) pool = pool.filter(g => g.name.toLowerCase().includes(q));
   pool = pool.slice(0, 40);
 

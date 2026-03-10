@@ -9,6 +9,10 @@ function slotFromKey(key) {
   return key.replace(/_\d+$/, '');
 }
 
+function slotLabelFromKey(key) {
+  return key.replace('_0', ' 1').replace('_1', ' 2');
+}
+
 function getSlotTier(slotKey, prefix) {
   const tiers = prefix === 'cur-' ? state.currentSlotTiers : state.slotTiers;
   return tiers[slotKey] || state.activeTier;
@@ -202,7 +206,7 @@ function renderSlotGrid(loadout, opts = {}) {
         totalScore += score(item, state.weights);
       }
       const slotClass = ['result-slot', item ? 'equipped' : '', locked ? 'locked' : ''].filter(Boolean).join(' ');
-      const slotLabel = keys.length > 1 ? slot + ' ' + (ki + 1) : slot;
+      const slotLabel = slotLabelFromKey(key);
       const domId = `slot-${prefix}${key}`;
 
       const headerBtns = item ? `<div class="slot-header-btns">
