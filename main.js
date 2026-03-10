@@ -74,7 +74,8 @@ function getItemEffects(item) {
 
 function sumLoadoutEffects() {
   const out = {haste:0, haste_worn:0, haste_aura:0, haste_proc:0,
-               lifesteal:0, atkroll:0, movespeed:0, mr:0, er:0, pr:0, vr:0};
+               lifesteal:0, atkroll:0, movespeed:0, mr:0, er:0, pr:0, vr:0,
+               wand_proc:null, bow_proc:null};
   Object.values(manualLoadout).forEach(entry => {
     if (!entry?.item) return;
     const e = entry.item.effects || {};
@@ -90,6 +91,9 @@ function sumLoadoutEffects() {
     out.er += (w.er||0) + (a.er||0) + (p.er||0)*0.5;
     out.pr += (w.pr||0) + (a.pr||0) + (p.pr||0)*0.5;
     out.vr += (w.vr||0) + (a.vr||0) + (p.vr||0)*0.5;
+    // Only one wand/bow can be equipped — last item wins (shouldn't conflict)
+    if (e.wand_proc) out.wand_proc = e.wand_proc;
+    if (e.bow_proc)  out.bow_proc  = e.bow_proc;
   });
   // Cap total haste at 60
   out.haste = Math.min(out.haste, 60);
@@ -604,12 +608,27 @@ function renderManualLoadout() {
         const hasAtkroll = fx.atkroll > 0;
         const hasMovespeed = fx.movespeed > 0;
         const hasResist = fx.mr > 0 || fx.er > 0 || fx.pr > 0 || fx.vr > 0;
-        if (!hasHaste && !hasLifesteal && !hasAtkroll && !hasMovespeed && !hasResist) return '';
+        const hasWandProc = !!fx.wand_proc;
+        const hasBowProc = !!fx.bow_proc;
+        if (!hasHaste && !hasLifesteal && !hasAtkroll && !hasMovespeed && !hasResist
+            && !hasWandProc && !hasBowProc) return '';
         const pill = (label, val, unit='', color='var(--blue-light)') =>
           `<div style="display:flex;flex-direction:column;gap:.1rem">
             <span style="font-family:'Cinzel',serif;font-size:.6rem;color:var(--text-dim);letter-spacing:.06em">${label}</span>
             <span style="font-family:'Cinzel',serif;font-size:.95rem;color:${color};font-weight:600">+${typeof val==='number'?val.toFixed(1).replace(/\.0$/,''):val}${unit}</span>
           </div>`;
+        const procPill = (label, proc, color) => {
+          const dmg = proc.target_damage || 0;
+          const heal = proc.target_healing || 0;
+          const val = dmg || heal;
+          const kind = dmg ? 'dmg' : 'heal';
+          const chance = proc.chance || 0;
+          return `<div style="display:flex;flex-direction:column;gap:.1rem">
+            <span style="font-family:'Cinzel',serif;font-size:.6rem;color:var(--text-dim);letter-spacing:.06em">${label}</span>
+            <span style="font-family:'Cinzel',serif;font-size:.95rem;color:${color};font-weight:600">${val} ${kind}</span>
+            <span style="font-size:.65rem;color:var(--text-dim)">@ ${chance}% chance</span>
+          </div>`;
+        };
         const hasteColor = fx.haste >= 55 ? '#ff9944' : fx.haste >= 30 ? '#a0c8ff' : 'var(--blue-light)';
         const hasteLabel = fx.haste >= 60 ? 'HASTE (cap)' : 'HASTE';
         const hastePills = hasHaste ? `
@@ -633,6 +652,8 @@ function renderManualLoadout() {
             ${hasResist && fx.er > 0 ? pill('ELEM RESIST', fx.er, '', 'var(--text-dim)') : ''}
             ${hasResist && fx.pr > 0 ? pill('PHY RESIST', fx.pr, '', 'var(--text-dim)') : ''}
             ${hasResist && fx.vr > 0 ? pill('VOID RESIST', fx.vr, '', 'var(--text-dim)') : ''}
+            ${hasWandProc ? procPill('WAND PROC', fx.wand_proc, '#c0a0ff') : ''}
+            ${hasBowProc  ? procPill('BOW PROC',  fx.bow_proc,  '#a0d0a0') : ''}
           </div>
         </div>`;
       })()}
