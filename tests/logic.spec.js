@@ -89,6 +89,62 @@ test.describe('getItemEffects', () => {
   });
 });
 
+// ── getItemPermEffects ────────────────────────────────────────────────────────
+
+test.describe('getItemPermEffects', () => {
+  test('excludes proc from permanent totals', async ({ page }) => {
+    const result = await page.evaluate(() =>
+      getItemPermEffects({
+        stats: {},
+        effects: {
+          worn: { haste: 10 },
+          proc: { haste: 20 },
+        },
+      })
+    );
+    expect(result.haste).toBe(10);
+  });
+
+  test('exposes raw proc values as _proc sub-labels', async ({ page }) => {
+    const result = await page.evaluate(() =>
+      getItemPermEffects({
+        stats: {},
+        effects: {
+          worn: { haste: 10 },
+          proc: { haste: 20, lifesteal: 5 },
+        },
+      })
+    );
+    expect(result.haste_proc).toBe(20);
+    expect(result.lifesteal_proc).toBe(5);
+  });
+
+  test('sums worn and aura permanently', async ({ page }) => {
+    const result = await page.evaluate(() =>
+      getItemPermEffects({
+        stats: {},
+        effects: {
+          worn: { haste: 10, mr: 4 },
+          aura: { haste: 15, mr: 2 },
+        },
+      })
+    );
+    expect(result.haste).toBe(25);
+    expect(result.mr).toBe(6);
+  });
+
+  test('returns zero proc sub-labels when no proc', async ({ page }) => {
+    const result = await page.evaluate(() =>
+      getItemPermEffects({
+        stats: {},
+        effects: { worn: { haste: 5 } },
+      })
+    );
+    expect(result.haste_proc).toBe(0);
+    expect(result.lifesteal_proc).toBe(0);
+  });
+});
+
 // ── bankersRound ──────────────────────────────────────────────────────────────
 
 test.describe('bankersRound', () => {
