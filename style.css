@@ -111,6 +111,33 @@ hr.div{border:none;border-top:1px solid var(--border);margin:.85rem 0}
 .smi-name{color:var(--text-bright);font-size:.9rem;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .smi-level{font-family:'Cinzel',serif;font-size:.6rem;color:var(--text-dim);flex-shrink:0}
 .smi-stats{font-size:.75rem;color:var(--gold);opacity:.8;flex-shrink:0;max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* Score bar score column */
+.score-col{display:flex;flex-direction:column;gap:.15rem;min-width:80px}
+/* Stat total label fixed size */
+.stat-total-name{font-size:.65rem}
+/* Effects panel container */
+.effects-panel{margin-top:.75rem;padding:.65rem .9rem;background:var(--surface2);border:1px solid var(--border);border-radius:3px;border-left:2px solid var(--blue-light)}
+/* Per-effect column in effects panel */
+.effect-col{display:flex;flex-direction:column;gap:.1rem}
+/* Small uppercased label inside an effect column */
+.effect-label{font-family:'Cinzel',serif;font-size:.6rem;color:var(--text-dim);letter-spacing:.06em}
+/* Large value span inside an effect column */
+.effect-value{font-family:'Cinzel',serif;font-size:.95rem;font-weight:600}
+/* Efficiency bar container */
+.eff-bar{margin-top:.9rem;padding-top:.9rem;border-top:1px solid var(--border)}
+/* Slot card empty-state variants */
+.result-empty-2h{font-size:.72rem;text-align:center;padding:.4rem 0;opacity:.4;font-style:italic}
+.result-empty-open{font-size:.75rem;text-align:center;padding:.4rem 0;opacity:.5}
+/* Slot header buttons container */
+.slot-header-btns{display:flex;gap:.25rem;align-items:center}
+/* Slot card score-bar divider */
+.score-bar-divider{width:1px;background:var(--border);align-self:stretch;margin:0 .5rem}
+/* Slot card stat totals container */
+.stat-totals{display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;flex:1}
+/* Slot card loadout grid wrapper */
+.loadout-grid{margin-top:1rem}
+/* Slot card comparison bar wrapper */
+.comparison-bar-inner{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:.9rem 1.2rem}
 /* Slot cards clickable */
 .result-slot:not(.equipped):not(.locked){cursor:pointer}
 .result-slot.equipped:not(.locked){cursor:pointer}

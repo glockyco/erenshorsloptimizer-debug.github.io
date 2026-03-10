@@ -124,9 +124,9 @@ function effBar(totalScore, maxScore) {
   const pct = Math.min(100, (totalScore / maxScore) * 100);
   const color = pct >= 90 ? '#c9b44a' : pct >= 70 ? '#7fba5a' : pct >= 50 ? '#5a9ecc' : '#888';
   const label = pct >= 95 ? 'Near Perfect' : pct >= 85 ? 'Excellent' : pct >= 70 ? 'Strong' : pct >= 50 ? 'Decent' : 'Room to Improve';
-  return `<div style="margin-top:.9rem;padding-top:.9rem;border-top:1px solid var(--border)">
+  return `<div class="eff-bar">
     <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.35rem">
-      <span style="font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.12em;color:var(--text-dim);text-transform:uppercase">Priority Efficiency</span>
+      <span class="effect-label" style="letter-spacing:.12em;text-transform:uppercase">Priority Efficiency</span>
       <span style="font-size:.78rem;color:${color};font-weight:600">${label} &nbsp;·&nbsp; ${pct.toFixed(1)}%
         <span style="color:var(--text-dim);font-weight:400;font-size:.72rem">(${totalScore.toFixed(0)} / ${maxScore.toFixed(0)})</span>
       </span>
@@ -174,9 +174,9 @@ function renderSlotContent(slot, slotKey, item, loadout, showSource) {
   if (!item) {
     const pri = loadout['Primary']?.item;
     if (slot === 'Secondary' && pri?.twoHanded) {
-      return `<div class="result-empty" style="font-size:.72rem;text-align:center;padding:.4rem 0;opacity:.4;font-style:italic">2H equipped</div>`;
+      return `<div class="result-empty result-empty-2h">2H equipped</div>`;
     }
-    return `<div class="result-empty" style="font-size:.75rem;text-align:center;padding:.4rem 0;opacity:.5">click to equip</div>`;
+    return `<div class="result-empty result-empty-open">click to equip</div>`;
   }
   return `<div class="result-item-name">${item.name}</div>
     <div class="result-item-stats">${STATS.filter(s => item.stats?.[s.key] > 0).map(s => `${s.abbr}+${item.stats[s.key]}`).join('·') || '—'}</div>
@@ -205,7 +205,7 @@ function renderSlotGrid(loadout, opts = {}) {
       const slotLabel = keys.length > 1 ? slot + ' ' + (ki + 1) : slot;
       const domId = `slot-${prefix}${key}`;
 
-      const headerBtns = item ? `<div style="display:flex;gap:.25rem;align-items:center">
+      const headerBtns = item ? `<div class="slot-header-btns">
         ${showTier ? renderTierBadge(key, prefix, item) : ''}
         ${showLock ? renderLockBtn(prefix, key, locked) : ''}
         <button class="clear-slot-btn" onclick="clearSlotIn('${prefix}','${key}')" title="Remove">✕</button>
@@ -238,10 +238,10 @@ function renderEffectPill(label, val, procVal, unit, color) {
     ? `<span style="font-size:.65rem;color:var(--text-dim)">▪ ${fmtEffect(procVal)}${unit} proc</span>`
     : '';
   const totalLine = val > 0
-    ? `<span style="font-family:'Cinzel',serif;font-size:.95rem;color:${color};font-weight:600">+${fmtEffect(val)}${unit}</span>`
-    : `<span style="font-family:'Cinzel',serif;font-size:.95rem;color:var(--text-dim);font-weight:600">—</span>`;
-  return `<div style="display:flex;flex-direction:column;gap:.1rem">
-    <span style="font-family:'Cinzel',serif;font-size:.6rem;color:var(--text-dim);letter-spacing:.06em">${label}</span>
+    ? `<span class="effect-value" style="color:${color}">+${fmtEffect(val)}${unit}</span>`
+    : `<span class="effect-value" style="color:var(--text-dim)">—</span>`;
+  return `<div class="effect-col">
+    <span class="effect-label">${label}</span>
     ${totalLine}
     ${procLine}
   </div>`;
@@ -253,9 +253,9 @@ function renderProcPill(label, proc, color) {
   const val    = dmg || heal;
   const kind   = dmg ? 'dmg' : 'heal';
   const chance = proc.chance || 0;
-  return `<div style="display:flex;flex-direction:column;gap:.1rem">
-    <span style="font-family:'Cinzel',serif;font-size:.6rem;color:var(--text-dim);letter-spacing:.06em">${label}</span>
-    <span style="font-family:'Cinzel',serif;font-size:.95rem;color:${color};font-weight:600">${val} ${kind}</span>
+  return `<div class="effect-col">
+    <span class="effect-label">${label}</span>
+    <span class="effect-value" style="color:${color}">${val} ${kind}</span>
     <span style="font-size:.65rem;color:var(--text-dim)">@ ${chance}% chance</span>
   </div>`;
 }
@@ -264,10 +264,10 @@ function renderHastePill(fx) {
   if (fx.haste <= 0 && fx.haste_proc <= 0) return '';
   const color = fx.haste >= 55 ? '#ff9944' : fx.haste >= 30 ? '#a0c8ff' : 'var(--blue-light)';
   const total = fx.haste > 0
-    ? `<span style="font-family:'Cinzel',serif;font-size:.95rem;color:${color};font-weight:600">+${fmtEffect(fx.haste)}%</span>`
-    : `<span style="font-family:'Cinzel',serif;font-size:.95rem;color:var(--text-dim);font-weight:600">—</span>`;
-  return `<div style="display:flex;flex-direction:column;gap:.1rem">
-    <span style="font-family:'Cinzel',serif;font-size:.6rem;color:var(--text-dim);letter-spacing:.06em">HASTE</span>
+    ? `<span class="effect-value" style="color:${color}">+${fmtEffect(fx.haste)}%</span>`
+    : `<span class="effect-value" style="color:var(--text-dim)">—</span>`;
+  return `<div class="effect-col">
+    <span class="effect-label">HASTE</span>
     ${total}
     <span style="font-size:.65rem;color:var(--text-dim)">
       ${fx.haste_worn > 0 ? `<span style="color:#a0c8ff">▪ ${fmtEffect(fx.haste_worn)}% worn</span>` : ''}
@@ -294,8 +294,8 @@ function renderEffectsPanel(fx) {
       }</div>`
     : '';
 
-  return `<div style="margin-top:.75rem;padding:.65rem .9rem;background:var(--surface2);border:1px solid var(--border);border-radius:3px;border-left:2px solid var(--blue-light)">
-    <div style="font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.12em;color:var(--text-dim);text-transform:uppercase;margin-bottom:.5rem">Spell &amp; Passive Effects</div>
+  return `<div class="effects-panel">
+    <div class="effect-label" style="letter-spacing:.12em;text-transform:uppercase;margin-bottom:.5rem">Spell &amp; Passive Effects</div>
     <div style="display:flex;flex-wrap:wrap;gap:.5rem 1.5rem">
       ${renderHastePill(fx)}
       ${hasLifesteal ? renderEffectPill('LIFESTEAL', fx.lifesteal, fx.lifesteal_proc, '%', '#e08080') : ''}
@@ -321,7 +321,7 @@ function renderStatTotals(totals, deltaTotals) {
       ? `<span style="font-size:.6rem;font-family:'Cinzel',serif;color:${delta > 0 ? 'var(--green-light)' : 'var(--red-light)'};display:block;line-height:1">${delta > 0 ? '▲' : '▼'}${Math.abs(delta)}</span>`
       : '';
     return `<div class="stat-total">
-      <span class="stat-total-name" style="font-size:.65rem">${s.abbr}</span>
+      <span class="stat-total-name">${s.abbr}</span>
       <span class="stat-total-val" style="color:${color};font-size:${Math.min(1.1, 0.7 + val / 80)}rem">${isNeg ? '' : val > 0 ? '+' : ''}${val}</span>
       ${deltaHtml}
     </div>`;
@@ -341,16 +341,14 @@ function renderCurrentGear() {
         <span style="font-size:.78rem;color:var(--text-dim);font-style:italic">${filledCount > 0 ? `${filledCount} slots filled` : 'Click a slot to set your current gear'}</span>
       </div>
       <div class="score-bar">
-        <div style="display:flex;flex-direction:column;gap:.15rem;min-width:80px">
+        <div class="score-col">
           <div class="score-label">Priority Score</div>
           <div class="score-value">${totalScore.toFixed(1)}</div>
         </div>
-        <div style="width:1px;background:var(--border);align-self:stretch;margin:0 .5rem"></div>
-        <div style="display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;flex:1">
-          ${renderStatTotals(totals, null)}
-        </div>
+        <div class="score-bar-divider"></div>
+        <div class="stat-totals">${renderStatTotals(totals, null)}</div>
       </div>
-      <div style="margin-top:1rem"><div class="result-grid">${slotHtml}</div></div>
+      <div class="loadout-grid"><div class="result-grid">${slotHtml}</div></div>
     </div>
   </div>`;
 }
@@ -388,18 +386,16 @@ function renderManualLoadout() {
         <span style="font-size:.78rem;color:var(--text-dim);font-style:italic">${filledCount > 0 ? `${filledCount} filled · ${lockedCount} locked` : 'Click a slot or drag items from the database'}</span>
       </div>
       <div class="score-bar">
-        <div style="display:flex;flex-direction:column;gap:.15rem;min-width:80px">
+        <div class="score-col">
           <div class="score-label">Priority Score</div>
           <div class="score-value">${totalScore.toFixed(1)}</div>
         </div>
-        <div style="width:1px;background:var(--border);align-self:stretch;margin:0 .5rem"></div>
-        <div style="display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;flex:1">
-          ${renderStatTotals(totals, hasCurrent ? curTotals : null)}
-        </div>
+        <div class="score-bar-divider"></div>
+        <div class="stat-totals">${renderStatTotals(totals, hasCurrent ? curTotals : null)}</div>
       </div>
       ${effBar(totalScore, maxScore)}
       ${renderEffectsPanel(fx)}
-      <div style="margin-top:1rem"><div class="result-grid">${slotHtml}</div></div>
+      <div class="loadout-grid"><div class="result-grid">${slotHtml}</div></div>
     </div>
   </div>`;
 }
@@ -437,9 +433,9 @@ function renderComparisonBar() {
     ? Math.min(100, 50 + (pct / 2))
     : Math.max(0, 50 - (Math.abs(pct) / 2));
 
-  el.innerHTML = `<div style="background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:.9rem 1.2rem">
+  el.innerHTML = `<div class="comparison-bar-inner">
     <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:.5rem;margin-bottom:.6rem">
-      <span style="font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.12em;color:var(--text-dim);text-transform:uppercase">Loadout Comparison</span>
+      <span class="effect-label" style="font-size:.7rem;letter-spacing:.12em;text-transform:uppercase">Loadout Comparison</span>
       <div style="display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap">
         <span style="font-size:.82rem;color:var(--text-dim)">Current: <strong style="color:var(--text-bright);font-family:'Cinzel',serif">${curScore.toFixed(1)}</strong></span>
         <span style="font-size:.82rem;color:var(--text-dim)">Builder: <strong style="color:var(--text-bright);font-family:'Cinzel',serif">${bldScore.toFixed(1)}</strong></span>
