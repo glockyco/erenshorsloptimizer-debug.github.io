@@ -1,4 +1,4 @@
-const GEAR_DATA = [
+window.GEAR_DATA = [
   {
     "name": "Cloth Sleeves",
     "slot": "Arms",

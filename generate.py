@@ -370,7 +370,7 @@ def main() -> None:
     finally:
         tmp_path.unlink(missing_ok=True)
 
-    OUTPUT.write_text("const GEAR_DATA = " + json.dumps(gear, indent=2) + ";\n", encoding="utf-8")
+    OUTPUT.write_text("window.GEAR_DATA = " + json.dumps(gear, indent=2) + ";\n", encoding="utf-8")
     print(f"Wrote {len(gear)} items to {OUTPUT}")
 
 
